@@ -18,7 +18,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 // require routes
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const carsRouter = require('./routes/packages');
+const packagesRouter = require('./routes/packages');
 
 const app = express();
 
@@ -54,7 +54,7 @@ app.use(methodOverride('_method'));
 // configure passport and sessions
 app.use(
 	session({
-		secret: 'I am a cool devloper ;)',
+		secret: 'I am gamer devloper!!!)',
 		resave: false,
 		saveUninitialized: true
 	})
@@ -77,7 +77,7 @@ app.use(function (req, res, next) {
 	//access logged in user
 	res.locals.currentUser = req.user;
 	// set default page title
-	res.locals.title = 'Auto Masterz';
+	res.locals.title = 'DMZ Guest House';
 	// set success flash message
 	res.locals.success = req.session.success || '';
 	delete req.session.success;
@@ -90,10 +90,9 @@ app.use(function (req, res, next) {
 
 // mount routes
 app.use('/', indexRouter);
-app.use('/car-dealerships', usersRouter);
-app.use('/cars-for-sale', carsRouter);
-// app.use('/car-promos', carPromoRouter);
-app.use('/motoring-news-&-reviews', postsRouter);
+app.use('/admin', usersRouter);
+app.use('/packages', packagesRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
