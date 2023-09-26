@@ -5,7 +5,7 @@ const slug = require('mongoose-slug-generator');
 
 mongoose.plugin(slug);
 
-const RoomSchema = new Schema(
+const PackageSchema = new Schema(
 	{
 		title: {
 			type: String,
@@ -33,7 +33,7 @@ const RoomSchema = new Schema(
 				public_id: String
 			}
 		],
-		mainPost: {
+		mainPackage: {
 			type: Boolean,
 			default: false
 		},
@@ -50,22 +50,6 @@ const RoomSchema = new Schema(
 	{ timestamps: true }
 );
 
-// ,
-// 		comments: [
-// 			{
-// 				type: Schema.Types.ObjectId,
-// 				ref: 'Comment'
-// 			}
-// 		]
+PackageSchema.plugin(mongoosePaginate);
 
-// RoomSchema.pre('remove', async function () {
-// 	await Comment.remove({
-// 		_id: {
-// 			$in: this.comments
-// 		}
-// 	});
-// });
-
-RoomSchema.plugin(mongoosePaginate);
-
-module.exports = mongoose.model('Post', RoomSchema);
+module.exports = mongoose.model('Package', PackageSchema);
