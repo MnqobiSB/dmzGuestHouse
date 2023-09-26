@@ -26,47 +26,49 @@ module.exports = {
 			packages
 		});
 	},
-	// POST /
+
+	// POST subscription/
 	async subscribe (req, res, next) {
 		// send DM-DMZ Guesthouse an email
 		const subscribeData = `
-		  	<h1>You Have a New User Newsletters Subscription!</h1>
-		  	<h2>User data:</h2>
+		  	<h1>You Have a New Customer Newsletters Subscription!</h1>
+		  	<h2>Customer data:</h2>
 		  	<ul>
 		  		<li>${req.body.firstName}</li>
 			    <li>${req.body.email}</li>
 		  	</ul>  
 		  	<h3>Message</h3>
-		  	<p>New user Subscription, add user to maillist.</p>
+		  	<p>You Have A New Subscriber, add customer to maillist and keep them in the loop.</p>
 	  	`;
-		// send user an email
-		const subscribeDataUser = `
-				<img src="https://res.cloudinary.com/mnqobi-digital-solutions/image/upload/v1626865504/logos/logo_yluhlm.png" width="150"/>
+      
+		// send customer an email
+		const subscribeDataCustomer = `
+				<img src="" width="150"/>
 
-		  	<h1>Welcome To AutoTerritory.co.za Newsletter!</h1>
+		  	<h1>Welcome To DM-DMZ Guesthouse Newsletter!</h1>
 
 		  	<p>Hello ${req.body.firstName},</p>
 
-		  	<p><b>Thank you for joining our cool community of package enthusiasts.</b></p>
+		  	<p><b>Thank you for subscribing!</b></p>
 
-		  	<p>We are all about providing top online package deals, latest motoring news and reviews, hosting fun activities and competitions and other usefull motoring tools.</p>
+		  	<p>We are all about providing the best choice accomodation in & around Clarens, Free State, South Africa.</p>
 
-		  	<p>Our main job is to help you find and buy your perfect package with the least effort possible.</p>
+		  	<p>Our main job is to cator you with the best possible accomodation services at the best price.</p>
 
-		  	<p>We will be sending you weekly updates from our website, keeping you in the loop of what is going on at DM-DMZ Guesthouse</p>
+		  	<p>We will be keeping you in the loop of what any new offerings and specials happening at DM-DMZ Guesthouse.</p>
 
-				<p>Regards,<br>DM-DMZ Guesthouse Newsletters</p>
+				<p>Happy Vacations!,<br>DM-DMZ Guesthouse Newsletters</p>
 
-				<p><small><a href="https://www.autoterritory.co.za/contact-us">Unsubscribe</a> | <a href="https://www.autoterritory.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.autoterritory.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.autoterritory.co.za/contact-us">Contact Us</a></small></p>
+				<p><small><a href="https://www.dmzguesthouse.co.za/contact-us">Unsubscribe</a> | <a href="https://www.dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
 			`;
 
-		// email sender auto territory
+		// email sender dmz guesthouse
 		let smtpTransport = nodemailer.createTransport({
 			host: 'serv28.registerdomain.co.za',
 			port: 465,
 			secure: true,
 			auth: {
-				user: 'subscribe@autoterritory.co.za',
+				user: 'subscribe@dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
 			},
 			tls: {
@@ -75,12 +77,12 @@ module.exports = {
 		});
 
 		// email sender user
-		let smtpTransportUser = nodemailer.createTransport({
+		let smtpTransportCustomer = nodemailer.createTransport({
 			host: 'serv28.registerdomain.co.za',
 			port: 465,
 			secure: true,
 			auth: {
-				user: 'subscribe@autoterritory.co.za',
+				user: 'subscribe@dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
 			},
 			tls: {
@@ -88,74 +90,40 @@ module.exports = {
 			}
 		});
 
-		// email options auto territory
+		// email options dmz guesthouse
 		const mailOptions = {
 			from:
-				'"New Newsletters Subscription" <subscribe@autoterritory.co.za>',
-			to: 'subscribe@autoterritory.co.za',
-			subject: 'New User Subscription',
+				'"New Newsletters Subscriber" <subscribe@dmzguesthouse.co.za>',
+			to: 'subscribe@dmzguesthouse.co.za',
+			subject: 'New Customer Subscriber',
 			html: subscribeData
 		};
 
 		// email options user
-		const mailOptionsUser = {
+		const mailOptionsCustomer = {
 			from:
-				'"DM-DMZ Guesthouse Newsletter Subscription" <subscribe@autoterritory.co.za>',
+				'"DM-DMZ Guesthouse Newsletter" <subscribe@dmzguesthouse.co.za>',
 			to: req.body.email,
-			subject: 'Welcome to DM-DMZ Guesthouse Newsletter Subscription',
-			html: subscribeDataUser
+			subject: 'Welcome to DM-DMZ Guesthouse Newsletter',
+			html: subscribeDataCustomer
 		};
 
-		await smtpTransport.sendMail(mailOptions, mailOptionsUser);
+		await smtpTransport.sendMail(mailOptions, mailOptionsCustomer);
 
-		await smtpTransportUser.sendMail(mailOptionsUser);
+		await smtpTransportCustomer.sendMail(mailOptionsCustomer);
 
-		req.session.success = `G'day ${req.body
-			.firstName}, thank you for subscribing to AutoTerritory.co.za newsletter. From now you will be receiving our weeklys updates!`;
+		req.session.success = 
+      `G'day ${req.body.firstName}, 
+      thank you for subscribing to DM-DMZ Guesthouse newsletter. We have sent you an email!`;
 		res.redirect('/');
 	},
-	// GET /finance-calculator
-	async getFinanceCalc (req, res, next) {
-		res.render('finance-calc', {
-			title: 'Finance Calculator - DM-DMZ Guesthouse',
-			description:
-				'Finance Calculator - Calculate Package Finance For Your Desired Package & Get Your Finance Plan Immediately',
-			canonical: '/finance-calculator',
-			robots: 'index, follow',
-			googlebot:
-				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-			page: 'finance-calc',
-			// open graph properties start
-			og_type: 'website',
-			og_site_name: 'DM-DMZ Guesthouse',
-			og_image: '/favicon.ico'
-			// open graph properties end
-		});
-	},
-	// GET /contact-us
-	async getContact (req, res, next) {
-		res.render('contact', {
-			title: 'Contact Us - DM-DMZ Guesthouse',
-			description:
-				'Contact DM-DMZ Guesthouse - Are You A Package Dealer Or A Package Buyer And You Have A Query? Feel Free To Contact Us Today',
-			canonical: '/contact-us',
-			robots: 'index, follow',
-			googlebot:
-				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-			page: 'contact',
-			// open graph properties start
-			og_type: 'website',
-			og_site_name: 'DM-DMZ Guesthouse',
-			og_image: '/favicon.ico'
-			// open graph properties end
-		});
-	},
+	
 	// POST /contact-us
 	async postContact (req, res, next) {
 		// send DM-DMZ Guesthouse an email
 		const contactData = `
-		  	<h1>New Enquiry From Contact Us</h1>
-		  	<h2>User Details:</h2>
+		  	<h1>New Customer Enquiry From DM-DMZ Website</h1>
+		  	<h2>Customer Details:</h2>
 		  	<ul>
 			    <li>Name: <b>${req.body.name}</b></li>
 			    <li>Email: <b>${req.body.email}</b></li>
@@ -179,16 +147,16 @@ module.exports = {
 
 				<p>Regards,<br>DM-DMZ Guesthouse Contact Team</p>
 
-				<p><small><a href="https://www.autoterritory.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.autoterritory.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.autoterritory.co.za/contact-us">Contact Us</a></small></p>
+				<p><small><a href="https://www.dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
 			`;
 
-		// email sender auto territory
+		// email sender dmz guesthouse
 		let smtpTransport = nodemailer.createTransport({
 			host: 'serv28.registerdomain.co.za',
 			port: 465,
 			secure: true,
 			auth: {
-				user: 'contact@autoterritory.co.za',
+				user: 'contact@dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
 			},
 			tls: {
@@ -202,7 +170,7 @@ module.exports = {
 			port: 465,
 			secure: true,
 			auth: {
-				user: 'contact@autoterritory.co.za',
+				user: 'contact@dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
 			},
 			tls: {
@@ -210,10 +178,10 @@ module.exports = {
 			}
 		});
 
-		// email options auto territory
+		// email options dmz guesthouse
 		const mailOptions = {
-			from: '"Contact Us - DM-DMZ Guesthouse" <contact@autoterritory.co.za>',
-			to: 'contact@autoterritory.co.za',
+			from: '"Contact Us - DM-DMZ Guesthouse" <contact@dmzguesthouse.co.za>',
+			to: 'contact@dmzguesthouse.co.za',
 			subject: 'New Contact Us Enquiry',
 			html: contactData
 		};
@@ -221,7 +189,7 @@ module.exports = {
 		// email options user
 		const mailOptionsUser = {
 			from:
-				'"DM-DMZ Guesthouse - Contact Us Team" <contact@autoterritory.co.za>',
+				'"DM-DMZ Guesthouse - Contact Us Team" <contact@dmzguesthouse.co.za>',
 			to: req.body.email,
 			subject: 'Contact Enquiry Recieved',
 			html: contactDataUser
