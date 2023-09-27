@@ -7,8 +7,6 @@ const {
   postContact,
   getBooking,
   postBooking,
-	getAbout,
-	getCareers,
 	getSiteMap,
 	getTerms,
 	getDisclaimer,
@@ -18,7 +16,6 @@ const {
 /* GET / - home page. */
 router.get(
 	'/',
-	asyncErrorHandler(searchAndFilterCars),
 	asyncErrorHandler(landingPage)
 );
 
@@ -33,12 +30,6 @@ router.get('/booking', asyncErrorHandler(getBooking));
 
 /* POST /booking */
 router.post('/booking', asyncErrorHandler(postBooking));
-
-/* GET /about */
-router.get('/about-us', asyncErrorHandler(getAbout));
-
-/* GET /careers */
-router.get('/careers', asyncErrorHandler(getCareers));
 
 // Website Laws
 // ************

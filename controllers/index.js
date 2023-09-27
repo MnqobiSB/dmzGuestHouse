@@ -135,7 +135,7 @@ module.exports = {
 	  	`;
 		// send user an email
 		const contactDataUser = `
-				<img src="https://res.cloudinary.com/mnqobi-digital-solutions/image/upload/v1626865504/logos/logo_yluhlm.png" width="150"/>
+				<img src="" width="150"/>
 
 		  	<h1>Thank you for contacting DM-DMZ Guesthouse!</h1>
 
@@ -145,7 +145,7 @@ module.exports = {
 
 		  	<p>A reply will be sent to you as soon as your enquiry has been reviewed.</p>
 
-				<p>Regards,<br>DM-DMZ Guesthouse Contact Team</p>
+				<p>Happy Vacations,<br>DM-DMZ Guesthouse Contact Team</p>
 
 				<p><small><a href="https://www.dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
 			`;
@@ -182,7 +182,7 @@ module.exports = {
 		const mailOptions = {
 			from: '"Contact Us - DM-DMZ Guesthouse" <contact@dmzguesthouse.co.za>',
 			to: 'contact@dmzguesthouse.co.za',
-			subject: 'New Contact Us Enquiry',
+			subject: 'New Customer Enquiry',
 			html: contactData
 		};
 
@@ -191,7 +191,7 @@ module.exports = {
 			from:
 				'"DM-DMZ Guesthouse - Contact Us Team" <contact@dmzguesthouse.co.za>',
 			to: req.body.email,
-			subject: 'Contact Enquiry Recieved',
+			subject: 'Enquiry Recieved - DM-DMZ Gusethouse',
 			html: contactDataUser
 		};
 
@@ -200,107 +200,28 @@ module.exports = {
 		await smtpTransportUser.sendMail(mailOptionsUser);
 
 		req.session.success = `G'day ${req.body
-			.name}, your enquiry has been successfully sent, a response will be sent to you soon!`;
-		res.redirect('/contact-us');
+			.name}, your enquiry has been sent successfully!`;
+		res.redirect('/');
 	},
-	// GET /sell-package
-	async getSellPackage (req, res, next) {
-		res.render('sell-package', {
-			title: 'Advertise A Package - DM-DMZ Guesthouse',
-			description:
-				'Advertise A Package On DM-DMZ Guesthouse - Are You A Package Dealer? Check Out Our Affordable Packages And Advertise Your Packages',
-			canonical: '/sell-package',
-			robots: 'index, follow',
-			googlebot:
-				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-			page: 'sell-package',
-			// open graph properties start
-			og_type: 'website',
-			og_site_name: 'DM-DMZ Guesthouse',
-			og_image: '/favicon.ico'
-			// open graph properties end
-		});
-	},
-	// GET /private-seller
-	async getSellPackagePrivate (req, res, next) {
-		res.render('private-seller', {
-			title: 'Private Seller - DM-DMZ Guesthouse',
-			description:
-				'Individual Package Seller On DM-DMZ Guesthouse - Are You Looking To Sell Or Trade-In Your Vehicle? Advertise Your Vehicle To Our Wide Range Of Dealership Partners',
-			canonical: '/private-seller',
-			robots: 'index, follow',
-			googlebot:
-				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-			page: 'private-seller',
-			// open graph properties start
-			og_type: 'website',
-			og_site_name: 'DM-DMZ Guesthouse',
-			og_image: '/favicon.ico'
-			// open graph properties end
-		});
-	},
-	// GET /about-us
-	async getAbout (req, res, next) {
-		res.render('about', {
-			title: 'About Us - DM-DMZ Guesthouse',
-			description:
-				'About DM-DMZ Guesthouse - We Provide Online Package Searchers & Package Lovers With The Best Packages For Sale Deals, And Other Motoring Services In South Africa',
-			canonical: '/about-us',
-			robots: 'index, follow',
-			googlebot:
-				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-			page: 'about',
-			// open graph properties start
-			og_type: 'website',
-			og_site_name: 'DM-DMZ Guesthouse',
-			og_image: '/favicon.ico'
-			// open graph properties end
-		});
-	},
-	// GET /packageeers
-	async getPackageeers (req, res, next) {
-		res.render('packageeers', {
-			title: 'Packageeers - DM-DMZ Guesthouse',
-			description:
-				'Packageeers At DM-DMZ Guesthouse - Work At DM-DMZ Guesthouse. Check Out Our Latest Job Posts & Apply Today',
-			canonical: '/packageeers',
-			robots: 'index, follow',
-			googlebot:
-				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-			page: 'packageeers',
-			// open graph properties start
-			og_type: 'website',
-			og_site_name: 'DM-DMZ Guesthouse',
-			og_image: '/favicon.ico'
-			// open graph properties end
-		});
-	},
-	// GET /site-map
-	async getSiteMap (req, res, next) {
-		// find all packages
-		let packages = await Package.find({}).sort({ _id: -1 });
-		// find all dealerships
-		let dealers = await User.find({}).sort({ _id: -1 });
-		// find all posts
-		let posts = await Package.find({}).sort({ _id: -1 });
 
-		res.render('site-map', {
-			title: 'Site Map - DM-DMZ Guesthouse',
-			description: 'DM-DMZ Guesthouse Site Map',
-			canonical: '/site-map',
-			robots: 'noindex, nofollow',
-			googlebot: 'noindex, nofollow',
-			page: 'site-map',
+  // GET /booking
+	async getBooking (req, res, next) {
+		res.render('booking', {
+			title: 'Booking - DM-DMZ Guesthouse',
+			description: 'DM-DMZ Guesthouse Bookings',
+			canonical: '/booking',
+			robots: 'index, follow',
+			googlebot:
+				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+			page: 'booking',
 			// open graph properties start
 			og_type: 'website',
 			og_site_name: 'DM-DMZ Guesthouse',
-			og_image: '/favicon.ico',
+			og_image: '/favicon.ico'
 			// open graph properties end
-			packages,
-			dealers,
-			posts
 		});
 	},
+
 	// GET /terms-of-service
 	async getTerms (req, res, next) {
 		res.render('terms', {
@@ -317,6 +238,93 @@ module.exports = {
 			// open graph properties end
 		});
 	},
+
+  // POST /booking
+	async postBooking (req, res, next) {
+		// send DM-DMZ Guesthouse an email
+		const contactData = `
+		  	<h1>New Customer Enquiry From DM-DMZ Website</h1>
+		  	<h2>Customer Details:</h2>
+		  	<ul>
+			    <li>Name: <b>${req.body.name}</b></li>
+			    <li>Email: <b>${req.body.email}</b></li>
+			    <li>Contact Nr: <b>${req.body.contactNr}</b></li>
+			    <li>Subject: <b>${req.body.subject}</b></li>
+		  	</ul>  
+		  	<h3>Message</h3>
+		  	<p>${req.body.message}</p>
+	  	`;
+		// send user an email
+		const contactDataUser = `
+				<img src="" width="150"/>
+
+		  	<h1>Thank you for contacting DM-DMZ Guesthouse!</h1>
+
+		  	<p>Hello ${req.body.name}!,</p>
+
+		  	<p><b>We have received your enquiry. Do not reply to this message!</b></p>
+
+		  	<p>A reply will be sent to you as soon as your enquiry has been reviewed.</p>
+
+				<p>Happy Vacations,<br>DM-DMZ Guesthouse Contact Team</p>
+
+				<p><small><a href="https://www.dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
+			`;
+
+		// email sender dmz guesthouse
+		let smtpTransport = nodemailer.createTransport({
+			host: 'serv28.registerdomain.co.za',
+			port: 465,
+			secure: true,
+			auth: {
+				user: 'booking@dmzguesthouse.co.za',
+				pass: process.env.GMAILPW
+			},
+			tls: {
+				rejectUnauthorized: false
+			}
+		});
+
+		// email sender user
+		let smtpTransportUser = nodemailer.createTransport({
+			host: 'serv28.registerdomain.co.za',
+			port: 465,
+			secure: true,
+			auth: {
+				user: 'booking@dmzguesthouse.co.za',
+				pass: process.env.GMAILPW
+			},
+			tls: {
+				rejectUnauthorized: false
+			}
+		});
+
+		// email options dmz guesthouse
+		const mailOptions = {
+			from: '"Contact Us - DM-DMZ Guesthouse" <contact@dmzguesthouse.co.za>',
+			to: 'booking@dmzguesthouse.co.za',
+			subject: 'New Customer Enquiry',
+			html: contactData
+		};
+
+		// email options user
+		const mailOptionsUser = {
+			from:
+				'"DM-DMZ Guesthouse - Bookings" <booking@dmzguesthouse.co.za>',
+			to: req.body.email,
+			subject: 'Booking Recieved - DM-DMZ Gusethouse',
+			html: contactDataUser
+		};
+
+		await smtpTransport.sendMail(mailOptions, mailOptionsUser);
+
+		await smtpTransportUser.sendMail(mailOptionsUser);
+
+		req.session.success = `G'day ${req.body
+			.name}, your Booking has been successfully received! An Email has been sent to you.`;
+		res.redirect('/booking');
+	},
+
 	// GET /legal-disclaimer
 	async getDisclaimer (req, res, next) {
 		res.render('disclaimer', {
@@ -333,6 +341,7 @@ module.exports = {
 			// open graph properties end
 		});
 	},
+
 	// GET /privacy-policy
 	async getPrivacy (req, res, next) {
 		res.render('privacy', {
@@ -347,6 +356,27 @@ module.exports = {
 			og_site_name: 'DM-DMZ Guesthouse',
 			og_image: '/favicon.ico'
 			// open graph properties end
+		});
+	},
+  
+  // GET /site-map
+	async getSiteMap (req, res, next) {
+		// find all packages
+		let packages = await Package.find({}).sort({ _id: -1 });
+
+		res.render('site-map', {
+			title: 'Site Map - DM-DMZ Guesthouse',
+			description: 'DM-DMZ Guesthouse Site Map',
+			canonical: '/site-map',
+			robots: 'noindex, nofollow',
+			googlebot: 'noindex, nofollow',
+			page: 'site-map',
+			// open graph properties start
+			og_type: 'website',
+			og_site_name: 'DM-DMZ Guesthouse',
+			og_image: '/favicon.ico',
+			// open graph properties end
+			packages
 		});
 	}
 };
