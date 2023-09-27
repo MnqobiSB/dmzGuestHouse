@@ -33,7 +33,7 @@ const PackageSchema = new Schema(
 				public_id: String
 			}
 		],
-		mainPackage: {
+		featuredPackage: {
 			type: Boolean,
 			default: false
 		},
@@ -41,7 +41,11 @@ const PackageSchema = new Schema(
 			type: Boolean,
 			default: false
 		},
-		
+		body: {
+			type: String,
+			trim: true,
+			required: true
+		},
 		author: {
 			type: Schema.Types.ObjectId,
 			ref: 'User'
