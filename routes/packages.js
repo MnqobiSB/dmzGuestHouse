@@ -3,7 +3,7 @@ const router = express.Router();
 const multer = require('multer');
 const { storage } = require('../cloudinary');
 const upload = multer({ storage });
-const { asyncErrorHandler, searchAndFilterPackages } = require('../middleware');
+const { asyncErrorHandler} = require('../middleware');
 const { isLoggedIn } = require('../middleware/users');
 const {
 	packageIndex,
@@ -18,7 +18,6 @@ const {
 /* GET packages Index /packages */
 router.get(
 	'/',
-	asyncErrorHandler(searchAndFilterPackages),
 	asyncErrorHandler(packageIndex)
 );
 

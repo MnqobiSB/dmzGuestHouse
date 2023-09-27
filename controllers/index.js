@@ -12,7 +12,7 @@ module.exports = {
 			title:
 				'DM-DMZ Guesthouse - The best choice accommodation',
 			description:
-				'DM-DMZ Guesthouse - We are the best choice accomodation in & around Clarens, Free State, South Africa. We provide quality accommodation services to our customers.',
+				'DM-DMZ Guesthouse - Get the best choice accomodation in & around Clarens, Free State, South Africa. We provide quality accommodation services to our customers.',
 			canonical: '/',
 			robots: 'index, follow',
 			googlebot:
