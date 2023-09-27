@@ -14,9 +14,7 @@ const {
 	getForgotPw,
 	putForgotPw,
 	getReset,
-	putReset,
-	adminIndex,
-	adminShow
+	putReset
 } = require('../controllers/users');
 const {
 	asyncErrorHandler
@@ -67,15 +65,5 @@ router.get('/reset/:token', asyncErrorHandler(getReset));
 
 /* PUT /reset/:token */
 router.put('/reset/:token', asyncErrorHandler(putReset));
-
-/* GET admins Index /admins */
-router.get(
-	'/', asyncErrorHandler(adminIndex)
-);
-
-/* GET admins show /admins/:id */
-router.get(
-	'/:slug', asyncErrorHandler(adminShow)
-);
 
 module.exports = router;
