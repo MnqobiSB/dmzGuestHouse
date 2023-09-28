@@ -1,0 +1,25 @@
+{
+	"lang": "en",
+	"name": "Auto Territory",
+	"apple-mobile-web-app-title": "Auto Territory",
+	"short_name": "Auto-Territory",
+	"description": "We Provide Car Searchers With The Best Online Car Offers Available In South Africa",
+	"icons": [
+		{
+			"src": "/iconx/pwa-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/iconx/pwa-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"scope": "/",
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "any",
+	"background_color": "#f7f7f7",
+	"theme_color": "#ffea17"
+}

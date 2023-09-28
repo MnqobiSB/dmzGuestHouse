@@ -1,0 +1,202 @@
+.marketing {
+	&__card {
+		text-align: center;
+		&--text {
+			margin-right: .75rem;
+			margin-left: .75rem;
+		}
+		&:not(:last-child) {
+			@media only screen and (max-width: $bp-smallest) {
+				margin-bottom: 3.6rem;
+			}
+		}
+	}
+	&__icon {
+		width: 8rem;
+		height: 8rem;
+		fill: $color-primary;
+		background-color: $color-grey-dark-3;
+		padding: .8rem;
+		border-radius: .4rem;
+		margin-bottom: .8rem;
+		// @media only screen and (max-width: $bp-medium) {
+		// 	width: 7rem;
+		// 	height: 7rem;
+		// }
+	}
+}
+
+#newsReviews {
+	background-color: $color-grey-light-1;
+}
+
+.newsReviews {
+	&__hr {
+		margin: 3.2rem 0;
+		@media only screen and (max-width: $bp-medium) {
+			margin: 1.6rem 0;
+		}
+	}
+}
+
+.main-blog {
+	&__img {
+		width: 100%;
+		object-fit: cover;
+
+		@media only screen and (max-width: $bp-ipadpro) {
+			height: 26rem;
+		}
+		@media only screen and (max-width: $bp-small) {
+			height: 22rem;
+		}
+		@media only screen and (max-width: $bp-smallest) {
+			height: 38rem;
+		}
+		@media only screen and (max-width: $bp-iphoneplus) {
+			height: 30rem;
+		}
+		@media only screen and (max-width: $bp-iphonex) {
+			height: 26rem;
+		}
+		@media only screen and (max-width: $bp-xxsmall) {
+			height: 22rem;
+		}
+	}
+}
+
+.news-blog {
+	&__img {
+		width: 100%;
+		object-fit: cover;
+		@media only screen and (max-width: $bp-ipadpro) {
+			height: 18rem;
+		}
+		@media only screen and (max-width: $bp-small) {
+			height: 14rem;
+		}
+		@media only screen and (max-width: $bp-smallest) {
+			height: 38rem;
+		}
+		@media only screen and (max-width: $bp-iphoneplus) {
+			height: 30rem;
+		}
+		@media only screen and (max-width: $bp-iphonex) {
+			height: 26rem;
+		}
+		@media only screen and (max-width: $bp-xxsmall) {
+			height: 22rem;
+		}
+	}
+}
+
+.launches-blog {
+	&__card-body {
+		@media only screen and (max-width: $bp-small) {
+			padding: 1rem;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		object-fit: cover;
+		@media only screen and (max-width: $bp-ipadpro) {
+			height: 14rem;
+		}
+		@media only screen and (max-width: $bp-small) {
+			height: 12rem;
+		}
+		@media only screen and (max-width: $bp-smallest) {
+			height: 16rem;
+		}
+		@media only screen and (max-width: $bp-iphoneplus) {
+			height: 16rem;
+		}
+		// @media only screen and (max-width: $bp-iphonex) {
+		// 	height: 26rem;
+		// }
+		@media only screen and (max-width: $bp-xxsmall) {
+			height: 14rem;
+		}
+	}
+
+	&__title {
+		margin-bottom: .8rem;
+	}
+
+	&__body {
+		& p {
+			margin-bottom: 0;
+			font-size: 1.4rem;
+		}
+		@media only screen and (max-width: $bp-large) {
+			display: none;
+		}
+	}
+}
+
+.news-blog,
+.launches-blog {
+	padding-right: 0;
+	padding-left: 0;
+	@media only screen and (max-width: $bp-smallest) {
+		padding-right: 1.5rem;
+		padding-left: 1.5rem;
+	}
+}
+
+.brandBodyFilters {
+	&__left {
+		border-left: 2px solid $color-primary;
+	}
+
+	&__right {
+		border-left: 2px solid $color-grey-dark-3;
+	}
+
+	&__links {
+		&:link,
+		&:visited {
+			color: $color-grey-dark-3;
+			text-decoration: none;
+			padding: .2rem;
+			border-radius: .2rem;
+			transition: all .2s;
+		}
+
+		&--brand {
+			&:hover,
+			&:active {
+				background-color: $color-primary;
+			}
+		}
+
+		&--body {
+			&:hover,
+			&:active {
+				background-color: $color-secondary;
+				color: $color-grey-light-1;
+			}
+		}
+	}
+}
+
+.subscribe {
+	margin-bottom: 0;
+
+	&__sub-heading {
+		font-size: $h6-font-size;
+	}
+
+	&__form-row {
+		margin-bottom: 0;
+	}
+
+	&__input {
+		&:not(:last-child) {
+			@media only screen and (max-width: $bp-medium) {
+				margin-bottom: .8rem;
+			}
+		}
+	}
+}

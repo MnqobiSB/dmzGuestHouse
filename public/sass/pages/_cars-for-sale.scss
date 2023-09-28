@@ -1,0 +1,15 @@
+#cars {
+	padding: 0;
+}
+.cars {
+	&__filters {
+		background-color: $color-secondary;
+		color: $color-grey-light-1;
+		padding: .2rem;
+	}
+
+	&__results {
+		text-align: right;
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,68 @@
+// Colors
+.color-primary {
+	color: $color-primary;
+}
+
+.color-secondary {
+	color: $color-secondary;
+}
+
+.color-red {
+	color: $color-red;
+}
+
+// font-weight
+.text-bold {
+	font-weight: bold;
+}
+
+// font-style
+.text-italic {
+	font-style: italic;
+}
+
+// .lead
+.lead {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+// navbar=active
+.navbar-active {
+	color: $color-primary !important;
+	background-color: rgb(65, 65, 65);
+}
+
+// margin-top
+.mt-medium {
+	margin-top: 3.2rem;
+}
+
+.mt-small {
+	margin-top: 1.6rem;
+}
+
+.mt-xsmall {
+	margin-top: .8rem;
+}
+
+// margin-bottom
+.mb-large {
+	margin-bottom: 5rem;
+}
+
+.mb-medium {
+	margin-bottom: 3.2rem;
+}
+
+.mb-small {
+	margin-bottom: 1.6rem;
+}
+
+.mb-xsmall {
+	margin-bottom: .8rem;
+}
+
+.mb-xxsmall {
+	margin-bottom: .6rem;
+}

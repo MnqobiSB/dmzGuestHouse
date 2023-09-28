@@ -1,0 +1,77 @@
+/* Position the image container (needed to position the left and right arrows) */
+.car__img-slider {
+	position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+	cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	background-color: $color-grey-dark-3;
+	color: #f2f2f2;
+	font-size: 1.2rem;
+	padding: .4rem 1.2rem;
+	margin: .3rem .3rem;
+	position: absolute;
+	top: 0;
+	border-radius: .2rem;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Six columns side by side */
+.column {
+	float: left;
+	width: 12.5%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+	opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+	opacity: 1;
+}

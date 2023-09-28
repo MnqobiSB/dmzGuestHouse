@@ -1,0 +1,121 @@
+.btn {
+	&__primary {
+		&,
+		&:link,
+		&:visited {
+			background-color: $color-primary;
+			color: $color-black;
+			font-size: inherit;
+			padding: .8rem 1.6rem;
+			font-weight: bold;
+			transition: all .2s;
+			border-radius: .2rem;
+			border: none;
+			cursor: pointer;
+		}
+
+		&:hover {
+			box-shadow: 0 1rem 2rem rgba($color-black, .2);
+			background-color: $color-primary-dark;
+		}
+
+		/* * click-state */
+		&:active,
+		&:focus {
+			transform: translateY(1px);
+			box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+		}
+	}
+
+	&__secondary {
+		&,
+		&:link,
+		&:visited {
+			background-color: $color-secondary-light;
+			color: $color-grey-light-1;
+			font-size: inherit;
+			padding: .8rem 1.6rem;
+			font-weight: bold;
+			transition: all .2s;
+			border-radius: .2rem;
+			border: none;
+			cursor: pointer;
+		}
+
+		&:hover {
+			box-shadow: 0 1rem 2rem rgba($color-black, .2);
+			background-color: $color-secondary-dark;
+			color: $color-grey-light-1 !important;
+		}
+
+		/* * click-state */
+		&:active,
+		&:focus {
+			transform: translateY(1px);
+			box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+		}
+	}
+
+	&__tertiary {
+		&,
+		&:link,
+		&:visited {
+			background-color: $color-grey-dark-3;
+			color: $color-primary;
+			font-size: inherit;
+			padding: .8rem 1.6rem;
+			font-weight: bold;
+			transition: all .2s;
+			border-radius: .2rem;
+			border: none;
+			cursor: pointer;
+		}
+
+		&:hover {
+			box-shadow: 0 1rem 2rem rgba($color-black, .2);
+			background-color: $color-black;
+			color: $color-primary !important;
+		}
+
+		/* * click-state */
+		&:active,
+		&:focus {
+			transform: translateY(1px);
+			box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+		}
+	}
+
+	&__red {
+		&,
+		&:link,
+		&:visited {
+			background-color: $color-red-light;
+			color: $color-grey-light-1;
+			font-size: inherit;
+			padding: .8rem 1.6rem;
+			font-weight: bold;
+			transition: all .2s;
+			border-radius: .2rem;
+			border: none;
+			cursor: pointer;
+		}
+
+		&:hover {
+			box-shadow: 0 1rem 2rem rgba($color-black, .2);
+			background-color: $color-red;
+			color: $color-grey-light-1 !important;
+		}
+
+		/* * click-state */
+		&:active,
+		&:focus {
+			transform: translateY(1px);
+			box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+		}
+	}
+
+	&__lg {
+		font-size: $default-font-size !important;
+		padding: 1.6rem 2.4rem !important;
+	}
+}

@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Mnqobi -- Lead Developer -- @MnqobiSB
+
+# THANKS
+
+    Credit: unsplash.com photographers
+    Story Set Illustrations - storyset.com
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, JavaScript, Bootstrap 4, NodeJS, Express
+    MongoDB, jQuery, Modernizr, Normalize.css, Cloudinary

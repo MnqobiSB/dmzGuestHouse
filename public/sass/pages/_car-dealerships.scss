@@ -1,0 +1,32 @@
+#dealers {
+	padding: 0;
+}
+
+.dealers {
+	&__card--img {
+		width: 100%;
+		object-fit: cover;
+
+		@media only screen and (max-width: $bp-small) {
+			height: 14rem;
+		}
+		@media only screen and (max-width: $bp-smallest) {
+			height: 14rem;
+		}
+		@media only screen and (max-width: $bp-iphoneplus) {
+			height: 14rem;
+		}
+		// @media only screen and (max-width: $bp-iphonex) {
+		// 	height: 30rem;
+		// }
+		// @media only screen and (max-width: $bp-xxsmall) {
+		// 	height: 26rem;
+		// }
+
+		&__title {
+			@media only screen and (max-width: $bp-xxsmall) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}

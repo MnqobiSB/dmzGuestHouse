@@ -1,0 +1,58 @@
+// * COLORS
+$color-primary: #ffea17;
+$color-primary-light: #ffea17;
+$color-primary-dark: #e2d115;
+$color-primary-middle: #e0dd0c;
+
+$color-secondary: #01751a;
+$color-secondary-light: #01751a;
+$color-secondary-dark: #005c05;
+$color-secondary-middle: #237f52;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eeeeee;
+
+$color-grey-dark-1: #777777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333333;
+
+$color-white: #ffffff;
+$color-black: #141414;
+
+$color-red: #e20000;
+$color-red-light: #ee0000;
+
+//! FONT-FAMILY
+$primary-font-family: 'Montserrat', sans-serif !important;
+$heading-font-family: 'Oswald', sans-serif !important;
+$numbers-font-family: 'Raleway', sans-serif !important;
+$blogHeading-font-family: 'Merriweather', serif !important;
+
+//! FONT-SIZES
+$default-font-size: 1.6rem;
+$h1-font-size: 4rem;
+$h2-font-size: 3.4rem;
+$h3-font-size: 3rem;
+$h4-font-size: 2.6rem;
+$h5-font-size: 2.2rem;
+$h6-font-size: 1.8rem;
+$small-font-size: 1.4rem;
+
+//! FONT-WEIGHT
+$default-font-weight: 400;
+$thin-font-weight: 300;
+$h1-font-weight: 600;
+$h2-font-weight: 500;
+$h3-font-weight: 450;
+$h4-font-weight: 400;
+
+//! RESPONSIVE-BREAKPOINTS
+$bp-largest: 85.38em; // 1366px / 16px
+$bp-large: 75em; // 1200px / 16px
+$bp-ipadpro: 64em; // 1024px / 16px
+$bp-medium: 62em; // 992px / 16px
+$bp-small: 48em; // 768px / 16px
+$bp-smallest: 33.75em; // 540px / 16px
+$bp-iphoneplus: 25.875em; // 414px / 16px
+$bp-iphonex: 23.4375em; // 375px / 16px
+$bp-xxsmall: 20em; // 320px / 16px

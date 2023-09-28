@@ -1,0 +1,126 @@
+#blog {
+	padding: 0;
+}
+
+.blog {
+	&__img {
+		width: 100%;
+		height: 18rem;
+		object-fit: cover;
+
+		@media only screen and (max-width: $bp-small) {
+			height: 16rem;
+		}
+	}
+
+	&__card-body {
+		@media only screen and (max-width: $bp-small) {
+			padding: .8rem;
+		}
+	}
+
+	&__title {
+		@media only screen and (max-width: $bp-small) {
+			font-size: 1.6rem;
+		}
+		@media only screen and (max-width: $bp-iphonex) {
+			font-size: .8rem;
+			margin-bottom: .4rem;
+		}
+	}
+
+	&__text-container {
+		@include verticalCenter;
+	}
+
+	&__icon {
+		width: 1.6rem;
+		height: 1.6rem;
+		margin-right: .6rem;
+		fill: $color-grey-dark-3;
+		margin-top: -.2rem;
+
+		&-read {
+			width: 2rem;
+			height: 2rem;
+			margin-left: -.25rem;
+		}
+	}
+
+	&__link {
+		&-container {
+			margin-top: .8rem;
+
+			@media only screen and (max-width: $bp-small) {
+				margin-top: .2rem;
+			}
+		}
+		&:link,
+		&:visited {
+			color: $color-secondary;
+			text-decoration: none;
+			font-weight: bold;
+			margin-top: auto;
+		}
+	}
+
+	&__iphonex-d-none {
+		@media only screen and (max-width: $bp-iphonex) {
+			display: none;
+		}
+	}
+
+	&__xxsmall-d-none {
+		@media only screen and (max-width: $bp-xxsmall) {
+			display: none;
+		}
+	}
+}
+
+.featured-blog {
+	&__img {
+		width: 100%;
+		height: 14rem;
+		object-fit: cover;
+
+		@media only screen and (max-width: $bp-small) {
+			height: 12rem;
+		}
+		@media only screen and (max-width: $bp-smallest) {
+			height: 14rem;
+		}
+
+		@media only screen and (max-width: $bp-iphonex) {
+			height: 14rem;
+		}
+		@media only screen and (max-width: $bp-xxsmall) {
+			height: 12rem;
+		}
+	}
+
+	&__icon {
+		width: 1.2rem;
+		height: 1.2rem;
+		margin-right: .6rem;
+		fill: $color-grey-dark-3;
+		margin-top: -.2rem;
+
+		&-read {
+			width: 2rem;
+			height: 2rem;
+			margin-left: -.25rem;
+		}
+	}
+
+	&__text {
+		font-size: 1.2rem;
+	}
+
+	&__link-container {
+		margin-top: 0;
+	}
+
+	&__link {
+		font-size: 1.4rem;
+	}
+}

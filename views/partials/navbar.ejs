@@ -1,0 +1,271 @@
+<nav 
+	id="mainNavbar" 
+	class="navbar navbar-dark navbar-expand-xl fixed-top"
+	aria-label="site"
+>
+	<!-- skip-link -->
+	<a class="sr-only text-light" href="#main">
+		Skip to main
+	</a>
+	<!-- skip-link -->
+
+	<div class="container">
+		<!-- logo -->
+		<a class="navbar-brand" href="/">
+			<img 
+				src="/images/logo.svg"
+				class="navbar__logo"
+				alt="Auto Territory Logo" 
+				title="Auto Territory"
+				loading="eager"
+				width="220"
+				height="51.18"
+			/>
+			<span class="sr-only"><%= typeof page !== 'undefined' && page === 'home' ? '(current)' : '' %></span>
+		</a>
+		<!-- logo -->
+
+		<!-- navbar toggler -->
+		<button class="navbar-toggler" type="button" data-toggle="offcanvas">
+			<span class="navbar-toggler-icon"></span>
+			<span class="sr-only">navbar toggler</span>
+		</button>
+		<!-- navbar toggler -->
+
+		<!-- main navbar -->
+		<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+				<!-- cars for sale link -->
+				<li class="nav-item">
+					<a 
+						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'all-cars' ? 'navbar-active' : '' %>" 
+						href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D="
+					>
+						Cars For Sale
+						<span class="sr-only">
+							<%= typeof page !== 'undefined' && page === 'all-cars' ? '(current)' : '' %>
+						</span>
+					</a>
+				</li>
+				<!-- cars for sale link -->
+
+				<!-- car dealerships link -->
+				<li class="nav-item">
+					<a 
+						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'all-users' ? 'navbar-active' : '' %>"
+						href="/car-dealerships"
+					>
+						Car Dealerships
+						<span class="sr-only">
+							<%= typeof page !== 'undefined' && page === 'all-users' ? '(current)' : '' %>
+						</span>
+					</a>
+				</li>
+				<!-- car dealerships link -->
+				
+				<!-- car news & reviews dropdown -->
+				<li class="nav-item dropdown">
+					<a 
+						class="nav-link nav__link text-light dropdown-toggle <%= typeof page !== 'undefined' && page === 'all-posts' ? 'navbar-active' : '' %>" 
+						href="#" 
+						id="dropdown01" 
+						data-toggle="dropdown" 
+						aria-haspopup="true" 
+						aria-expanded="false"
+					>
+						Car News & Reviews
+						<span class="sr-only">
+							<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
+						</span>
+					</a>
+
+					<div class="dropdown-menu" aria-labelledby="dropdown01">
+						<a 
+							class="dropdown-item <%= typeof page !== 'undefined' && page === 'all-posts' ? 'navbar-active' : '' %>" 
+							href="/motoring-news-&-reviews"
+						>
+							Latest News & Reviews
+							<span class="sr-only">
+								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
+							</span>
+						</a>
+						<div class="dropdown-divider"></div>
+						<a 
+							class="dropdown-item" 
+							href="/motoring-news-&-reviews?search=&category%5B%5D=Car+News"
+						>
+							Car News
+							<span class="sr-only">
+								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
+							</span>
+						</a>
+						<div class="dropdown-divider"></div>
+						<a 
+							class="dropdown-item" 
+							href="/motoring-news-&-reviews?search=&category%5B%5D=Car+Launches"
+						>
+							Car Launches
+							<span class="sr-only">
+								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
+							</span>
+						</a>
+						<div class="dropdown-divider"></div>
+						<a 
+							class="dropdown-item" 
+							href="/motoring-news-&-reviews?search=&category%5B%5D=Car+Reviews"
+						>
+							Car Reviews
+							<span class="sr-only">
+								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
+							</span>
+						</a>
+						<div class="dropdown-divider"></div>
+						<a 
+							class="dropdown-item" 
+							href="/motoring-news-&-reviews?search=&category%5B%5D=Car+Opinions"
+						>
+							Car Opinions & Advice
+							<span class="sr-only">
+								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
+							</span>
+						</a>
+						<div class="dropdown-divider"></div>
+						<a 
+							class="dropdown-item" 
+							href="/motoring-news-&-reviews?search=&category%5B%5D=Car+Lifestyles"
+						>
+							Car Lifestyles
+							<span class="sr-only">
+								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
+							</span>
+						</a>
+					</div>
+				</li>
+				<!-- car news & reviews dropdown -->
+
+				<!-- tools and services dropdown -->
+				<li class="nav-item dropdown">
+					<a 
+						class="nav-link nav__link text-light dropdown-toggle <%= typeof page !== 'undefined' && page === 'finance-calc' ? 'navbar-active' : '' %>" 
+						href="/tools&services" 
+						id="dropdown02" 
+						data-toggle="dropdown" 
+						aria-haspopup="true" 
+						aria-expanded="false"
+					>
+						Tools & Services
+						<span class="sr-only">
+							<%= typeof page !== 'undefined' && page === 'finance-calc' ? '(current)' : '' %>
+						</span>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown02">
+						<a 
+							class="dropdown-item <%= typeof page !== 'undefined' && page === 'finance-calc' ? 'navbar-active' : '' %>" 
+							href="/finance-calculator"
+						>
+							Finance Calculator
+							<span class="sr-only">
+								<%= typeof page !== 'undefined' && page === 'finance-calc' ? '(current)' : '' %>
+							</span>
+						</a>
+					</div>
+				</li>
+				<!-- tools and services dropdown -->
+
+				<li class="nav-item">
+					<a 
+						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'contact' ? 'navbar-active' : '' %>" 
+						href="/contact-us"
+					>
+						Contact Us
+						<span class="sr-only">
+							<%= typeof page !== 'undefined' && page === 'contact' ? '(current)' : '' %>
+						</span>
+					</a>
+				</li>
+			</ul>
+			
+			<!-- car dealer admin button -->
+			<% if(!currentUser) { %>
+				<a 
+					class="btn btn__primary navbar__btn" 
+					href="/advertise" 
+					role="button"
+				>
+					Advertise &raquo;
+					<span class="sr-only">
+						<%= typeof page !== 'undefined' && page === 'sell-car' ? '(current)' : '' %>
+					</span>
+				</a>
+			<% } else { %>
+				<div class="btn-group navbar__btn">
+					<button class="btn btn__primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: user">
+							<use xlink:href="/images/symbol-defs.svg#icon-user-circle-o"></use>
+						</svg>
+						<span class="sr-only"><%= currentUser.name %></span>
+					</button>
+					<div class="dropdown-menu dropdown-menu-xl-right">
+						<!-- dealer name -->
+						<a 
+							class="dropdown-item" 
+							href="/car-dealerships/profile"
+						>
+							<%= currentUser.name %>
+						</a>
+						<!-- dealer name -->
+						<div class="dropdown-divider"></div>
+						<!-- add car link -->
+						<a 
+							class="dropdown-item <%= typeof page !== 'undefined' && page === 'cars-new' ? 'navbar-active' : '' %>" 
+							href="/cars-for-sale/add-a-car"
+						>
+							<svg class="dropdown-icon" focusable="false" role="img" aria-label="Placeholder: plus">
+								<use xlink:href="/images/symbol-defs.svg#icon-plus"></use>
+							</svg>
+							<span>Add A Car</span>
+						</a>
+						<!-- add car link -->
+						<div class="dropdown-divider"></div>
+						<!-- add post link -->
+						<% if (currentUser&&currentUser.isAdmin) { %>
+							<a 
+								class="dropdown-item <%= typeof page !== 'undefined' && page === 'new-post' ? 'navbar-active' : '' %>" 
+								href="/motoring-news-&-reviews/add-new-post"
+							>
+								<svg class="dropdown-icon" focusable="false" role="img" aria-label="Placeholder: plus">
+									<use xlink:href="/images/symbol-defs.svg#icon-pencil-square"></use>
+								</svg>
+								<span>Add New Post</span>
+							</a>
+							<div class="dropdown-divider"></div>
+						<% } %>
+						<!-- add post link -->
+
+						<!-- dashboard link -->
+						<a 
+							class="dropdown-item <%= typeof page !== 'undefined' && page === 'profile' ? 'navbar-active' : '' %>" 
+							href="/car-dealerships/profile"
+						>
+							<svg class="dropdown-icon" focusable="false" role="img" aria-label="Placeholder: dashboard">
+								<use xlink:href="/images/symbol-defs.svg#icon-dashboard"></use>
+							</svg>
+							<span>Dashboard</span>
+						</a>
+						<!-- dashboard link -->
+						<div class="dropdown-divider"></div>
+						<!-- sign-out link -->
+						<a class="dropdown-item" href="/car-dealerships/sign-out">
+							<svg class="dropdown-icon" focusable="false" role="img" aria-label="Placeholder: sign-out">
+								<use xlink:href="/images/symbol-defs.svg#icon-sign-out"></use>
+							</svg>
+							<span>Sign Out</span>
+						</a>
+						<!-- sign-out link -->
+					</div>
+				</div>
+			<% } %>
+		</div>
+	</div>
+</nav>
+<!-- main navbar -->

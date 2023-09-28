@@ -1,0 +1,145 @@
+body {
+	font-family: $primary-font-family;
+	font-weight: $default-font-weight;
+	font-size: $default-font-size;
+	line-height: 1.7;
+	color: $color-black;
+}
+
+.heading-primary {
+	font-family: $heading-font-family;
+	font-size: $h1-font-size;
+	font-weight: $h1-font-weight;
+	letter-spacing: .1rem;
+
+	&__sub-heading {
+		font-size: $h5-font-size;
+		margin-bottom: 0;
+		// font-weight: bold;
+		@media only screen and (max-width: $bp-smallest) {
+			display: none;
+		}
+	}
+}
+
+.heading-section {
+	font-family: $heading-font-family;
+	font-size: $h2-font-size;
+	font-weight: $h2-font-weight;
+	letter-spacing: .1rem;
+	text-align: center;
+	margin-bottom: 2.4rem;
+}
+
+.heading-third {
+	font-family: $heading-font-family;
+	font-size: $h3-font-size;
+	font-weight: $h4-font-weight;
+	letter-spacing: .1rem;
+	margin-bottom: 1.6rem;
+	@media only screen and (max-width: $bp-medium) {
+		margin-bottom: .8rem;
+	}
+}
+
+.heading-third__link {
+	&:link,
+	&:visited {
+		color: $color-secondary-light;
+		text-decoration: none;
+	}
+	&:hover,
+	&:active {
+		color: $color-secondary;
+	}
+}
+
+.main-blog__title {
+	font-family: $blogHeading-font-family;
+	font-size: $h5-font-size;
+	font-weight: $h4-font-weight;
+}
+
+.main-blog__link,
+.news-blog__link {
+	&:link,
+	&:visited {
+		color: $color-black;
+		text-decoration: none;
+	}
+	&:hover,
+	&:active {
+		color: $color-secondary;
+	}
+}
+
+.news-blog__title {
+	font-family: $blogHeading-font-family;
+	font-size: $h6-font-size;
+	font-weight: $h4-font-weight;
+}
+
+.launches-blog__title {
+	font-family: $blogHeading-font-family;
+	font-size: $h6-font-size;
+	font-weight: $h4-font-weight;
+
+	@media only screen and (max-width: $bp-small) {
+		font-size: 1.7rem;
+	}
+	@media only screen and (max-width: $bp-smallest) {
+		font-size: $h4-font-size !important;
+	}
+	@media only screen and (max-width: $bp-iphoneplus) {
+		font-size: $h5-font-size !important;
+	}
+	@media only screen and (max-width: $bp-iphonex) {
+		font-size: $h5-font-size !important;
+	}
+	@media only screen and (max-width: $bp-xxsmall) {
+		font-size: 1.8rem !important;
+	}
+}
+
+.news-blog__title {
+	@media only screen and (max-width: $bp-smallest) {
+		font-size: $h5-font-size;
+	}
+}
+
+.news-blog__title.larger {
+	font-size: $h5-font-size;
+}
+
+.news-blog__title.smaller {
+	font-size: 1.7rem;
+}
+
+.page-header__heading {
+	font-family: $heading-font-family;
+	font-size: $h2-font-size;
+	font-weight: $h4-font-weight;
+}
+
+.blog-page__heading {
+	font-family: $blogHeading-font-family;
+	font-size: $h3-font-size;
+	font-weight: $h4-font-weight;
+}
+
+.small__text {
+	font-size: $small-font-size;
+}
+
+.car__price {
+	font-family: $numbers-font-family;
+	font-weight: bold;
+	&-heading {
+		font-size: $h3-font-size;
+		font-family: $heading-font-family;
+		font-weight: normal;
+	}
+	&--sidebar {
+		font-size: $h6-font-size;
+	}
+}

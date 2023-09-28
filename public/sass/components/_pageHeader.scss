@@ -1,0 +1,71 @@
+.breadcrumb {
+	border-radius: 0;
+	background-color: transparent;
+
+	&__nav {
+		margin-top: 7rem;
+		background-color: $color-grey-light-2;
+
+		@media only screen and (max-width: $bp-large) {
+			margin-top: 8rem;
+		}
+	}
+
+	&-item + &-item::before {
+		color: $color-grey-dark-3 !important;
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			color: $color-black;
+			font-size: 1.4rem;
+			text-decoration: none;
+			border-radius: .2rem;
+			padding: .2rem;
+			transition: all .2s;
+		}
+
+		&:hover,
+		&:active {
+			color: $color-primary;
+			background-color: $color-grey-dark-3;
+		}
+	}
+
+	&__active {
+		color: $color-primary;
+		background-color: $color-grey-dark-3;
+		font-weight: bold;
+		padding: .2rem;
+		border-radius: .2rem;
+	}
+}
+
+.page-header {
+	margin-bottom: 1.6rem;
+
+	&__text-box {
+		@include verticalCenter;
+		justify-content: space-between;
+	}
+	&__heading {
+		font-size: $h3-font-size;
+	}
+	&__price {
+		font-family: $heading-font-family;
+		font-size: $h4-font-size;
+		font-weight: $default-font-weight;
+		padding: .4rem 1.6rem;
+		background-color: $color-secondary;
+		color: $color-grey-light-1;
+		width: fit-content;
+		margin-left: auto;
+		border-radius: .2rem;
+
+		@media only screen and (max-width: $bp-large) {
+			margin-left: 0;
+			margin-top: .8rem;
+		}
+	}
+}

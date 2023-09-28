@@ -1,0 +1,111 @@
+.form {
+	&__container {
+		background-color: $color-grey-light-2;
+		padding: 1.6rem;
+		border-radius: .2rem;
+	}
+
+	&-reset {
+		border: 1px solid $color-secondary;
+		border-radius: .2rem;
+		&:link,
+		&:visited {
+			color: $color-secondary;
+			font-weight: bold;
+			margin-bottom: .8rem;
+		}
+	}
+
+	&-required {
+		font-size: 2rem;
+		color: $color-red;
+		font-weight: bold;
+	}
+
+	&-clue {
+		font-size: 1.2rem;
+		color: $color-secondary;
+	}
+
+	&-badge {
+		display: inline-block;
+		margin-left: auto;
+	}
+}
+
+.form-control {
+	font-size: $default-font-size;
+	color: inherit !important;
+	height: auto;
+	padding: .8rem 1rem;
+
+	&:focus {
+		border: .2rem solid $color-secondary;
+		box-shadow: 0 0 5px $color-secondary;
+	}
+
+	&:focus:invalid {
+		border: .2rem solid $color-red;
+		box-shadow: 0 0 5px $color-red;
+	}
+}
+
+.form-check {
+	display: flex;
+	align-items: center;
+	padding: .2rem 0;
+	border-radius: .2rem;
+	&:not(:last-child) {
+		border-bottom: 1px solid $color-grey-light-2;
+	}
+	&-input {
+		top: .6rem;
+		margin-left: .4rem;
+
+		@media only screen and (max-width: $bp-smallest) {
+			top: .4rem;
+			margin-left: .4rem;
+		}
+	}
+	&-label {
+		margin-bottom: 0;
+		margin-left: 2.4rem;
+
+		@media only screen and (max-width: $bp-smallest) {
+			margin-left: 3rem;
+		}
+	}
+}
+
+.sort-form {
+	&__label {
+		margin-right: .8rem;
+	}
+	&__btn {
+		margin-left: .8rem;
+	}
+}
+
+.accordion {
+	&__card-header {
+		background: $color-grey-dark-3;
+		color: $color-grey-light-1;
+	}
+
+	&__heading {
+		margin-bottom: 0;
+	}
+
+	&__btn {
+		font-size: $small-font-size;
+		color: inherit;
+		font-weight: bold;
+		text-decoration: none !important;
+		transition: all .2s;
+
+		&:hover,
+		&:active {
+			color: $color-primary;
+		}
+	}
+}

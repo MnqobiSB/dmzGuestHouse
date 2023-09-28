@@ -1,0 +1,55 @@
+.header {
+	height: 69vh;
+	border-radius: 0 !important;
+	position: relative;
+	margin-bottom: 0;
+
+	background-image: linear-gradient(
+			to right,
+			rgba($color-primary, .99),
+			rgba($color-primary, 0.94)
+		),
+		url(../images/main-bg-img.jpg);
+	background-size: cover;
+	background-position: center;
+
+	@supports (background-attachment: fixed) or (-webkit-background-attachment: fixed) {
+		-webkit-background-attachment: fixed;
+		background-attachment: fixed;
+	}
+
+	@media only screen and (max-width: $bp-ipadpro) {
+		height: 40vh;
+	}
+	@media only screen and (max-width: $bp-medium) {
+		height: 50vh;
+	}
+	@media only screen and (max-width: $bp-smallest) {
+		height: 55vh;
+	}
+	@media only screen and (max-width: $bp-xxsmall) {
+		height: 60vh;
+	}
+
+	&__text-box {
+		@include absCenter;
+		width: 80%;
+		text-align: center;
+		padding-top: 6rem;
+	}
+
+	&__hr {
+		border-top: 1px solid $color-grey-dark-1;
+		margin: 3.2rem 0 3.8rem;
+		@media only screen and (max-width: $bp-medium) {
+			margin: 1.6rem 0 2.2rem;
+		}
+	}
+
+	&__icon {
+		width: 2.4rem;
+		height: 2.4rem;
+		fill: $color-grey-light-1;
+		margin-right: .8rem;
+	}
+}

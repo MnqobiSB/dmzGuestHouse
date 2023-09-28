@@ -1,0 +1,28 @@
+.pagination {
+	margin-bottom: 0;
+	display: flex;
+	align-items: center;
+
+	&__totalPages {
+		margin-right: 1.6rem;
+	}
+}
+
+.page-link {
+	&:link,
+	&:visited {
+		color: $color-grey-dark-3;
+		font-size: $default-font-size;
+		font-weight: bold;
+		text-decoration: none;
+		text-transform: uppercase;
+		border-radius: .2rem;
+		transition: all .2s;
+	}
+
+	&:hover,
+	&:active {
+		color: $color-primary;
+		background-color: rgb(65, 65, 65);
+	}
+}

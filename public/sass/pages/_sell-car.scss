@@ -1,0 +1,42 @@
+.sell-car {
+	&__card {
+		@media only screen and (max-width: $bp-smallest) {
+			margin-bottom: 3.2rem;
+		}
+	}
+
+	&__card-header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&.one {
+			background-color: $color-secondary;
+			color: $color-grey-light-1;
+		}
+		&.two {
+			background-color: $color-primary;
+			color: $color-grey-dark-3;
+		}
+		&.three {
+			background-color: $color-grey-dark-3;
+			color: $color-primary;
+		}
+	}
+
+	&__card--icon {
+		width: 2.4rem;
+		height: 2.4rem;
+		margin-right: .8rem;
+
+		&.one {
+			fill: $color-grey-light-1;
+		}
+		&.two {
+			fill: $color-grey-dark-3;
+		}
+		&.three {
+			fill: $color-primary;
+		}
+	}
+}

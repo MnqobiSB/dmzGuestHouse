@@ -1,0 +1,27 @@
+.blog-post {
+	&__dot {
+		color: $color-secondary;
+		font-size: 1.6rem;
+	}
+
+	&__body img {
+		width: 100% !important;
+		height: auto !important;
+		object-fit: contain !important;
+	}
+
+	&__author-img {
+		width: 100%;
+		object-fit: contain;
+
+		@media only screen and (max-width: $bp-smallest) {
+			height: 10rem;
+		}
+	}
+
+	&__aside-header {
+		@media only screen and (max-width: $bp-smallest) {
+			margin-top: 3.2rem;
+		}
+	}
+}

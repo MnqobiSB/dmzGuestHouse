@@ -1,0 +1,40 @@
+.contact {
+	&__img {
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+		@media only screen and (max-width: $bp-small) {
+			width: 80%;
+		}
+	}
+}
+
+.auto {
+	&__contact--container {
+		background-color: $color-grey-dark-3;
+		border-radius: .2rem;
+		justify-content: center;
+		padding: .4rem 0;
+
+		@media only screen and (max-width: $bp-large) {
+			margin-bottom: .8rem;
+		}
+	}
+
+	&__contact--link {
+		&:link,
+		&:visited {
+			color: $color-grey-light-1;
+		}
+	}
+
+	&__contact--text {
+		color: $color-grey-light-1;
+	}
+
+	&__contact--address {
+		@media only screen and (max-width: $bp-large) {
+			font-size: 1.6rem !important;
+		}
+	}
+}
