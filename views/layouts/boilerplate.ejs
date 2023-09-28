@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-6HX4RGQ1WK"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-6HX4RGQ1WK');
+	</script> -->
+  
+  <title><%= title %></title>
+  
+  <!-- META TAGS -->
+  <meta charset="UTF-8" />
+  <meta name="author" content="Amandla Mnqobi Mzolo" />
+  <meta name="publisher" content="Mnqobi Digital Solutions Pty(Ltd)." />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="<%= description %>" />
+	<meta name="robots" content="<%= robots %>" />
+  <meta name="googlebot" content="<%= googlebot %>" />
+  <meta name="rating" content="Safe For Children" />
+  <meta name="audience" content="Public" />
+  <meta name="Language" content="en" />
+  <meta name="Country" content="ZA" />
+	<!-- <meta name="wot-verification" content="cff1afb2e1e97137ba95" /> -->
+  
+  <!-- SOCIAL MEDIA -->
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="<%= og_type %>" />
+	<meta property="og:title" content="<%= title %>" />
+	<meta property="og:description" content="<%= description %>" />
+	<meta property="og:url" content="https://www.dm-dmzguesthouse.co.za<%= canonical %>" />
+	<meta property="og:image" content="<%= og_image %>" />
+	<!-- <% if (page === 'post-show') { %>
+		<meta property="og:image:secure_url" content="<%= og_image_secure_url %>" />
+		<meta property="og:image:width" content="<%= og_image_width %>" />
+		<meta property="og:image:height" content="<%= og_image_height %>" />
+	<% } %> -->
+	<meta property="og:site_name" content="Auto Territory" />
+	
+	<!-- twitter properties -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="<%= title %>" />
+	<meta name="twitter:description" content="<%= description %>" />
+	<meta name="twitter:image" content="<%= og_image %>" />
+	<meta name="twitter:site" content="@AutoTerritorySA"  />
+  <meta name="twitter:creator" content="@AutoTerritorySA"  />
+  
+  <!-- STRUCTURED DATA -->
+	<script type="application/ld+json">
+		{	
+      [
+			"@context":"http://schema.org",
+			"@type":"WebSite",
+			"@id":"#website",
+			"url":"https://www.dm-dmzguesthouse.co.za/",
+			"name":"DM-DMZ Guesthouse",
+			"sameAs" : [
+			"https://www.facebook.com/dm-dmzguesthouse/",
+			"https://www.instagram.com/dm-dmzguesthouse/",
+			"https://twitter.com/dm-dmzguesthouse",
+			]
+		}
+  </script>
+
+	<meta name="google" content="nositelinkssearchbox" />
+  
+  <!-- SITE DATA -->
+	<link rel="manifest" href="/manifest.webmanifest" />
+	<link rel="text/plain" href="/humans.txt" />
+	<link rel="text/plain" href="/robots.txt" />
+  <link rel="canonical" href="https://www.dm-dmzguesthouse.co.za<%= canonical %>" />
+  
+  <!-- VENDOR STYLESHEETS -->
+	<link rel="stylesheet" href="/stylesheets/vendor/normalize.css" />
+  <link rel="stylesheet" href="/stylesheets/vendor/bootstrap.min.css" />
+  
+  <!-- CUSTOM STYLES -->
+  <link rel='stylesheet' type="text/css" href='/stylesheets/style.css' />
+
+	<!-- GOOGLE FONTS -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- ANIMATE ON SCROLL -->
+	<link rel="text/plain" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- GOOGLE RECAPTURE -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+	<!-- THEME COLOR -->
+	<meta name="theme-color" content="#ffea17" />
+	<meta name="msapplication-TileColor" content="#ffea17" />
+
+	<!-- SHOTCUT ICON -->
+	<link rel="icon" type="image/png" href="/iconx/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/iconx/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/iconx/pwa-192x192.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="/iconx/apple-touch-icon-180x180.png" sizes="180x180">
+	<meta name="msapplication-config" content="/iconx/browserconfig.xml">
+	
+</head>
+
+<body>
+  <!--[if lt IE 9]>
+		<script>
+			document.createElement("article");
+			document.createElement("aside");
+			document.createElement("footer");
+			document.createElement("header");
+			document.createElement("nav");
+			document.createElement("section");
+			document.createElement("time");
+		</script>
+	<![endif]-->
+	
+	<!-- <noscript>
+		<p><strong>This web page requires JavaScript to be enabled.</strong></p>
+		<p>JavaScript is an object-oriented computer programming language
+			commonly used to create interactive effects within web browsers.</p>
+		<p><a href="https://goo.gl/koeeaJ">How to enable JavaScript?</a></p>
+  </noscript> -->
+  
+  <!-- Page BoilerPlate -->
+  <% include ../partials/navbar %>
+  <% include ../partials/flash-messages %>
+  <%- body -%>
+  <% include ../partials/footer %>
+
+  <!-- Modernizer vendor scripts -->
+	<script src="/javascripts/vendor/modernizr-3.7.1.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="/javascripts/vendor/jquery-3.4.1.min.js"><\/script>')
+  </script>
+  
+  <!-- Bootstrap scripts -->
+	<script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous">
+  </script>
+  <script src="/javascripts/vendor/bootstrap.min.js"></script>
+
+  <!-- Local scripts -->
+	<script src="/javascripts/plugins.js"></script>
+	<script src="/javascripts/main.js"></script>
+
+	<!-- car show js -->
+	<% if ( page === 'package-show') { %>
+		<script src="/javascripts/car-show.js"></script>
+	<% } %>
+
+	<!-- AOS -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 200,
+			duration: 1000
+		});
+	</script>
+
+	<!-- CKEditor -->
+	<% if (
+					page === 'new-package'|| 
+					page === 'edit-package'
+	) { %>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.14.1/ckeditor.js"
+			integrity="sha256-bEIQpI72w9NJuIVhTLFUF2/8uxl0u5800r8ddViuv+o="
+			crossorigin="anonymous">
+		</script>
+
+		<script>
+			CKEDITOR.replace('description', {
+				height: 300
+			});
+		</script>
+	<% } %>
+</body>
+</html>
