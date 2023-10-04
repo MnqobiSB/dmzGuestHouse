@@ -13,13 +13,13 @@
 		<!-- logo -->
 		<a class="navbar-brand" href="/">
 			<img 
-				src="/images/logo.svg"
+				src="/images/logo.png"
 				class="navbar__logo"
-				alt="Auto Territory Logo" 
+				alt="DM-DMZ Guesthouse Logo" 
 				title="Auto Territory"
 				loading="eager"
-				width="220"
-				height="51.18"
+				width="200"
+				height="60"
 			/>
 			<span class="sr-only"><%= typeof page !== 'undefined' && page === 'home' ? '(current)' : '' %></span>
 		</a>
@@ -35,143 +35,63 @@
 		<!-- main navbar -->
 		<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
 			<ul class="navbar-nav mr-auto">
-				<!-- cars for sale link -->
+				<!-- home link -->
 				<li class="nav-item">
 					<a 
 						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'all-cars' ? 'navbar-active' : '' %>" 
-						href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D="
+						href="/"
 					>
-						Cars For Sale
+						Home
 						<span class="sr-only">
 							<%= typeof page !== 'undefined' && page === 'all-cars' ? '(current)' : '' %>
 						</span>
 					</a>
 				</li>
-				<!-- cars for sale link -->
+				<!-- home link -->
 
-				<!-- car dealerships link -->
+				<!-- our packages link -->
 				<li class="nav-item">
 					<a 
-						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'all-users' ? 'navbar-active' : '' %>"
-						href="/car-dealerships"
+						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'packages' ? 'navbar-active' : '' %>"
+						href="/packages"
 					>
-						Car Dealerships
+						Our packages
 						<span class="sr-only">
 							<%= typeof page !== 'undefined' && page === 'all-users' ? '(current)' : '' %>
 						</span>
 					</a>
 				</li>
-				<!-- car dealerships link -->
+				<!-- our packages link -->
+
+				<!-- gallery link -->
+				<li class="nav-item">
+					<a 
+						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'packages' ? 'navbar-active' : '' %>"
+						href="/gallery"
+					>
+						Gallery
+						<span class="sr-only">
+							<%= typeof page !== 'undefined' && page === 'all-users' ? '(current)' : '' %>
+						</span>
+					</a>
+				</li>
+				<!-- gallery link -->
+
+				<!-- about us link -->
+				<li class="nav-item">
+					<a 
+						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'packages' ? 'navbar-active' : '' %>"
+						href="/about-us"
+					>
+						About Us
+						<span class="sr-only">
+							<%= typeof page !== 'undefined' && page === 'all-users' ? '(current)' : '' %>
+						</span>
+					</a>
+				</li>
+				<!-- about us link -->
 				
-				<!-- car news & reviews dropdown -->
-				<li class="nav-item dropdown">
-					<a 
-						class="nav-link nav__link text-light dropdown-toggle <%= typeof page !== 'undefined' && page === 'all-posts' ? 'navbar-active' : '' %>" 
-						href="#" 
-						id="dropdown01" 
-						data-toggle="dropdown" 
-						aria-haspopup="true" 
-						aria-expanded="false"
-					>
-						Car News & Reviews
-						<span class="sr-only">
-							<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
-						</span>
-					</a>
-
-					<div class="dropdown-menu" aria-labelledby="dropdown01">
-						<a 
-							class="dropdown-item <%= typeof page !== 'undefined' && page === 'all-posts' ? 'navbar-active' : '' %>" 
-							href="/motoring-news-&-reviews"
-						>
-							Latest News & Reviews
-							<span class="sr-only">
-								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
-							</span>
-						</a>
-						<div class="dropdown-divider"></div>
-						<a 
-							class="dropdown-item" 
-							href="/motoring-news-&-reviews?search=&category%5B%5D=Car+News"
-						>
-							Car News
-							<span class="sr-only">
-								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
-							</span>
-						</a>
-						<div class="dropdown-divider"></div>
-						<a 
-							class="dropdown-item" 
-							href="/motoring-news-&-reviews?search=&category%5B%5D=Car+Launches"
-						>
-							Car Launches
-							<span class="sr-only">
-								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
-							</span>
-						</a>
-						<div class="dropdown-divider"></div>
-						<a 
-							class="dropdown-item" 
-							href="/motoring-news-&-reviews?search=&category%5B%5D=Car+Reviews"
-						>
-							Car Reviews
-							<span class="sr-only">
-								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
-							</span>
-						</a>
-						<div class="dropdown-divider"></div>
-						<a 
-							class="dropdown-item" 
-							href="/motoring-news-&-reviews?search=&category%5B%5D=Car+Opinions"
-						>
-							Car Opinions & Advice
-							<span class="sr-only">
-								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
-							</span>
-						</a>
-						<div class="dropdown-divider"></div>
-						<a 
-							class="dropdown-item" 
-							href="/motoring-news-&-reviews?search=&category%5B%5D=Car+Lifestyles"
-						>
-							Car Lifestyles
-							<span class="sr-only">
-								<%= typeof page !== 'undefined' && page === 'all-posts' ? '(current)' : '' %>
-							</span>
-						</a>
-					</div>
-				</li>
-				<!-- car news & reviews dropdown -->
-
-				<!-- tools and services dropdown -->
-				<li class="nav-item dropdown">
-					<a 
-						class="nav-link nav__link text-light dropdown-toggle <%= typeof page !== 'undefined' && page === 'finance-calc' ? 'navbar-active' : '' %>" 
-						href="/tools&services" 
-						id="dropdown02" 
-						data-toggle="dropdown" 
-						aria-haspopup="true" 
-						aria-expanded="false"
-					>
-						Tools & Services
-						<span class="sr-only">
-							<%= typeof page !== 'undefined' && page === 'finance-calc' ? '(current)' : '' %>
-						</span>
-					</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown02">
-						<a 
-							class="dropdown-item <%= typeof page !== 'undefined' && page === 'finance-calc' ? 'navbar-active' : '' %>" 
-							href="/finance-calculator"
-						>
-							Finance Calculator
-							<span class="sr-only">
-								<%= typeof page !== 'undefined' && page === 'finance-calc' ? '(current)' : '' %>
-							</span>
-						</a>
-					</div>
-				</li>
-				<!-- tools and services dropdown -->
-
+				<!-- contact us link -->
 				<li class="nav-item">
 					<a 
 						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'contact' ? 'navbar-active' : '' %>" 
@@ -189,10 +109,10 @@
 			<% if(!currentUser) { %>
 				<a 
 					class="btn btn__primary navbar__btn" 
-					href="/advertise" 
+					href="/booking" 
 					role="button"
 				>
-					Advertise &raquo;
+					Book Now &raquo;
 					<span class="sr-only">
 						<%= typeof page !== 'undefined' && page === 'sell-car' ? '(current)' : '' %>
 					</span>

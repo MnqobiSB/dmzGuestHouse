@@ -14,16 +14,22 @@ const {
 } = require('../controllers');
 
 /* GET / - home page. */
-router.get(
-	'/',
-	asyncErrorHandler(landingPage)
-);
+router.get('/', asyncErrorHandler(landingPage));
 
 /* POST / - subscribe newsletter */
 router.post('/', asyncErrorHandler(subscribe));
 
+/* GET /gallery */
+router.get('/gallery', asyncErrorHandler(getTerms));
+
+/* GET /about-us */
+router.get('/about-us', asyncErrorHandler(getTerms));
+
+/* GET /contact */
+router.get('/contact', asyncErrorHandler(getTerms));
+
 /* POST /contact */
-router.post('/', asyncErrorHandler(postContact));
+router.post('/contact', asyncErrorHandler(postContact));
 
 /* GET /booking */
 router.get('/booking', asyncErrorHandler(getBooking));
