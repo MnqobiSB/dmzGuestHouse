@@ -145,40 +145,19 @@
 	}
 }
 
+#brandBodyFilters {
+	background-image: linear-gradient(
+			to right,
+			rgba($color-secondary, .99),
+			rgba($color-secondary, .95)
+		),
+		url(../images/dfd.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
 .brandBodyFilters {
-	&__left {
-		border-left: 2px solid $color-primary;
-	}
-
-	&__right {
-		border-left: 2px solid $color-grey-dark-3;
-	}
-
-	&__links {
-		&:link,
-		&:visited {
-			color: $color-grey-dark-3;
-			text-decoration: none;
-			padding: .2rem;
-			border-radius: .2rem;
-			transition: all .2s;
-		}
-
-		&--brand {
-			&:hover,
-			&:active {
-				background-color: $color-primary;
-			}
-		}
-
-		&--body {
-			&:hover,
-			&:active {
-				background-color: $color-secondary;
-				color: $color-grey-light-1;
-			}
-		}
-	}
+	color: $color-white;
 }
 
 .subscribe {

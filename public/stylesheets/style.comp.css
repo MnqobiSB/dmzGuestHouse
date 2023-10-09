@@ -21,7 +21,7 @@ body {
 
 ::selection {
   background-color: #ffea17;
-  color: #333; }
+  color: #333333; }
 
 section,
 footer,
@@ -265,7 +265,7 @@ body {
     .footer__body {
       display: none; } }
   .footer__hr {
-    border-top: 1px solid #333; }
+    border-top: 1px solid #333333; }
 
 .copyright {
   margin: 0 auto; }
@@ -278,7 +278,7 @@ body {
   border-radius: 0 !important;
   position: relative;
   margin-bottom: 0;
-  background-image: linear-gradient(to right, rgba(255, 234, 23, 0.99), rgba(255, 234, 23, 0.94)), url(../images/main-bg-img.jpg);
+  background-image: linear-gradient(to right, rgba(255, 234, 23, 0.3), rgba(255, 234, 23, 0.3)), url(../images/main-bg-img.jpg);
   background-size: cover;
   background-position: center; }
   @supports (background-attachment: fixed) or (-webkit-background-attachment: fixed) {
@@ -318,7 +318,7 @@ body {
     margin-right: .8rem; }
 
 .navbar {
-  background: #333;
+  background: #333333;
   border-bottom: 2px solid #ffea17; }
   .navbar-brand:link, .navbar-brand:visited {
     color: #f7f7f7;
@@ -393,7 +393,7 @@ body {
   margin-right: .8rem; }
 
 .navbar.scrolled {
-  background: #333;
+  background: #333333;
   transition: background 500ms; }
   .navbar.scrolled .navbar-brand:link, .navbar.scrolled .navbar-brand:visited {
     color: #ffea17; }
@@ -420,7 +420,7 @@ body {
     padding-left: 1.6rem;
     overflow-y: auto;
     visibility: hidden;
-    background: #333;
+    background: #333333;
     transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
     transition: transform .3s ease-in-out, visibility .3s ease-in-out;
     transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out; }
@@ -471,7 +471,7 @@ body {
 .btn__tertiary {
   /* * click-state */ }
   .btn__tertiary, .btn__tertiary:link, .btn__tertiary:visited {
-    background-color: #333;
+    background-color: #333333;
     color: #ffea17;
     font-size: inherit;
     padding: .8rem 1.6rem;
@@ -595,7 +595,7 @@ body {
   margin-left: .8rem; }
 
 .accordion__card-header {
-  background: #333;
+  background: #333333;
   color: #f7f7f7; }
 
 .accordion__heading {
@@ -620,7 +620,7 @@ body {
       .breadcrumb__nav {
         margin-top: 8rem; } }
   .breadcrumb-item + .breadcrumb-item::before {
-    color: #333 !important; }
+    color: #333333 !important; }
   .breadcrumb__link:link, .breadcrumb__link:visited {
     color: #141414;
     font-size: 1.4rem;
@@ -630,10 +630,10 @@ body {
     transition: all .2s; }
   .breadcrumb__link:hover, .breadcrumb__link:active {
     color: #ffea17;
-    background-color: #333; }
+    background-color: #333333; }
   .breadcrumb__active {
     color: #ffea17;
-    background-color: #333;
+    background-color: #333333;
     font-weight: bold;
     padding: .2rem;
     border-radius: .2rem; }
@@ -722,7 +722,7 @@ body {
 .cars__card--icon {
   width: 1.6rem;
   height: 1.6rem;
-  fill: #333;
+  fill: #333333;
   margin-right: .8rem; }
   @media only screen and (max-width: 33.75em) {
     .cars__card--icon {
@@ -744,7 +744,7 @@ body {
         text-align: left;
         margin-top: .8rem; } }
   .cars__card--btn, .cars__card--btn:link, .cars__card--btn:visited {
-    background-color: #333;
+    background-color: #333333;
     color: #ffea17;
     font-size: inherit;
     font-weight: bold;
@@ -771,7 +771,7 @@ body {
     margin-right: 1.6rem; }
 
 .page-link:link, .page-link:visited {
-  color: #333;
+  color: #333333;
   font-size: 1.6rem;
   font-weight: bold;
   text-decoration: none;
@@ -823,7 +823,7 @@ body {
 
 /* Number text (1/3 etc) */
 .numbertext {
-  background-color: #333;
+  background-color: #333333;
   color: #f2f2f2;
   font-size: 1.2rem;
   padding: .4rem 1.2rem;
@@ -863,7 +863,7 @@ body {
   width: 8rem;
   height: 8rem;
   fill: #ffea17;
-  background-color: #333;
+  background-color: #333333;
   padding: .8rem;
   border-radius: .4rem;
   margin-bottom: .8rem; }
@@ -969,10 +969,10 @@ body {
   border-left: 2px solid #ffea17; }
 
 .brandBodyFilters__right {
-  border-left: 2px solid #333; }
+  border-left: 2px solid #333333; }
 
 .brandBodyFilters__links:link, .brandBodyFilters__links:visited {
-  color: #333;
+  color: #333333;
   text-decoration: none;
   padding: .2rem;
   border-radius: .2rem;
@@ -1186,7 +1186,7 @@ body {
     margin-bottom: 1.6rem; } }
 
 .dealer__contact-section {
-  background-color: #333;
+  background-color: #333333;
   color: #f7f7f7;
   padding: 1.6rem;
   border-radius: .2rem; }
@@ -1246,9 +1246,9 @@ body {
   font-size: 1.6rem; }
 
 .blog-post__body img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; }
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important; }
 
 .blog-post__author-img {
   width: 100%;
@@ -1293,7 +1293,7 @@ body {
   width: 1.6rem;
   height: 1.6rem;
   margin-right: .6rem;
-  fill: #333;
+  fill: #333333;
   margin-top: -.2rem; }
   .blog__icon-read {
     width: 2rem;
@@ -1341,7 +1341,7 @@ body {
   width: 1.2rem;
   height: 1.2rem;
   margin-right: .6rem;
-  fill: #333;
+  fill: #333333;
   margin-top: -.2rem; }
   .featured-blog__icon-read {
     width: 2rem;
@@ -1363,7 +1363,7 @@ body {
 
 /* For element with id="payment" */
 #graph {
-  border: solid #333 1px;
+  border: solid #333333 1px;
   border-radius: .2rem; }
 
 /* Chart has a simple border */
@@ -1383,11 +1383,14 @@ td {
 
 .contact__img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain; }
+  @media only screen and (max-width: 48em) {
+    .contact__img {
+      width: 80%; } }
 
 .auto__contact--container {
-  background-color: #333;
+  background-color: #333333;
   border-radius: .2rem;
   justify-content: center;
   padding: .4rem 0; }
@@ -1405,6 +1408,10 @@ td {
   .auto__contact--address {
     font-size: 1.6rem !important; } }
 
+@media only screen and (max-width: 33.75em) {
+  .sell-car__card {
+    margin-bottom: 3.2rem; } }
+
 .sell-car__card-header {
   display: flex;
   align-items: center;
@@ -1414,9 +1421,9 @@ td {
     color: #f7f7f7; }
   .sell-car__card-header.two {
     background-color: #ffea17;
-    color: #333; }
+    color: #333333; }
   .sell-car__card-header.three {
-    background-color: #333;
+    background-color: #333333;
     color: #ffea17; }
 
 .sell-car__card--icon {
@@ -1426,6 +1433,6 @@ td {
   .sell-car__card--icon.one {
     fill: #f7f7f7; }
   .sell-car__card--icon.two {
-    fill: #333; }
+    fill: #333333; }
   .sell-car__card--icon.three {
     fill: #ffea17; }

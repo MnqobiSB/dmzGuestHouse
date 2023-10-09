@@ -20,7 +20,7 @@ body {
   overflow-x: hidden; }
 
 ::selection {
-  background-color: #ffea17;
+  background-color: #bb935f;
   color: #333333; }
 
 section,
@@ -95,7 +95,7 @@ body {
   text-decoration: none; }
 
 .heading-third__link:hover, .heading-third__link:active {
-  color: #01751a; }
+  color: #0d1727; }
 
 .main-blog__title {
   font-family: "Merriweather", serif !important;
@@ -111,7 +111,7 @@ body {
 .main-blog__link:hover, .main-blog__link:active,
 .news-blog__link:hover,
 .news-blog__link:active {
-  color: #01751a; }
+  color: #0d1727; }
 
 .news-blog__title {
   font-family: "Merriweather", serif !important;
@@ -172,10 +172,10 @@ body {
     font-size: 1.8rem; }
 
 .color-primary {
-  color: #ffea17; }
+  color: #bb935f; }
 
 .color-secondary {
-  color: #01751a; }
+  color: #0d1727; }
 
 .color-red {
   color: #e20000; }
@@ -191,7 +191,7 @@ body {
   font-weight: 400; }
 
 .navbar-active {
-  color: #ffea17 !important;
+  color: #bb935f !important;
   background-color: #414141; }
 
 .mt-medium {
@@ -222,7 +222,7 @@ body {
   background-color: #141414;
   color: #f7f7f7; }
   .footer__heading {
-    color: #ffea17;
+    color: #bb935f;
     font-size: 1.8rem;
     font-weight: 450;
     border-bottom: 2px solid #777777;
@@ -236,7 +236,7 @@ body {
       border-radius: .2rem;
       transition: all .2s; }
     .footer__links:hover, .footer__links:active {
-      color: #ffea17; }
+      color: #bb935f; }
   .footer__icon {
     width: 2rem;
     height: 2rem;
@@ -274,11 +274,11 @@ body {
     margin-bottom: 0; }
 
 .header {
-  height: 69vh;
+  height: 85vh;
   border-radius: 0 !important;
   position: relative;
   margin-bottom: 0;
-  background-image: linear-gradient(to right, rgba(255, 234, 23, 0.99), rgba(255, 234, 23, 0.94)), url(../images/main-bg-img.jpg);
+  background-image: linear-gradient(to right, rgba(13, 23, 39, 0.3), rgba(13, 23, 39, 0.3)), url(../images/main-bg-img.jpg);
   background-size: cover;
   background-position: center; }
   @supports (background-attachment: fixed) or (-webkit-background-attachment: fixed) {
@@ -319,7 +319,7 @@ body {
 
 .navbar {
   background: #333333;
-  border-bottom: 2px solid #ffea17; }
+  border-bottom: 2px solid #bb935f; }
   .navbar-brand:link, .navbar-brand:visited {
     color: #f7f7f7;
     text-decoration: none;
@@ -363,7 +363,7 @@ body {
       padding: 1.2rem; } }
 
 .nav__link:hover, .nav__link:active {
-  color: #ffea17 !important;
+  color: #bb935f !important;
   background-color: #414141; }
 
 .dropdown-menu {
@@ -381,7 +381,7 @@ body {
     font-weight: bold;
     color: #f7f7f7; }
   .dropdown-item:hover, .dropdown-item:active {
-    background-color: #ffea17;
+    background-color: #bb935f;
     color: #141414 !important; }
     .dropdown-item:hover .dropdown-icon, .dropdown-item:active .dropdown-icon {
       fill: #141414; }
@@ -396,14 +396,14 @@ body {
   background: #333333;
   transition: background 500ms; }
   .navbar.scrolled .navbar-brand:link, .navbar.scrolled .navbar-brand:visited {
-    color: #ffea17; }
+    color: #bb935f; }
   .navbar.scrolled .nav-link:link, .navbar.scrolled .nav-link:visited {
     color: #f7f7f7; }
   .navbar.scrolled .nav-link:hover, .navbar.scrolled .nav-link:active {
-    color: #ffea17;
+    color: #bb935f;
     background-color: #414141; }
   .navbar.scrolled .active {
-    color: #ffea17 !important;
+    color: #bb935f !important;
     background-color: #414141; }
   .navbar.scrolled .dropdown-menu {
     background-color: #414141; }
@@ -432,7 +432,7 @@ body {
 .btn__primary {
   /* * click-state */ }
   .btn__primary, .btn__primary:link, .btn__primary:visited {
-    background-color: #ffea17;
+    background-color: #bb935f;
     color: #141414;
     font-size: inherit;
     padding: .8rem 1.6rem;
@@ -451,7 +451,7 @@ body {
 .btn__secondary {
   /* * click-state */ }
   .btn__secondary, .btn__secondary:link, .btn__secondary:visited {
-    background-color: #01751a;
+    background-color: #0d1727;
     color: #f7f7f7;
     font-size: inherit;
     padding: .8rem 1.6rem;
@@ -462,7 +462,7 @@ body {
     cursor: pointer; }
   .btn__secondary:hover {
     box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.2);
-    background-color: #005c05;
+    background-color: #0d2957;
     color: #f7f7f7 !important; }
   .btn__secondary:active, .btn__secondary:focus {
     transform: translateY(1px);
@@ -472,7 +472,7 @@ body {
   /* * click-state */ }
   .btn__tertiary, .btn__tertiary:link, .btn__tertiary:visited {
     background-color: #333333;
-    color: #ffea17;
+    color: #bb935f;
     font-size: inherit;
     padding: .8rem 1.6rem;
     font-weight: bold;
@@ -483,7 +483,7 @@ body {
   .btn__tertiary:hover {
     box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.2);
     background-color: #141414;
-    color: #ffea17 !important; }
+    color: #bb935f !important; }
   .btn__tertiary:active, .btn__tertiary:focus {
     transform: translateY(1px);
     box-shadow: 0 0.5rem 1rem rgba(20, 20, 20, 0.2); }
@@ -535,10 +535,10 @@ body {
   border-radius: .2rem; }
 
 .form-reset {
-  border: 1px solid #01751a;
+  border: 1px solid #0d1727;
   border-radius: .2rem; }
   .form-reset:link, .form-reset:visited {
-    color: #01751a;
+    color: #0d1727;
     font-weight: bold;
     margin-bottom: .8rem; }
 
@@ -549,7 +549,7 @@ body {
 
 .form-clue {
   font-size: 1.2rem;
-  color: #01751a; }
+  color: #0d1727; }
 
 .form-badge {
   display: inline-block;
@@ -561,8 +561,8 @@ body {
   height: auto;
   padding: .8rem 1rem; }
   .form-control:focus {
-    border: 0.2rem solid #01751a;
-    box-shadow: 0 0 5px #01751a; }
+    border: 0.2rem solid #0d1727;
+    box-shadow: 0 0 5px #0d1727; }
   .form-control:focus:invalid {
     border: 0.2rem solid #e20000;
     box-shadow: 0 0 5px #e20000; }
@@ -608,7 +608,7 @@ body {
   text-decoration: none !important;
   transition: all .2s; }
   .accordion__btn:hover, .accordion__btn:active {
-    color: #ffea17; }
+    color: #bb935f; }
 
 .breadcrumb {
   border-radius: 0;
@@ -629,10 +629,10 @@ body {
     padding: .2rem;
     transition: all .2s; }
   .breadcrumb__link:hover, .breadcrumb__link:active {
-    color: #ffea17;
+    color: #bb935f;
     background-color: #333333; }
   .breadcrumb__active {
-    color: #ffea17;
+    color: #bb935f;
     background-color: #333333;
     font-weight: bold;
     padding: .2rem;
@@ -651,7 +651,7 @@ body {
     font-size: 2.6rem;
     font-weight: 400;
     padding: .4rem 1.6rem;
-    background-color: #01751a;
+    background-color: #0d1727;
     color: #f7f7f7;
     width: fit-content;
     margin-left: auto;
@@ -710,7 +710,7 @@ body {
 .cars__card--price {
   font-family: "Oswald", sans-serif !important;
   font-size: 2.4rem;
-  color: #01751a;
+  color: #0d1727;
   font-weight: 400; }
   .cars__card--price-container {
     text-align: right; }
@@ -745,7 +745,7 @@ body {
         margin-top: .8rem; } }
   .cars__card--btn, .cars__card--btn:link, .cars__card--btn:visited {
     background-color: #333333;
-    color: #ffea17;
+    color: #bb935f;
     font-size: inherit;
     font-weight: bold;
     padding: .8rem 1.6rem;
@@ -780,7 +780,7 @@ body {
   transition: all .2s; }
 
 .page-link:hover, .page-link:active {
-  color: #ffea17;
+  color: #bb935f;
   background-color: #414141; }
 
 /* Position the image container (needed to position the left and right arrows) */
@@ -862,7 +862,7 @@ body {
 .marketing__icon {
   width: 8rem;
   height: 8rem;
-  fill: #ffea17;
+  fill: #bb935f;
   background-color: #333333;
   padding: .8rem;
   border-radius: .4rem;
@@ -965,25 +965,13 @@ body {
       padding-right: 1.5rem;
       padding-left: 1.5rem; } }
 
-.brandBodyFilters__left {
-  border-left: 2px solid #ffea17; }
+#brandBodyFilters {
+  background-image: linear-gradient(to right, rgba(13, 23, 39, 0.99), rgba(13, 23, 39, 0.95)), url(../images/dfd.jpg);
+  background-size: cover;
+  background-position: center; }
 
-.brandBodyFilters__right {
-  border-left: 2px solid #333333; }
-
-.brandBodyFilters__links:link, .brandBodyFilters__links:visited {
-  color: #333333;
-  text-decoration: none;
-  padding: .2rem;
-  border-radius: .2rem;
-  transition: all .2s; }
-
-.brandBodyFilters__links--brand:hover, .brandBodyFilters__links--brand:active {
-  background-color: #ffea17; }
-
-.brandBodyFilters__links--body:hover, .brandBodyFilters__links--body:active {
-  background-color: #01751a;
-  color: #f7f7f7; }
+.brandBodyFilters {
+  color: #ffffff; }
 
 .subscribe {
   margin-bottom: 0; }
@@ -999,7 +987,7 @@ body {
   padding: 0; }
 
 .cars__filters {
-  background-color: #01751a;
+  background-color: #0d1727;
   color: #f7f7f7;
   padding: .2rem; }
 
@@ -1025,7 +1013,7 @@ body {
 .car__features--icon {
   width: 1.8rem;
   height: 1.8rem;
-  fill: #01751a;
+  fill: #0d1727;
   margin-right: .8rem; }
 
 .car__disclaimer {
@@ -1037,13 +1025,13 @@ body {
     width: 2.2rem;
     height: 2.2rem;
     margin-right: .4rem;
-    fill: #ffea17; }
+    fill: #bb935f; }
   .car__disclaimer--text {
     font-style: italic;
     margin-bottom: 0; }
 
 .car__features--link:link, .car__features--link:visited {
-  color: #01751a;
+  color: #0d1727;
   font-size: 1.4rem;
   font-weight: bold;
   text-decoration: none;
@@ -1100,7 +1088,7 @@ body {
   font-family: "Oswald", sans-serif !important;
   font-weight: 400;
   font-size: 1.4rem;
-  background-color: #01751a;
+  background-color: #0d1727;
   color: #f7f7f7;
   border-radius: .2rem;
   width: fit-content;
@@ -1119,10 +1107,10 @@ body {
   width: 4rem;
   height: 4rem;
   margin-right: .8rem;
-  fill: #01751a; }
+  fill: #0d1727; }
 
 .dealer__contact-person--number:link, .dealer__contact-person--number:visited {
-  color: #01751a; }
+  color: #0d1727; }
 
 @media only screen and (max-width: 75em) {
   .dealer__car-milleage {
@@ -1199,10 +1187,10 @@ body {
   width: 1.6rem;
   height: 1.6rem;
   margin-right: .8rem;
-  fill: #ffea17; }
+  fill: #bb935f; }
 
 .dealer__contact--link:link, .dealer__contact--link:visited {
-  color: #ffea17; }
+  color: #bb935f; }
 
 .dealer__contact--text {
   margin-left: 2.8rem; }
@@ -1242,7 +1230,7 @@ body {
   border-radius: .2rem; }
 
 .blog-post__dot {
-  color: #01751a;
+  color: #0d1727;
   font-size: 1.6rem; }
 
 .blog-post__body img {
@@ -1307,7 +1295,7 @@ body {
       margin-top: .2rem; } }
 
 .blog__link:link, .blog__link:visited {
-  color: #01751a;
+  color: #0d1727;
   text-decoration: none;
   font-weight: bold;
   margin-top: auto; }
@@ -1358,7 +1346,7 @@ body {
   font-size: 1.4rem; }
 
 #payment {
-  color: #ffea17;
+  color: #bb935f;
   font-weight: bold; }
 
 /* For element with id="payment" */
@@ -1417,14 +1405,14 @@ td {
   align-items: center;
   justify-content: center; }
   .sell-car__card-header.one {
-    background-color: #01751a;
+    background-color: #0d1727;
     color: #f7f7f7; }
   .sell-car__card-header.two {
-    background-color: #ffea17;
+    background-color: #bb935f;
     color: #333333; }
   .sell-car__card-header.three {
     background-color: #333333;
-    color: #ffea17; }
+    color: #bb935f; }
 
 .sell-car__card--icon {
   width: 2.4rem;
@@ -1435,4 +1423,4 @@ td {
   .sell-car__card--icon.two {
     fill: #333333; }
   .sell-car__card--icon.three {
-    fill: #ffea17; }
+    fill: #bb935f; }

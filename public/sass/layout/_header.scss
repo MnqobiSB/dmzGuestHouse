@@ -1,13 +1,13 @@
 .header {
-	height: 69vh;
+	height: 85vh;
 	border-radius: 0 !important;
 	position: relative;
 	margin-bottom: 0;
 
 	background-image: linear-gradient(
 			to right,
-			rgba($color-primary, .99),
-			rgba($color-primary, 0.94)
+			rgba($color-secondary, .3),
+			rgba($color-secondary, 0.3)
 		),
 		url(../images/main-bg-img.jpg);
 	background-size: cover;

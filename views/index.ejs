@@ -1,69 +1,22 @@
 <% layout('layouts/boilerplate') -%>
-<!-- home page header with jumbotron -->
-<header class="jumbotron header">
-	<div class="container">
-		<div class="header__text-box">
-			<h1 class="display-4 heading-primary">The <span class="color-secondary">Best</span> Choice <span class="color-secondary">Accommodation</span></h1>
-			<p class="heading-primary__sub-heading">Quality accomodation in & around Clarens, Free State, South Africa!</p>
-			<hr class="header__hr">
-			<a 
-				class="btn btn__secondary btn__lg" 
-				href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=" 
-				role="button"
-			>
-				<svg class="header__icon" focusable="false" role="img" aria-label="Placeholder: Search">
-					<use xlink:href="/images/symbol-defs.svg#icon-search"></use>
-				</svg>
-				Book Now!
-			</a>
+	<!-- home page header with jumbotron -->
+	<header class="jumbotron header">
+		<div class="container">
+			<div class="header__text-box">
+				<h1 class="display-4 heading-primary">The <span class="color-secondary">Best</span> Choice <span class="color-secondary">Accommodation</span></h1>
+				<p class="heading-primary__sub-heading">Quality accomodation in & around Clarens, Free State, South Africa!</p>
+				<hr class="header__hr">
+				<a 
+					class="btn btn__secondary btn__lg" 
+					href="/booking" 
+					role="button"
+				>
+					Book Now!
+				</a>
+			</div>
 		</div>
-	</div>
-</header>
-<!-- home page header with jumbotron -->
-
-<!-- MAIN SECTION START -->
-<main
-	id="main"
-	class="main"
-	tabindex="-1"
-	role="main"
->
-	<!-- company marketing section -->
-	<section id="marketing">
-		<div class="container marketing">
-			<h2 class="heading-section">What Services Do We Offer Our Visitors</h2>
-			<!-- Three columns of company marketing -->
-			<div class="row marketing__row">
-				<div class="col-md-4 marketing__card">
-					<svg class="marketing__icon" focusable="false" role="img" aria-label="Placeholder: Special Offers">
-						<use xlink:href="/images/symbol-defs.svg#icon-star"></use>
-					</svg>
-					<h3 class="heading-third">Quality Servies</h3>
-					<p class="marketing__card--text">Quality Servies Quality ServiesQuality ServiesQuality ServiesQuality ServiesQuality Servies</p>
-					<a class="btn btn__secondary" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&carState%5B%5D=New&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=" role="button">View New Cars &raquo;</a>
-				</div><!-- /.col-lg-4 marketing__card -->
-				
-				<div class="col-md-4 marketing__card">
-					<svg class="marketing__icon" focusable="false" role="img" aria-label="Placeholder: Approved Dealers">
-						<use xlink:href="/images/symbol-defs.svg#icon-storefront"></use>
-					</svg>
-					<h3 class="heading-third">Safety & Security</h3>
-					<p class="marketing__card--text">Safety & SecuritySafety & SecuritySafety & SecuritySafety & SecuritySafety & SecuritySafety & Security</p>
-					<a class="btn btn__secondary" href="/car-dealerships" role="button">View Dealers &raquo;</a>
-				</div><!-- /.col-lg-4 marketing__card -->
-				
-				<div class="col-md-4 marketing__card">
-					<svg class="marketing__icon" focusable="false" role="img" aria-label="Placeholder: Cars For Sale">
-						<use xlink:href="/images/symbol-defs.svg#icon-automobile"></use>
-					</svg>
-					<h3 class="heading-third">Customer Satisfaction</h3>
-					<p class="marketing__card--text">Customer SatisfactionCustomer SatisfactionCustomer SatisfactionCustomer Satisfaction</p>
-					<a class="btn btn__secondary" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=" role="button">Find A Car &raquo;</a>
-				</div><!-- /.col-lg-4 marketing__card -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</section>
-	<!-- company marketing section -->
+	</header>
+	<!-- home page header with jumbotron -->
 
 	<!-- packages section - all news -->
 	<section id="newsReviews">
@@ -72,7 +25,7 @@
 				<a href="/packages" class="heading-third__link">Our Rooms Packages</a>
 			</h2>
 			
-
+			<!-- ADD PACKAGES AFTER SETTING UP THE USERS AND PACKAGES SECTIONS -->
 
 			<hr class="newsReviews__hr">
 		</div><!-- /.container -->
@@ -81,106 +34,64 @@
 
 	<!-- Our Facilities section -->
 	<section id="brandBodyFilters">
-		<div class="container">
-			<div class="row brandBodyFilters">
-				<!-- view facilities -->
-				<div class="col-md-12 col-lg-6 col-md brandBodyFilters__left">
-					<h2 class="heading-third">Search Car By Popular Brand</h2><!-- must be h2 -->
-					<div class="row">
-						<div class="col-6 col-md">
-							<ul class="list-unstyled">
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Audi&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Audi</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=BMW&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">BMW</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Chevrolet&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Chevrolet</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Datsun&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Datsun</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Fiat&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Fiat</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Ford&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Ford</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Honda&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Honda</a></li>
-							</ul>
-						</div>
-	
-						<div class="col-6 col-md">
-							<ul class="list-unstyled text-small">
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Hyundai&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Hyundai</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Isuzu&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Isuzu</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Jaguar&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Jaguar</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Jeep&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Jeep</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Kia&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Kia</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Land+Rover&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Land Rover</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Lexus&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Lexus</a></li>
-							</ul>
-						</div>
-	
-						<div class="col-6 col-md">
-							<ul class="list-unstyled text-small">
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Mazda&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Mazda</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Mercedes-Benz&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Mercedes-Benz</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=MINI&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">MINI</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Mitsubishi&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Mitsubishi</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Nissan&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Nissan</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Opel&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Opel</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Peugeot&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Peugeot</a></li>
-							</ul>
-						</div>
-						
-						<div class="col-6 col-md">
-							<ul class="list-unstyled text-small">
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Porsche&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Porsche</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Renault&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Renault</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Subaru&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Subaru</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Suzuki&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Suzuki</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Toyota&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Toyota</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Volkswagen&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Volkswagen</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--brand" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&brand%5B%5D=Volvo&price%5Bmin%5D=&price%5Bmax%5D=&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Volvo</a></li>
-							</ul>
-						</div><!-- /.col-6 col-md -->
-					</div><!-- /.row -->
-				</div><!-- /.col-6 col-md -->
-				<!-- view facilities -->
-	
-				<!-- view facicities -->
-				<div class="col-md-6 col-md brandBodyFilters__right d-none d-lg-block">
-					<h2 class="heading-third">Search Car By Popular Body Type</h2>
-					<div class="row">
-						<div class="col-6 col-md">
-							<ul class="list-unstyled text-small">
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Cabriolet&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Cabriolet</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Compact+SUV&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Compact SUV</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Convertable&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Convertable</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Coupe&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Coupé</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Double+Cab+Bakkie&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Double Cab Bakkie</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Economy+Car&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Economy Car</a></li>
-							</ul>
-						</div>
-		
-						<div class="col-6 col-md">
-							<ul class="list-unstyled text-small">
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Executive+Car&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Executive Car</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Family+Car&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Family Car</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Fastback&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Fastback</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Hatchback&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Hatchback</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Multi+Purpose+Vehicle&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Multi-Purpose-Vehicle</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Panel+Van&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Panel Van</a></li>
-							</ul>
-						</div>
-		
-						<div class="col-6 col-md">
-							<ul class="list-unstyled text-small">
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Roadster&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Roadster</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Sedan&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Sedan</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Sportback&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Sportback</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Station+Wagon&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Station Wagon</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=SUV&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">SUV</a></li>
-								<li><a class="brandBodyFilters__links brandBodyFilters__links--body" href="/cars-for-sale?allCars=%7B%7D&sortBy=price&search=&price%5Bmin%5D=&price%5Bmax%5D=&bodyType%5B%5D=Single+Cab+Bakkie&year=&mileage%5BminMileage%5D=&mileage%5BmaxMileage%5D=">Single Cab Bakkie</a></li>
-							</ul>
-						</div><!-- /.col-6 col-md -->
-					</div><!-- /.row -->
-				</div><!-- /.col-6 col-md -->
-				<!-- view facicities -->
+		<div class="container brandBodyFilters text-center">
+			<h2 class="heading-third">Our Facilities</h2>
+			<div class="row">
+				<div class="col-6 col-md">
+					<ul class="text-small">
+						<li class="brandBodyFilters__links">Free WiFi</li>
+						<li class="brandBodyFilters__links">Shared Lounge</li>
+						<li class="brandBodyFilters__links">Serves Continental Breakfast</li>
+						<li class="brandBodyFilters__links">Private Desk</li>
+						<li class="brandBodyFilters__links">Private TV</li>
+					</ul>
+				</div>
+
+				<div class="col-6 col-md">
+					<ul class="text-small">
+						<li class="brandBodyFilters__links">Private Bathroom</li>
+						<li class="brandBodyFilters__links">Dinning area</li>
+						<li class="brandBodyFilters__links">Parking</li>
+						<li class="brandBodyFilters__links">Mountain View</li>
+					</ul>
+				</div>
 			</div><!-- /.row -->
 		</div><!-- /.container -->
 	</section>
 	<!-- Our Facilities section -->
+
+		<!-- Gallery section -->
+		<section id="gallery">
+			<div class="container">
+				<h2 class="heading-third  text-center">Our Gallery</h2>
+				<div class="row">
+					<div class="col-md-4 col-md">
+						<img src="/images/g3.jpg" alt="..." class="img-thumbnail">
+					</div>
+	
+					<div class="col-md-4 col-md">
+						<img src="/images/g1.jpg" alt="..." class="img-thumbnail">
+					</div>
+
+					<div class="col-md-4 col-md">
+						<img src="/images/g5.jpg" alt="..." class="img-thumbnail">
+					</div>
+
+					<div class="col-md-4 col-md">
+						<img src="/images/dfd.jpg" alt="..." class="img-thumbnail">
+					</div>
+	
+					<div class="col-md-4 col-md">
+						<img src="/images/g2.jpg" alt="..." class="img-thumbnail">
+					</div>
+
+					<div class="col-md-4 col-md">
+						<img src="/images/room6.jpg" alt="..." class="img-thumbnail">
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</section>
+		<!-- Gallery section -->
 
 	<!-- subscribe section -->
 	<section id="subscribe" class="jumbotron subscribe">
