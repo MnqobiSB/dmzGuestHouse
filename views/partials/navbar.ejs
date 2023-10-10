@@ -38,12 +38,12 @@
 				<!-- home link -->
 				<li class="nav-item">
 					<a 
-						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'all-cars' ? 'navbar-active' : '' %>" 
+						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'home' ? 'navbar-active' : '' %>" 
 						href="/"
 					>
 						Home
 						<span class="sr-only">
-							<%= typeof page !== 'undefined' && page === 'all-cars' ? '(current)' : '' %>
+							<%= typeof page !== 'undefined' && page === 'home' ? '(current)' : '' %>
 						</span>
 					</a>
 				</li>
@@ -66,12 +66,12 @@
 				<!-- gallery link -->
 				<li class="nav-item">
 					<a 
-						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'packages' ? 'navbar-active' : '' %>"
+						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'gallery' ? 'navbar-active' : '' %>"
 						href="/gallery"
 					>
 						Gallery
 						<span class="sr-only">
-							<%= typeof page !== 'undefined' && page === 'all-users' ? '(current)' : '' %>
+							<%= typeof page !== 'undefined' && page === 'gallery' ? '(current)' : '' %>
 						</span>
 					</a>
 				</li>
@@ -80,12 +80,12 @@
 				<!-- about us link -->
 				<li class="nav-item">
 					<a 
-						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'packages' ? 'navbar-active' : '' %>"
+						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'about' ? 'navbar-active' : '' %>"
 						href="/about-us"
 					>
 						About Us
 						<span class="sr-only">
-							<%= typeof page !== 'undefined' && page === 'all-users' ? '(current)' : '' %>
+							<%= typeof page !== 'undefined' && page === 'about' ? '(current)' : '' %>
 						</span>
 					</a>
 				</li>

@@ -140,14 +140,14 @@ module.exports = {
 	// GET /gallery
 	async getGallery (req, res, next) {
 		res.render('gallery', {
-			title: 'About Us - DM-DMZ Guesthouse',
+			title: 'Gallery - DM-DMZ Guesthouse',
 			description:
 				'DM-DMZ Guesthouse - Check out our gallery',
 			canonical: '/gallery',
 			robots: 'index, follow',
 			googlebot:
 				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-			page: 'about',
+			page: 'gallery',
 			// open graph properties start
 			og_type: 'website',
 			og_site_name: 'DM-DMZ Guesthouse',
