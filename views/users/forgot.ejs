@@ -1,0 +1,68 @@
+<% layout('layouts/boilerplate') -%>
+<!-- page breadcrumb -->
+<nav aria-label="breadcrumb" class="breadcrumb__nav">
+	<div class="container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a a class="breadcrumb__link" href="/">Home</a></li>
+			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Forgot Password</span></li>
+		</ol>
+	</div>
+</nav>
+<!-- page breadcrumb -->
+
+<div class="page-wrapper">
+	<div class="container">
+		<!-- MAIN SECTION START -->
+		<main
+			id="main"
+			class="main"
+			tabindex="-1"
+			role="main"
+		>
+			<!-- page header component -->
+			<header class="page-header">
+				<div class="page-header__text-box">
+					<h1 class="display-4 page-header__heading mb-xxsmall">Forgot Password</h1>
+				</div>
+			</header>
+			<!-- page header component -->
+			
+      <section id="sell-car" class="sell-car p-0">
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<div class="form__container">
+							<span class="badge badge-dark form-badge"><span class="form-required">*</span> = Required Form Field</span>
+							<form action="/car-dealerships/forgot-password?_method=PUT" method="POST">
+								<div class="form-group">
+									<label for="email">Your Email <span class="form-required">*</span>:</label>
+									<input 
+										type="email" 
+										name="email"
+										id="email" 
+										class="form-control"
+										maxlength="150"
+										pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+										title="Email must follow this pattern: characters@characters.domain (should include '@' sign, '.' followed by atleast 2 characters)."
+										placeholder="Enter your email" 
+										required
+										autofocus
+									/>
+								</div>
+								
+								<div class="form-group">
+									<button type="submit" class="btn btn__secondary w-100 mt-xsmall">
+										Reset Password
+									</button>
+								</div>
+							</form>
+							
+							<div class="text-center">
+								<a href="/car-dealerships/sign-in">Back to Sign In</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</div>

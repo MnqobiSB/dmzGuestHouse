@@ -1,0 +1,83 @@
+<% layout('layouts/boilerplate') -%>
+<!-- page breadcrumb -->
+<nav aria-label="breadcrumb" class="breadcrumb__nav">
+	<div class="container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a a class="breadcrumb__link" href="/">Home</a></li>
+			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Reset Password</span></li>
+		</ol>
+	</div>
+</nav>
+<!-- page breadcrumb -->
+
+<div class="page-wrapper">
+	<div class="container">
+		<!-- MAIN SECTION START -->
+		<main
+			id="main"
+			class="main"
+			tabindex="-1"
+			role="main"
+		>
+			<!-- page header component -->
+			<header class="page-header">
+				<div class="page-header__text-box">
+					<h1 class="display-4 page-header__heading mb-xxsmall">Reset Password</h1>
+				</div>
+			</header>
+			<!-- page header component -->
+			
+      <section id="sell-car" class="sell-car p-0">
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<div class="form__container">
+							<span class="badge badge-dark form-badge"><span class="form-required">*</span> = Required Form Field</span>
+							<form action="/car-dealerships/reset/<%= token %>?_method=PUT" method="POST">
+								<div class="form-group">
+									<label for="password">New Password <span class="form-required">*</span>:</label>
+									<input 
+										type="password"
+										name="password" 
+										id="password"  
+										class="form-control"
+										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+										title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" 
+										placeholder="Enter new password" 
+										required
+										autofocus
+									/> 
+								</div>
+							
+								<div class="form-group">
+									<label for="confirm">Confirm Password <span class="form-required">*</span>:</label>
+									<input 
+										type="password" 
+										name="confirm"
+										id="confirm" 
+										class="form-control"
+										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+										title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" 
+										placeholder="Confirm password" 
+										required
+									/>
+								</div>
+							
+								<div class="form-group">
+									<button type="submit" class="btn btn-success">
+										Update Password
+									</button>
+								</div>
+							</form>
+							
+							<div class="text-center">
+								<a href="/car-dealerships/forgot-password">Forgot password?</a> 
+								<p class="m-0">or</p> 
+								<a href="/car-dealerships/sign-up">Sign Up</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</div>
