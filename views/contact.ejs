@@ -1,0 +1,186 @@
+<% layout('layouts/boilerplate') -%>
+<!-- page breadcrumb -->
+<nav aria-label="breadcrumb" class="breadcrumb__nav">
+	<div class="container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a a class="breadcrumb__link" href="/">Home</a></li>
+			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Contact Us</span></li>
+		</ol>
+	</div>
+</nav>
+<!-- page breadcrumb -->
+
+<div class="page-wrapper">
+	<div class="container">
+		<!-- MAIN SECTION START -->
+		<main
+			id="main"
+			class="main"
+			tabindex="-1"
+			role="main"
+		>
+			<!-- page header component -->
+			<header class="page-header">
+				<div class="page-header__text-box">
+					<h1 class="display-4 page-header__heading">Contact Us - Auto Territory</h1>
+				</div>
+        <p class="lead mt-xsmall">Are You A Car Searcher Or A Car Dealer And Have A Query? Feel Free To Contact Us Today!</p>
+			</header>
+			<!-- page header component -->
+			
+      <section id="contact" class="contact p-0">
+        <div class="row text-center mb-medium">
+          <div class="col-md-6 col-xl-3">
+            <div class="dealer__contact--container auto__contact--container">
+              <svg class="dealer__contact--icon" focusable="false" role="img" aria-label="Placeholder: phone">
+                <use xlink:href="/images/symbol-defs.svg#icon-phone"></use>
+              </svg>
+              <a class="auto__contact--link" href="tel:+27681600538">+27 68 160 0538</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="dealer__contact--container auto__contact--container">
+              <svg class="dealer__contact--icon" focusable="false" role="img" aria-label="Placeholder: email">
+                <use xlink:href="/images/symbol-defs.svg#icon-envelope"></use>
+              </svg>
+              <a class="auto__contact--link" href="mailto:admin@autoterritory.co.za">admin@autoterritory.co.za</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="dealer__contact--container auto__contact--container">
+              <svg class="dealer__contact--icon" focusable="false" role="img" aria-label="Placeholder: email">
+                <use xlink:href="/images/symbol-defs.svg#icon-envelope"></use>
+              </svg>
+              <a class="auto__contact--link" href="mailto:support@autoterritory.co.za">support@autoterritory.co.za</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="dealer__contact--container auto__contact--container">
+              <svg class="dealer__contact--icon" focusable="false" role="img" aria-label="Placeholder: map-marker">
+                <use xlink:href="/images/symbol-defs.svg#icon-map-marker"></use>
+              </svg>
+              <span class="auto__contact--text"><small class="auto__contact--address">10A Kerk Str, Bethlehem, 9701</small></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-5 contact__img-box mb-small text-center">
+            <img
+              src="/images/Mailbox-bro.svg"
+              class="contact__img"
+              alt="Contact us illustration"
+              title="Auto Territory contact us illustration"
+              loading="eager"
+              width="540"
+              height="540"
+            />
+            <a href="https://storyset.com/communication" class="sr-only text-dark">Illustration by Freepik Storyset</a>
+          </div><!-- /.col-md-6 -->
+
+          <div class="col-md-6 col-lg-7">
+            <form
+              class="contact__form form__container"
+              action="/contact-us"
+              method="POST"
+            >
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="name">Name<span class="form-required">*</span>:</label>
+                    <input 
+                      type="text" 
+                      name="name"
+                      id="name" 
+                      class="form-control"
+                      maxlength="256" 
+                      pattern="[a-zA-Z0-9._%+-\s]{2,}"
+                      title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
+                      placeholder="Your name" 
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="email">Email<span class="form-required">*</span>:</label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      id="email" 
+                      class="form-control"
+                      maxlength="150"
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                      title="Email must follow this pattern: characters@characters.domain (should include '@' sign, '.' followed by atleast 2 characters)."
+                      placeholder="Your email" 
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contactNr">Cellphone<span class="form-required">*</span>:</label>
+                <input 
+                  type="tel"
+                  name="contactNr" 
+                  id="contactNr"  
+                  class="form-control"
+                  maxlength="13" 
+                  pattern="[+0-9]{9,}" 
+                  title="Contact number must be a series of numeric characters (min 9)." 
+                  placeholder="Your cell numbers" 
+                  required
+                />
+              </div>
+          
+              <div class="form-group">
+                <label for="subject">Subject<span class="form-required">*</span>:</label>
+                <select 
+                  name="subject" 
+                  id="subject" 
+                  class="form-control" 
+                  title="Select your subscription type" 
+                  required
+                >
+                  <option disabled selected value>Choose Subject...</option>
+                  <option value="Car Dealer Enquiry">Car Dealer Enquiry</option>
+                  <option value="Car Buyer Enquiry">Car Buyer Enquiry</option>
+                  <option value="General Enquiry">General Enquiry</option>
+                </select>
+              </div>
+          
+              <div class="form-group">
+                <label for="message">Message<span class="form-required">*</span>:</label>
+                <textarea 
+                  name="message" 
+                  id="message" 
+                  class="form-control"
+                  rows="5"
+                  placeholder="Type your message here"
+                ></textarea>
+              </div>
+          
+              <!-- <div class="form-check form-group border-0">
+                <input 
+                  type="checkbox"
+                  name="subscribe"
+                  id="subscribe"
+                  class="form-check-input" 
+                  value="true" 
+                  title="Subscribe To Our Newsletter"
+                />
+                <label class="form-check-label" for="subscribe"><small>Subscribe To Newsletter</small></label>
+              </div> -->
+          
+              <div class="form-group">
+                <button type="submit" class="btn btn__secondary w-100 mt-xsmall">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div><!-- /.col-md-6 -->
+        </div>
+      </section>
+    </main>
+  </div>
+</div>

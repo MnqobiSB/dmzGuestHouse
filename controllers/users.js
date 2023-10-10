@@ -9,7 +9,7 @@ module.exports = {
 	getSignup (req, res, next) {
 		if (req.isAuthenticated())
 			return res.redirect('/admin/profile');
-		res.render('admin/signup', {
+		res.render('users/signup', {
 			title: 'Admin Sign Up - DM-DMZ Guesthouse',
 			description: 'Admin Sign Up - DM-DMZ Guesthouse',
 			canonical: '/admin/sign-up',
@@ -51,7 +51,7 @@ module.exports = {
 			) {
 				error = 'An admin with the given email is already registered!';
 			}
-			res.render('admin/signup', {
+			res.render('users/signup', {
 				title: 'Admin Sign Up - DM-DMZ Guesthouse',
 				description: 'Admin Sign Up - DM-DMZ Guesthouse',
 				canonical: '/admin/sign-up',
@@ -77,7 +77,7 @@ module.exports = {
 		if (req.isAuthenticated())
 			return res.redirect('/admin/profile');
 		if (req.query.returnTo) req.session.redirectTo = req.headers.referer;
-		res.render('admin/signin', {
+		res.render('users/signin', {
 			title: 'Admin Sign In - DM-DMZ Guesthouse',
 			description: 'Admin Sign In - DM-DMZ Guesthouse',
 			canonical: '/admin/sign-in',
@@ -101,7 +101,7 @@ module.exports = {
 			if (err) return next(err);
 			req.session.success = `Hello ${username}, Welcome back!`;
 			const redirectUrl =
-				req.session.redirectTo || '/admin/profile';
+				req.session.redirectTo || '/';
 			delete req.session.redirectTo;
 			res.redirect(redirectUrl);
 		});
@@ -122,7 +122,7 @@ module.exports = {
 			.equals(req.user._id)
 			.exec();
 		// render page
-		res.render('admin/profile', {
+		res.render('users/profile', {
 			title: 'My Profile - DM-DMZ Guesthouse',
 			description: 'Admin Profile - DM-DMZ Guesthouse',
 			canonical: '/admin/profile',
@@ -161,7 +161,7 @@ module.exports = {
 
 	// GET /admin/forgot
 	getForgotPw (req, res, next) {
-		res.render('admin/forgot', {
+		res.render('users/forgot', {
 			title: 'Forgot Password - DM-DMZ Guesthouse',
 			description: 'Admin Forgot Password - DM-DMZ Guesthouse',
 			canonical: '/admin/forgot-password',
@@ -235,7 +235,7 @@ module.exports = {
 			return res.redirect('/admin/forgot-password');
 		}
 
-		res.render('admin/reset', {
+		res.render('users/reset', {
 			title: 'Reset Password - DM-DMZ Guesthouse',
 			description: 'Admin Reset Password - DM-DMZ Guesthouse',
 			canonical: '/admin/reset/:token',

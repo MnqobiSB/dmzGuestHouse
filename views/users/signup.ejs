@@ -4,7 +4,7 @@
 	<div class="container">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a a class="breadcrumb__link" href="/">Home</a></li>
-			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Dealership Sign Up</span></li>
+			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Admin Sign Up</span></li>
 		</ol>
 	</div>
 </nav>
@@ -22,9 +22,9 @@
 			<!-- page header component -->
 			<header class="page-header">
 				<div class="page-header__text-box">
-					<h1 class="display-4 page-header__heading mb-xxsmall">Dealership Sign Up</h1>
+					<h1 class="display-4 page-header__heading mb-xxsmall">Admin Sign Up</h1>
 				</div>
-        <p>Only Registered Car Dealerships Are Allowed To Advertise Cars On Auto Galore. If You Are A Private Car Seller Visit <a href="/private-seller">Private Seller</a> Page.</p>
+        <p>The Website Admin Of DM-DMZ Guest House is the one that must sign-up here.</p>
 			</header>
 			<!-- page header component -->
 			
@@ -35,16 +35,32 @@
 							<span class="badge badge-dark form-badge"><span class="form-required">*</span> = Required Form Field</span>
 							<form 
 								class=""
-								action="/car-dealerships/sign-up" 
+								action="/admin/sign-up" 
 								method="POST" 
 								enctype="multipart/form-data"
 							>
 								<div class="form-group">
-									<label for="name">Company Name<span class="form-clue"> (car dealership name)</span> <span class="form-required">*</span>:</label>
+									<label for="firstName">First Name<span class="form-required">*</span>:</label>
 									<input 
 										type="text" 
-										name="name"
-										id="name" 
+										name="firstName"
+										id="firstName" 
+										class="form-control"
+										maxlength="256" 
+										pattern="[a-zA-Z0-9._%+-\s]{2,}"
+										title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
+										placeholder="Enter company name" 
+										required
+										autofocus
+									/>
+								</div>
+
+								<div class="form-group">
+									<label for="lastName">First Name<span class="form-required">*</span>:</label>
+									<input 
+										type="text" 
+										name="lastName"
+										id="lastName" 
 										class="form-control"
 										maxlength="256" 
 										pattern="[a-zA-Z0-9._%+-\s]{2,}"
@@ -100,264 +116,7 @@
 										required
 									/>
 								</div>
-							
-								<div class="form-group">
-									<label for="contactNr">Contact Number <span class="form-required">*</span>:</label>
-									<input 
-										type="tel"
-										name="contactNr" 
-										id="contactNr"  
-										class="form-control"
-										maxlength="13" 
-										pattern="[+0-9]{9,}" 
-										title="Contact number must be a series of numeric characters (min 9)." 
-										placeholder="Enter contact number" 
-										required
-									/>
-								</div>
-								
-								<div class="form-group">
-									<label for="addressLineOne">Address Line One <span class="form-required">*</span>:</label>
-									<input 
-										type="text"
-										name="addressLineOne" 
-										id="addressLineOne"  
-										class="form-control"
-										maxlength="100" 
-										pattern="[a-zA-Z0-9._%+-\s]{4,}"
-										title="Address line one may be a mixture of numeric & alphabetic characters only (min 4, max 100)." 
-										placeholder="1234 Main Str" 
-										required
-									/>
-								</div>
-								
-								<div class="form-group">
-									<label for="addressLineTwo">Address Line Two <span class="form-clue">(Optional)</span>:</label>
-									<input 
-										type="text"
-										name="addressLineTwo" 
-										id="addressLineTwo"  
-										class="form-control"
-										maxlength="100" 
-										pattern="[a-zA-Z0-9._%+-\s]{4,}"
-										title="Address line two may be a mixture of numeric & alphabetic characters only (min 2, max 100). It is not required" 
-										placeholder="Suburb or Apartment" 
-									/>
-								</div>
-							
-								<div class="form-group">
-									<label for="city">City <span class="form-required">*</span>:</label>
-									<input 
-										type="text"
-										name="city" 
-										id="city"  
-										class="form-control"
-										maxlength="100" 
-										pattern="[a-zA-Z0-9._%+-\s]{2,}"
-										title="City must be a series of alphabetic characters only (min 2, max 100)."
-										placeholder="Enter your city" 
-										required
-									/>
-								</div>
-							
-								<div class="form-group">
-									<label for="zipCode">Zip Code <span class="form-required">*</span>:</label>
-									<input 
-										type="number"
-										name="zipCode" 
-										id="zipCode"  
-										class="form-control"
-										maxlength="6" 
-										pattern="[0-9]{3,}"
-										title="Zip code must be a series of numeric characters." 
-										placeholder="Enter your zip code" 
-										required
-									/>
-								</div>
-							
-								<div class="form-group">
-									<label for="province">Province <span class="form-required">*</span>:</label>
-									<select 
-										name="province" 
-										id="province" 
-										class="form-control" 
-										title="Select your province" 
-										required
-									>
-										<option disabled selected value>Choose...</option>
-										<option value="Free State">Free State</option>
-										<option value="Gauteng">Gauteng</option>
-										<option value="Mpumalanga">Mpumalanga</option>
-										<option value="Kwa-Zulu Natal">Kwa-Zulu Natal</option>
-										<option value="Eastern Cape">Eastern Cape</option>
-										<option value="Northern Cape">Northern Cape</option>
-										<option value="Western Cape">Western Cape</option>
-										<option value="North West">North West</option>
-										<option value="Limpopo">Limpopo</option>
-									</select>
-								</div>
-								
-								<div class="form-group">
-									<label for="location">Car Dealership Location <span class="form-required">*</span>: <span class="form-clue">(If You Need Any Assisstance, <a href="/contact-us" target="_blank" rel="noopener noreferrer">Contact Support</a>)</span></label>
-									<input 
-										type="url" 
-										name="location" 
-										id="location"
-										class="form-control"
-										pattern="https://.*" 
-										size="5200" 
-										title="Must be a URL format containing: https://."
-										placeholder="Your dealership google maps location embed link 'src'"
-									/>
-								</div>
-
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="contactPersonOneName">Sales Person One Name <span class="form-required">*</span>:</label>
-											<input 
-												type="text" 
-												name="contactPersonOneName"
-												id="contactPersonOneName" 
-												class="form-control"
-												maxlength="256" 
-												pattern="[a-zA-Z0-9._%+-\s]{2,}"
-												title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-												placeholder="Enter sales person one name" 
-												required
-											/>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="contactPersonOneNumber">Sales Person One Contact Nr. <span class="form-required">*</span>:</label>
-											<input 
-												type="tel"
-												name="contactPersonOneNumber" 
-												id="contactPersonOneNumber"  
-												class="form-control"
-												maxlength="13" 
-												pattern="[+0-9]{9,}" 
-												title="Contact number must be a series of numeric characters (min 9)." 
-												placeholder="Enter sales person one number" 
-												required
-											/>
-										</div>
-									</div>
-								</div>
-								
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="contactPersonTwoName">Sales Person Two Name <span class="form-clue">(Optional)</span>:</label>
-											<input 
-												type="text" 
-												name="contactPersonTwoName"
-												id="contactPersonTwoName" 
-												class="form-control"
-												maxlength="256" 
-												pattern="[a-zA-Z0-9._%+-\s]{2,}"
-												title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-												placeholder="Enter sales person two name" 
-											/>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="contactPersonTwoNumber">Sales Person Two Contact Nr <span class="form-clue">(Optional)</span>:</label>
-											<input 
-												type="tel"
-												name="contactPersonTwoNumber" 
-												id="contactPersonTwoNumber"  
-												class="form-control"
-												maxlength="13" 
-												pattern="[+0-9]{9,}" 
-												title="Contact number must be a series of numeric characters (min 9)." 
-												placeholder="Enter sales person two number" 
-											/>
-										</div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label for="website">Company Website <span class="form-clue">(Optional)</span>:</label>
-									<input 
-										type="url" 
-										name="website" 
-										id="website"
-										class="form-control"
-										pattern="https://.*" 
-										size="128" 
-										title="Must be a URL format containing: https://."
-										placeholder="E.g. https://company.co.za"
-									/>
-								</div>
-								
-								<div class="form-group">
-									<label for="subscriptionType">Subscription Type <span class="form-required">*</span>:</label>
-									<select 
-										name="subscriptionType" 
-										id="subscriptionType" 
-										class="form-control" 
-										title="Select your subscription type" 
-										required
-									>
-										<option disabled selected value>Choose...</option>
-										<option value="Monthly">Monthly</option>
-										<!-- <option value="Yearly">Yearly</option> -->
-									</select>
-								</div>
-								<div class="form-group">
-									<label for="numOfCarsEntryPack">Standard Package Cars Quantity <span class="form-required">*</span>: <span class="form-clue">(min: 5 cars)</span></label>
-									<input 
-										type="number"
-										name="numOfCarsEntryPack" 
-										id="numOfCarsEntryPack"  
-										class="form-control"
-										step="1" 
-										min="5" 
-										max="99999"
-										pattern="[0-9]{3,}"
-										title="Zip code must be a series of numeric characters." 
-										placeholder="R 20/mo"
-										required
-									/>
-								</div>
-								
-								<div class="form-group">
-									<label for="paymentDate">Date of Payment <span class="form-clue">(must be between the 25<sup>th</sup> and 5<sup>th</sup>)</span><span class="form-required">*</span>:</label>
-									<input 
-										type="date" 
-										name="paymentDate" 
-										id="paymentDate" 
-										class="form-control"
-										title="Payment date must follow a pattern of year/month/day."
-									/>
-								</div>
-								
-								<div class="form-group">
-									<label for="image">Profile Image <span class="form-clue">(is recommended, can be your logo or image of dealership)</span>:</label>
-									<input 
-										type="file" 
-										name="image"
-										id="image" 
-										class="form-control btn-secondary" 
-										title="Image file format must be: JPEG, PNG or SVG."
-									>
-								</div>
-							
-								<div class="form-group">
-									<label for="description">Car Dealership About/Bio <span class="form-clue">(e.g. values, mission, vision)</span><span class="form-required">*</span>:</label>
-									<textarea 
-										name="about" 
-										id="description" 
-										class="form-control"
-										rows="10"
-										placeholder="Enter car dealership about/bio"
-										required
-									></textarea>
-								</div>
-							
+														
 								<div class="form-check form-group border-0">
 									<input 
 										type="checkbox"
@@ -388,7 +147,7 @@
 							</form>
 							<div class="text-center">
 								<p>Or You Already Have An Account?</p>
-								<a href="/car-dealerships/sign-in">Sign In</a>
+								<a href="/admin/sign-in">Sign In</a>
 							</div>
 						</div>
 					</div>
