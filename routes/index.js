@@ -4,6 +4,9 @@ const { asyncErrorHandler } = require('../middleware');
 const {
 	landingPage,
 	subscribe,
+	getAbout,
+	getGallery,
+	getContact,
   postContact,
   getBooking,
   postBooking,
@@ -20,16 +23,16 @@ router.get('/', asyncErrorHandler(landingPage));
 router.post('/', asyncErrorHandler(subscribe));
 
 /* GET /gallery */
-router.get('/gallery', asyncErrorHandler(getTerms));
+router.get('/gallery', asyncErrorHandler(getGallery));
 
 /* GET /about-us */
-router.get('/about-us', asyncErrorHandler(getTerms));
+router.get('/about-us', asyncErrorHandler(getAbout));
 
 /* GET /contact */
-router.get('/contact', asyncErrorHandler(getTerms));
+router.get('/contact-us', asyncErrorHandler(getContact));
 
 /* POST /contact */
-router.post('/contact', asyncErrorHandler(postContact));
+router.post('/contact-us', asyncErrorHandler(postContact));
 
 /* GET /booking */
 router.get('/booking', asyncErrorHandler(getBooking));

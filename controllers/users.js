@@ -30,7 +30,7 @@ module.exports = {
 	// POST /sign up
 	async postSignup (req, res, next) {
 		if (req.isAuthenticated())
-			return res.redirect('/admin/profile');
+			return res.redirect('/');
 		try {
 			// save/register admin-user
 			const user = await User.register(
@@ -41,10 +41,10 @@ module.exports = {
 			req.login(user, function (err) {
 				if (err) return next(err);
 				req.session.success = `You are successfully signed-up ${user.firstName}`;
-				res.redirect('/admin/profile');
+				res.redirect('/');
 			});
 		} catch (err) {
-			const { username, firstName, lastName, email } = req.body;
+			const { firstName, lastName, username,  email } = req.body;
 			let error = err.message;
 			if (
 				error.includes('index: email_1 dup key')
@@ -63,9 +63,9 @@ module.exports = {
 				og_site_name: 'DM-DMZ Guesthouse',
 				og_image: '/favicon.ico',
 				// open graph properties end
-				username,
         firstName,
         lastName,
+				username,
 				email,
 				error
 			});
@@ -101,7 +101,7 @@ module.exports = {
 			if (err) return next(err);
 			req.session.success = `Hello ${username}, Welcome back!`;
 			const redirectUrl =
-				req.session.redirectTo || '/';
+				req.session.redirectTo || '/admin/profile';
 			delete req.session.redirectTo;
 			res.redirect(redirectUrl);
 		});

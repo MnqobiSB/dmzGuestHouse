@@ -117,6 +117,63 @@ module.exports = {
       thank you for subscribing to DM-DMZ Guesthouse newsletter. We have sent you an email!`;
 		res.redirect('/');
 	},
+
+	// GET /about-us
+	async getAbout (req, res, next) {
+		res.render('about', {
+			title: 'About Us - DM-DMZ Guesthouse',
+			description:
+				'About DM-DMZ Guesthouse - We Provide Online Car Searchers & Car Lovers With The Best Cars For Sale Deals, And Other Motoring Services In South Africa',
+			canonical: '/about-us',
+			robots: 'index, follow',
+			googlebot:
+				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+			page: 'about',
+			// open graph properties start
+			og_type: 'website',
+			og_site_name: 'DM-DMZ Guesthouse',
+			og_image: '/favicon.ico'
+			// open graph properties end
+		});
+	},
+
+	// GET /gallery
+	async getGallery (req, res, next) {
+		res.render('gallery', {
+			title: 'About Us - DM-DMZ Guesthouse',
+			description:
+				'DM-DMZ Guesthouse - Check out our gallery',
+			canonical: '/gallery',
+			robots: 'index, follow',
+			googlebot:
+				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+			page: 'about',
+			// open graph properties start
+			og_type: 'website',
+			og_site_name: 'DM-DMZ Guesthouse',
+			og_image: '/favicon.ico'
+			// open graph properties end
+		});
+	},
+
+	// GET /contact-us
+	async getContact (req, res, next) {
+		res.render('contact', {
+			title: 'Contact Us - DM-DMZ Guesthouse',
+			description:
+				'Contact DM-DMZ-Guesthouse - Are You Looking To Book With US? Feel Free To Contact Us Today',
+			canonical: '/contact-us',
+			robots: 'index, follow',
+			googlebot:
+				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+			page: 'contact',
+			// open graph properties start
+			og_type: 'website',
+			og_site_name: 'DM-DMZ Guesthouse',
+			og_image: '/favicon.ico'
+			// open graph properties end
+		});
+	},
 	
 	// POST /contact-us
 	async postContact (req, res, next) {
