@@ -118,6 +118,44 @@ module.exports = {
 		res.redirect('/');
 	},
 
+		// GET /gallery
+		async getGallery (req, res, next) {
+			res.render('gallery', {
+				title: 'Gallery - DM-DMZ Guesthouse',
+				description:
+					'DM-DMZ Guesthouse - Check out our gallery',
+				canonical: '/gallery',
+				robots: 'index, follow',
+				googlebot:
+					'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+				page: 'gallery',
+				// open graph properties start
+				og_type: 'website',
+				og_site_name: 'DM-DMZ Guesthouse',
+				og_image: '/favicon.ico'
+				// open graph properties end
+			});
+		},
+
+			// GET /packages
+	async getPackages (req, res, next) {
+		res.render('package', {
+			title: 'Packages - DM-DMZ Guesthouse',
+			description:
+				'DM-DMZ Guesthouse - Our room packages',
+			canonical: '/packages',
+			robots: 'index, follow',
+			googlebot:
+				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+			page: 'gallery',
+			// open graph properties start
+			og_type: 'website',
+			og_site_name: 'DM-DMZ Guesthouse',
+			og_image: '/favicon.ico'
+			// open graph properties end
+		});
+	},
+
 	// GET /about-us
 	async getAbout (req, res, next) {
 		res.render('about', {
@@ -129,25 +167,6 @@ module.exports = {
 			googlebot:
 				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
 			page: 'about',
-			// open graph properties start
-			og_type: 'website',
-			og_site_name: 'DM-DMZ Guesthouse',
-			og_image: '/favicon.ico'
-			// open graph properties end
-		});
-	},
-
-	// GET /gallery
-	async getGallery (req, res, next) {
-		res.render('gallery', {
-			title: 'Gallery - DM-DMZ Guesthouse',
-			description:
-				'DM-DMZ Guesthouse - Check out our gallery',
-			canonical: '/gallery',
-			robots: 'index, follow',
-			googlebot:
-				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-			page: 'gallery',
 			// open graph properties start
 			og_type: 'website',
 			og_site_name: 'DM-DMZ Guesthouse',
