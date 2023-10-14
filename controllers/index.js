@@ -147,7 +147,7 @@ module.exports = {
 			robots: 'index, follow',
 			googlebot:
 				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-			page: 'gallery',
+			page: 'packages',
 			// open graph properties start
 			og_type: 'website',
 			og_site_name: 'DM-DMZ Guesthouse',
