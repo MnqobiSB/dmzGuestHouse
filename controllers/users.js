@@ -35,6 +35,7 @@ module.exports = {
 			// save/register admin-user
 			const user = await User.register(
 				new User(req.body),
+				req.body.username,
 				req.body.password
 			);
 			// sign in user
@@ -44,7 +45,7 @@ module.exports = {
 				res.redirect('/');
 			});
 		} catch (err) {
-			const { firstName, lastName, username,  email } = req.body;
+			const { firstName, lastName, username, email } = req.body;
 			let error = err.message;
 			if (
 				error.includes('index: email_1 dup key')
