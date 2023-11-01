@@ -87,7 +87,7 @@
                       maxlength="256" 
                       pattern="[a-zA-Z0-9._%+-\s]{2,}"
                       title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-                      placeholder="" 
+                      placeholder="Your name" 
                       required
                     />
                   </div>
@@ -103,7 +103,7 @@
                       maxlength="150"
                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
                       title="Email must follow this pattern: characters@characters.domain (should include '@' sign, '.' followed by atleast 2 characters)."
-                      placeholder="" 
+                      placeholder="Your email" 
                       required
                     />
                   </div>
@@ -119,7 +119,7 @@
                   maxlength="13" 
                   pattern="[+0-9]{9,}" 
                   title="Contact number must be a series of numeric characters (min 9)." 
-                  placeholder="" 
+                  placeholder="Your cell numbers" 
                   required
                 />
               </div>
@@ -133,7 +133,7 @@
                   title="Select your subscription type" 
                   required
                 >
-                  <option disabled selected value></option>
+                  <option disabled selected value>Choose Subject...</option>
                   <option value="Booking Enquiry">Booking Enquiry</option>
                   <option value="General Enquiry">General Enquiry</option>
                 </select>
@@ -146,7 +146,7 @@
                   id="message" 
                   class="form-control"
                   rows="5"
-                  placeholder=""
+                  placeholder="Type your message here"
                 ></textarea>
               </div>
           

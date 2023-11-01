@@ -12,7 +12,7 @@
 	}
 
 	&__logo {
-		height: 5rem;
+		height: 6rem;
 
 		@media only screen and (max-width: $bp-large) {
 			height: 6rem;
@@ -165,7 +165,7 @@
 @media only screen and (max-width: $bp-large) {
 	.offcanvas-collapse {
 		position: fixed;
-		top: 7.8rem;
+		top: 7.9rem;
 		/* Height of navbar */
 		bottom: 0;
 		left: 100%;

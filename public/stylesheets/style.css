@@ -325,7 +325,7 @@ body {
     text-decoration: none;
     margin-right: .4rem; }
   .navbar__logo {
-    height: 5rem; }
+    height: 6rem; }
     @media only screen and (max-width: 75em) {
       .navbar__logo {
         height: 6rem; } }
@@ -411,7 +411,7 @@ body {
 @media only screen and (max-width: 75em) {
   .offcanvas-collapse {
     position: fixed;
-    top: 7.8rem;
+    top: 7.9rem;
     /* Height of navbar */
     bottom: 0;
     left: 100%;
@@ -614,7 +614,7 @@ body {
   border-radius: 0;
   background-color: transparent; }
   .breadcrumb__nav {
-    margin-top: 7rem;
+    margin-top: 8rem;
     background-color: #eeeeee; }
     @media only screen and (max-width: 75em) {
       .breadcrumb__nav {
