@@ -34,42 +34,9 @@
 						<div class="form__container">
 							<span class="badge badge-dark form-badge"><span class="form-required">*</span> = Required Form Field</span>
 							<form 
-								class=""
 								action="/admin/sign-up" 
-								method="POST" 
-								enctype="multipart/form-data"
+								method="POST"
 							>
-								<div class="form-group">
-									<label for="firstName">First Name<span class="form-required">*</span>:</label>
-									<input 
-										type="text" 
-										name="firstName"
-										id="firstName" 
-										class="form-control"
-										maxlength="256" 
-										pattern="[a-zA-Z0-9._%+-\s]{2,}"
-										title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-										placeholder="First Name" 
-										required
-										autofocus
-									/>
-								</div>
-
-								<div class="form-group">
-									<label for="lastName">Last Name<span class="form-required">*</span>:</label>
-									<input 
-										type="text" 
-										name="lastName"
-										id="lastName" 
-										class="form-control"
-										maxlength="256" 
-										pattern="[a-zA-Z0-9._%+-\s]{2,}"
-										title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-										placeholder="Last Name" 
-										required
-									/>
-								</div>
-							
 								<div class="form-group">
 									<label for="username">Username<span class="form-clue"> (remember your username! you use it to sign in)</span> <span class="form-required">*</span>:</label>
 									<input 
@@ -81,6 +48,22 @@
 										pattern="[a-zA-Z0-9._%+-\s]{2,}"
 										title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
 										placeholder="Enter your username" 
+										required
+									/>
+								</div>
+
+								<div class="form-group">
+									<label for="email">Email <span class="form-required">*</span>:</label>
+									<input 
+										type="email" 
+										name="email"
+										id="email" 
+										class="form-control"
+										maxlength="150"
+										pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+										title="Email must follow this pattern: characters@characters.domain (should include '@' sign, '.' followed by atleast 2 characters)."
+										value="<%= email %>" 
+										placeholder="Enter email" 
 										required
 									/>
 								</div>
@@ -100,49 +83,12 @@
 								</div>
 							
 								<div class="form-group">
-									<label for="email">Email <span class="form-required">*</span>:</label>
-									<input 
-										type="email" 
-										name="email"
-										id="email" 
-										class="form-control"
-										maxlength="150"
-										pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-										title="Email must follow this pattern: characters@characters.domain (should include '@' sign, '.' followed by atleast 2 characters)."
-										value="<%= email %>" 
-										placeholder="Enter email" 
-										required
-									/>
-								</div>
-														
-								<div class="form-check form-group border-0">
-									<input 
-										type="checkbox"
-										name="agreeToTerms"
-										id="agreeToTerms"
-										class="form-check-input" 
-										value="true" 
-										title="Check to agree to the terms"
-										required  
-									/>
-									<label class="form-check-label" for="agreeToTerms"><small>I have read and agree to the <a href="/terms-of-service">terms & services</a>.</small></label>
-								</div>
-							
-								<div class="form-group">
-									<div 
-										class="g-recaptcha" 
-										data-sitekey="6Ldu568bAAAAAMZRZUb8eu_60fgXsI7KTS1A_axD"
-										data-theme="dark"
-										tabindex="0"
-									></div> 
-								</div>
-							
-								<div class="form-group">
 									<button type="submit" id="form-btn" class="btn btn__secondary w-100 mt-xsmall">
-										Sign Up Now!
+										Sign Up As Admin
 									</button>
 								</div>
 							</form>
+
 							<div class="text-center">
 								<p>Or You Already Have An Account?</p>
 								<a href="/admin/sign-in">Sign In</a>

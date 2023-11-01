@@ -129,7 +129,7 @@
 						<!-- dealer name -->
 						<a 
 							class="dropdown-item" 
-							href="/car-dealerships/profile"
+							href="/admin/profile"
 						>
 							<%= currentUser.name %>
 						</a>
@@ -165,7 +165,7 @@
 						<!-- dashboard link -->
 						<a 
 							class="dropdown-item <%= typeof page !== 'undefined' && page === 'profile' ? 'navbar-active' : '' %>" 
-							href="/car-dealerships/profile"
+							href="/admin/profile"
 						>
 							<svg class="dropdown-icon" focusable="false" role="img" aria-label="Placeholder: dashboard">
 								<use xlink:href="/images/symbol-defs.svg#icon-dashboard"></use>
@@ -175,7 +175,7 @@
 						<!-- dashboard link -->
 						<div class="dropdown-divider"></div>
 						<!-- sign-out link -->
-						<a class="dropdown-item" href="/car-dealerships/sign-out">
+						<a class="dropdown-item" href="/admin/sign-out">
 							<svg class="dropdown-icon" focusable="false" role="img" aria-label="Placeholder: sign-out">
 								<use xlink:href="/images/symbol-defs.svg#icon-sign-out"></use>
 							</svg>

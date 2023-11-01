@@ -35,7 +35,6 @@ module.exports = {
 			// save/register admin-user
 			const user = await User.register(
 				new User(req.body),
-				req.body.username,
 				req.body.password
 			);
 			// sign in user
@@ -102,7 +101,7 @@ module.exports = {
 			if (err) return next(err);
 			req.session.success = `Hello ${username}, Welcome back!`;
 			const redirectUrl =
-				req.session.redirectTo || '/admin/profile';
+				req.session.redirectTo || '/';
 			delete req.session.redirectTo;
 			res.redirect(redirectUrl);
 		});
@@ -110,9 +109,13 @@ module.exports = {
 
 	// GET /logout
 	getSignout (req, res, next) {
-		req.logout();
-		req.session.success = `Goodbye, come back soon!`;
-		res.redirect('/');
+		req.logout(function (err) {
+			if (err) {
+					return next(err);
+				}
+				req.session.success = `Goodbye, come back soon!`;
+				res.redirect('/');
+		});
 	},
 
 	// GET /profile

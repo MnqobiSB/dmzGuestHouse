@@ -10,6 +10,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
+const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
@@ -57,9 +58,9 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()))
 
 // User
-passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
