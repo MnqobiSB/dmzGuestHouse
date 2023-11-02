@@ -105,7 +105,7 @@
 				</li>
 			</ul>
 			
-			<!-- car dealer admin button -->
+			<!-- package dealer admin button -->
 			<% if(!currentUser) { %>
 				<a 
 					class="btn btn__primary navbar__btn" 
@@ -114,7 +114,7 @@
 				>
 					Book Now &raquo;
 					<span class="sr-only">
-						<%= typeof page !== 'undefined' && page === 'sell-car' ? '(current)' : '' %>
+						<%= typeof page !== 'undefined' && page === 'booking' ? '(current)' : '' %>
 					</span>
 				</a>
 			<% } else { %>
@@ -123,44 +123,22 @@
 						<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: user">
 							<use xlink:href="/images/symbol-defs.svg#icon-user-circle-o"></use>
 						</svg>
-						<span class="sr-only"><%= currentUser.name %></span>
+						<span class=""><%= currentUser.username %></span>
 					</button>
 					<div class="dropdown-menu dropdown-menu-xl-right">
-						<!-- dealer name -->
+						<!-- add package link -->
 						<a 
-							class="dropdown-item" 
-							href="/admin/profile"
-						>
-							<%= currentUser.name %>
-						</a>
-						<!-- dealer name -->
-						<div class="dropdown-divider"></div>
-						<!-- add car link -->
-						<a 
-							class="dropdown-item <%= typeof page !== 'undefined' && page === 'cars-new' ? 'navbar-active' : '' %>" 
-							href="/cars-for-sale/add-a-car"
+							class="dropdown-item <%= typeof page !== 'undefined' && page === 'new-package' ? 'navbar-active' : '' %>" 
+							href="/packages/add-a-package"
 						>
 							<svg class="dropdown-icon" focusable="false" role="img" aria-label="Placeholder: plus">
 								<use xlink:href="/images/symbol-defs.svg#icon-plus"></use>
 							</svg>
-							<span>Add A Car</span>
+							<span>Add A Package</span>
 						</a>
-						<!-- add car link -->
+						<!-- add package link -->
+						
 						<div class="dropdown-divider"></div>
-						<!-- add post link -->
-						<% if (currentUser&&currentUser.isAdmin) { %>
-							<a 
-								class="dropdown-item <%= typeof page !== 'undefined' && page === 'new-post' ? 'navbar-active' : '' %>" 
-								href="/motoring-news-&-reviews/add-new-post"
-							>
-								<svg class="dropdown-icon" focusable="false" role="img" aria-label="Placeholder: plus">
-									<use xlink:href="/images/symbol-defs.svg#icon-pencil-square"></use>
-								</svg>
-								<span>Add New Post</span>
-							</a>
-							<div class="dropdown-divider"></div>
-						<% } %>
-						<!-- add post link -->
 
 						<!-- dashboard link -->
 						<a 
@@ -173,7 +151,9 @@
 							<span>Dashboard</span>
 						</a>
 						<!-- dashboard link -->
+
 						<div class="dropdown-divider"></div>
+
 						<!-- sign-out link -->
 						<a class="dropdown-item" href="/admin/sign-out">
 							<svg class="dropdown-icon" focusable="false" role="img" aria-label="Placeholder: sign-out">

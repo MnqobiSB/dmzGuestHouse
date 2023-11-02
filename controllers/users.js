@@ -44,7 +44,7 @@ module.exports = {
 				res.redirect('/');
 			});
 		} catch (err) {
-			const { firstName, lastName, username, email } = req.body;
+			const { username, email } = req.body;
 			let error = err.message;
 			if (
 				error.includes('index: email_1 dup key')
@@ -63,8 +63,6 @@ module.exports = {
 				og_site_name: 'DM-DMZ Guesthouse',
 				og_image: '/favicon.ico',
 				// open graph properties end
-        firstName,
-        lastName,
 				username,
 				email,
 				error
@@ -99,7 +97,7 @@ module.exports = {
 		if (!user && error) return next(error);
 		req.login(user, function (err) {
 			if (err) return next(err);
-			req.session.success = `Hello ${username}, Welcome back!`;
+			req.session.success = `Hello ${username}, You are now able to manage the website!`;
 			const redirectUrl =
 				req.session.redirectTo || '/';
 			delete req.session.redirectTo;
@@ -113,7 +111,7 @@ module.exports = {
 			if (err) {
 					return next(err);
 				}
-				req.session.success = `Goodbye, come back soon!`;
+				req.session.success = `Goodbye, come back if you need to make changes!`;
 				res.redirect('/');
 		});
 	},

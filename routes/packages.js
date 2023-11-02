@@ -26,9 +26,9 @@ router.get('/add-a-package', isLoggedIn, packageNew);
 
 /* POST packages Create /packages */
 router.post(
-	'/',
+	'/add-a-package',
 	isLoggedIn,
-	upload.array('images', 10),
+	upload.array('images', 2),
 	asyncErrorHandler(packageCreate)
 );
 

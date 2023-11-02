@@ -1,0 +1,154 @@
+<% layout('layouts/boilerplate') -%>
+<!-- page breadcrumb -->
+<nav aria-label="breadcrumb" class="breadcrumb__nav">
+	<div class="container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a a class="breadcrumb__link" href="/">Home</a></li>
+			<li class="breadcrumb-item"><a a class="breadcrumb__link" href="/motoring-news-&-reviews">Latest News and Reviews</a></li>
+			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active"><%= post.title %></span></li>
+		</ol>
+	</div>
+</nav>
+<!-- page breadcrumb -->
+
+<div class="page-wrapper">
+	<div class="container">
+		<!-- MAIN SECTION START -->
+		<main
+			id="main"
+			class="main"
+			tabindex="-1"
+			role="main"
+		>
+			<!-- page header component -->
+			<header class="page-header">
+				<div class="page-header__text-box">
+					<h1 class="display-4 page-header__heading"><%= post.title %></h1>
+				</div>
+			</header>
+			<!-- page header component -->
+
+			<div class="row">
+				<div class="col-md-8">
+					<section id="article" class="article p-0">
+						<!-- post article -->
+						<article class="blog-post">
+							<!-- post header -->
+							<header class="blog-post__header mb-small">
+								<p class="blog-post__meta">
+									<span class="blog-post__date">
+										<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: calendars">
+											<use xlink:href="/images/symbol-defs.svg#icon-calendar"></use>
+										</svg> 
+										<%= post.datePosted.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %> 
+									</span>
+									<span class="blog-post__dot">·</span> 
+									<span class="blog-post__read">
+										<svg class="blog__icon blog__icon-read" focusable="false" role="img" aria-label="Placeholder: watch">
+											<use xlink:href="/images/symbol-defs.svg#icon-timer"></use>
+										</svg> 
+										<em><%= post.read %> min read</em>
+									</span>
+								</p>
+								<span class="article-meta">
+									Category: <span class="badge badge-dark"> <strong class="post-category"><%= post.category %></strong></span>
+								</span>
+								<p>
+									<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: instagram">
+										<use xlink:href="/images/symbol-defs.svg#icon-bookmark-o"></use>
+									</svg> 
+									<small class="post-tag text-bold"><%= post.tag1 %> | <%= post.tag2 %> | <%= post.tag3 %> <%= post.tag4 ? `| ${post.tag4}` : '' %> <%= post.tag5 ? `| ${post.tag5}`: '' %> </small>
+								</p>
+							</header>
+							<!-- post header -->
+
+							<!-- car main images slider container -->
+								<% include ../partials/posts/postImageSlider %>
+							<!-- car main images slider container -->
+
+							<!-- post article -->
+							<div class="blog-post__body mb-medium">
+								<%- post.body %>
+							</div>
+							<!-- post article -->
+
+							<!-- post article -->
+							<footer class="blog-post__footer p-0 mb-small">
+								<h2 class="mb-small">Posted by:</h2>
+								<div class="card blog-post__author border-0">
+									<div class="row no-gutters">
+										<div class="col-4">
+											<img
+												src="<%= post.authorImage %>"
+												class="blog-post__author-img"
+												alt="<%= post.authorNames %>"
+												title="<%= post.authorNames %>'s image"
+												loading="lazy"
+												width="362"
+												height="159"
+											/>
+										</div>
+										<div class="col-8">
+											<div class="card-body pt-0">
+												<h3 class="card-title"><%= post.authorNames %></h3>
+												<p class="card-text blog__xxsmall-d-none"><%= post.authorBio %></p>
+												<p class="card-text"><small class="text-muted"><%= post.authorTwitter %></small></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</footer>
+							<!-- post article -->
+						</article>
+						<!-- post article -->
+
+						<!-- delete/edit post if author -->
+						<% if (currentUser && post.author.equals(currentUser._id)) { %>
+							<div class="row justify-content-between mb-4">
+								<div class="col-6">
+									<a class="float-right" href="/motoring-news-&-reviews/<%= post.id %>/edit">
+										<button class="btn btn__secondary">Edit Post</button>
+									</a>
+								</div><!-- /.col-6 -->
+
+								<div class="col-6">
+									<form 
+										class="form-inline"
+										action="/motoring-news-&-reviews/<%= post.id %>?_method=DELETE"
+										method="POST"
+									>
+										<div class="form-group">
+											<button type="submit" class="btn btn__red">
+												Delete Post
+											</button>
+										</div>
+									</form>
+								</div><!-- /.col-6 -->
+							</div><!-- /.row -->
+						<% } %>
+						<!-- delete/edit post if author -->
+						
+						<!-- back button -->
+						<form>
+							<input 
+								class="btn btn__tertiary"
+								type="button" 
+								value="&laquo; Go back" 
+								onclick="history.back()"
+							/>
+						</form>
+						<!-- back button -->
+					</section>
+				</div><!-- /.col-md-8 -->
+				<div class="col-md-4">
+					<aside id="aside-post">
+						<% include ../partials/posts/post-show-aside %>
+					</aside>
+				</div><!-- /.col-md-4 -->
+			</div><!-- /.row -->
+		</main><!-- MAIN SECTION END -->
+	</div><!-- /.container -->
+</div><!-- /.page-wrapper -->
+
+
+

@@ -20,7 +20,7 @@ module.exports = {
 		}
 		// render page
 		res.render('packages/index', {
-			title: 'Room Bookings - DM-DMZ Guesthouse',
+			title: 'All Packages - DM-DMZ Guesthouse',
 			description:
 				'DM-DMZ Guesthouse - Get the best choice accomodation in & around Clarens, Free State, South Africa. We provide quality accommodation services to our customers.',
 			canonical: '/packages',

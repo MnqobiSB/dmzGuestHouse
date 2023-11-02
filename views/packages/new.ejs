@@ -1,0 +1,163 @@
+<% layout('layouts/boilerplate') -%>
+<!-- page breadcrumb -->
+<nav aria-label="breadcrumb" class="breadcrumb__nav">
+	<div class="container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a a class="breadcrumb__link" href="/">Home</a></li>
+			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Add New Package</span></li>
+		</ol>
+	</div>
+</nav>
+<!-- page breadcrumb -->
+
+<div class="page-wrapper">
+	<div class="container">
+		<!-- MAIN SECTION START -->
+		<main
+			id="main"
+			class="main"
+			tabindex="-1"
+			role="main"
+		>
+			<!-- page header component -->
+			<header class="page-header">
+				<div class="page-header__text-box">
+					<h1 class="display-4 page-header__heading mb-xxsmall">Add New Package</h1>
+				</div>
+			</header>
+			<!-- page header component -->
+			
+      <section id="add-a-post" class="add-a-post p-0">
+				<div class="row">
+					<div class="col-md-10 offset-1">
+            <form 
+              action="/packages/add-a-package" 
+              method="POST" 
+              enctype="multipart/form-data"
+            >
+              <div class="form-group">
+                <label for="title">Package Title <span class="form-required">*</span>:</label>
+                <input
+                  type="text"
+                  name="package[title]"
+                  id="title"
+                  class="form-control"
+                  placeholder="Title"
+                  required
+                  autofocus
+                />
+              </div>
+            
+              <div class="form-group">
+                <label for="images">Image (Choose up to 2) <span class="form-required">*</span>:</label>
+                <input
+                  type="file"
+                  name="images"
+                  id="images"
+                  class="form-control"
+                  accept="images/*"
+                  multiple
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="price">Price/night in Rands <span class="form-required">*</span>:</label>
+                <input 
+                  type="number" 
+                  name="package[price]" 
+                  id="price"
+                  class="form-control"
+                  step="1" 
+                  min="100" 
+                  max="9999999999999"
+                  pattern="[0-9]{3,}"
+                  title="Must be a series of numeric characters."
+                  placeholder="Enter car price in Rands"
+                  required
+                />
+              </div>
+            
+              <div class="form-group">
+                <label for="featured">Is Featured Post?</label>
+                <select
+                  name="package[featuredPost]"
+                  id="featured"
+                  class="form-control">
+                  <option disabled selected>Choose...</option>
+                  <option value="true">Yes</option>
+                  <option value="false">No</option>
+                </select>
+              </div>
+            
+              <div class="form-group">
+                <label for="description">Body <span class="form-required">*</span>:</label>
+                <textarea
+                  name="package[body]"
+                  id="description"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Post Body" 
+                  required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="bookDate1">Booked Date 1:</label>
+                <input 
+                  type="date" 
+                  name="package[bookDate1]" 
+                  id="bookDate1" 
+                  class="form-control"
+                  title="Booked date must follow a pattern of year/month/day."
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="bookDate2">Booked Date 2:</label>
+                <input 
+                  type="date" 
+                  name="package[bookDate2]" 
+                  id="bookDate2" 
+                  class="form-control"
+                  title="Booked date must follow a pattern of year/month/day."
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="bookDate3">Booked Date 3:</label>
+                <input 
+                  type="date" 
+                  name="package[bookDate3]" 
+                  id="bookDate3" 
+                  class="form-control"
+                  title="Booked date must follow a pattern of year/month/day."
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="bookDate4">Booked Date 4:</label>
+                <input 
+                  type="date" 
+                  name="package[bookDate4]" 
+                  id="bookDate4" 
+                  class="form-control"
+                  title="Booked date must follow a pattern of year/month/day."
+                />
+              </div>
+            
+              <div class="form-group">
+                <button
+                  type="submit"
+                  id="submit"
+                  class="btn btn__secondary w-100"
+                >
+                  Create Package!
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
