@@ -32,6 +32,10 @@ const PackageSchema = new Schema(
 		bookDate2: { type: Date },
 		bookDate3: { type: Date },
 		bookDate4: { type: Date },
+		checkoutDate1: { type: Date },
+		checkoutDate2: { type: Date },
+		checkoutDate3: { type: Date },
+		checkoutDate4: { type: Date },
 		createdAt: {
 			type: Date,
 			default: Date.now

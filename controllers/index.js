@@ -5,8 +5,12 @@ const nodemailer = require('nodemailer');
 module.exports = {
 	// GET /
 	async landingPage (req, res, next) {
-		// find all packages
-		let packages = await Package.paginate({});
+		// find featured packages
+		let packages = await Package.find({
+			featuredPackage: true
+		})
+		.limit(3)
+		.exec();
 		// render page/file
 		res.render('index', {
 			title:
