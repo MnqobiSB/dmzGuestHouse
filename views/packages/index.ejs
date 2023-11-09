@@ -4,7 +4,7 @@
 	<div class="container">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a a class="breadcrumb__link" href="/">Home</a></li>
-			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Latest News and Reviews</span></li>
+			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Packages</span></li>
 		</ol>
 	</div>
 </nav>
@@ -22,91 +22,36 @@
 			<!-- page header component -->
 			<header class="page-header">
 				<div class="page-header__text-box">
-					<h1 class="display-4 page-header__heading">Latest Motoring News and Reviews</h1>
+					<h1 class="display-4 page-header__heading">All Packages</h1>
 				</div>
 			</header>
 			<!-- page header component -->
-
-			<div class="row">
-				<div class="col-md-8 order-2 order-sm-1">
 					<section id="blog" class="blog">
-						<div class="row mb-xsmall">
-							<div class="col-2">
-								<span class="badge badge-warning"><strong>Results:</strong> <%= posts.total %></span>
-							</div>
-							<% if (query) { %> 
-								<div class="col-10">
-									<%- query.category ? `<span class="cars__filters">${query.category}</span>`: '' %>
-									<%- query.carBrand ? `<span class="cars__filters">${query.carBrand}</span>`: '' %>
-									<%- query.carType ? `<span class="cars__filters">${query.carType}</span>`: '' %>
-								</div>
-							<% } %> 
-						</div>
-
-						<% posts.docs.forEach(function(post){ %>
-							<div class="card blog__card mb-small">
-								<div class="row no-gutters">
-									<div class="col-5">
+						<div class="card-deck row">
+							<% packages.forEach(function(package){ %>
+								<div class="col-md-4 news-blog">
+									<div class="card">
 										<img 
-											src="<%= post.images[0].url %>" 
-											class="card-img rounded-0 blog__img" 
-											alt="<%= post.title %>"
-											title="<%= post.title %>'s image"
-											loading="eager"
+											src="<%= package.images[0].url %>" 
+											class="card-img rounded-0 news-blog__img" 
+											alt="<%= package.title %>"
+											title="<%= package.title %>'s image"
+											loading="lazy"
 											width="800"
-											height="480"
-										/>
-									</div>
-									<div class="col-7">
-										<div class="card-body blog__card-body">
-											<h2 class="card-title news-blog__title larger"><%= post.title %></h2>
-											<!-- read time -->
-											<div class="blog__text-container d-none d-lg-block">
-												<svg class="blog__icon blog__icon-read" focusable="false" role="img" aria-label="Placeholder: timer">
-													<use xlink:href="/images/symbol-defs.svg#icon-timer"></use>
-												</svg>
-												<span><%= post.read %> min read</span>
-											</div>
-
-											<!-- posted date -->
-											<div class="row">
-												<div class="col-md-6 blog__xxsmall-d-none">
-													<div class="blog__text-container">
-														<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: calendar">
-															<use xlink:href="/images/symbol-defs.svg#icon-calendar"></use>
-														</svg>
-														<span><%= post.datePosted.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
-													</div>
-												</div>
-												
-												<!-- post author -->
-												<div class="col-md-6 d-none d-lg-block">
-													<div class="blog__text-container">
-														<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: user">
-															<use xlink:href="/images/symbol-defs.svg#icon-user-circle-o"></use>
-														</svg>
-														<span><%= post.authorNames %></span>
-													</div>
-												</div>
-											</div>
-											<div class="blog__link-container">
-												<a class="blog__link stretched-link" href="/motoring-news-&-reviews/<%= post.slug %>">Read More &raquo;</a>
-											</div>
+											height="250"
+										>
+										<div class="card-body text-center">
+											<h3 class="news-blog__title"><%= package.title %></h3> <!-- must be h3 -->
+											<p class="card-text"><span class="text-bold">R<%= package.price %></span><small class="text-muted">/night</small></p>
+											<p><small>Get 20% Discount for Online Bookings</small></p>
+											<a class="btn btn__secondary" href="/packages/<%= package.slug %>" role="button">View Room &raquo;</a>
 										</div>
-									</div>
-								</div>
-							</div>
-						<% }); %>
-						<% include ../partials/posts/paginatePosts %>
+									</div><!-- /.card-->
+								</div><!-- /.col-md-4 -->
+							<% }); %><!-- ejs forEach -->
+						</div><!-- /.card-deck row -->
 					</section>
 				</div><!-- /.col-md-8 -->
-
-				<div class="col-md-4 order-1 order-sm-2">
-					<aside id="search-filter-dealers">
-						<% include ../partials/posts/searchFilterPosts %>
-					</aside>
-				</div><!-- /.col-md-4 -->
-			</div><!-- /.row -->
 		</main><!-- MAIN SECTION END -->
 	</div><!-- /.container -->
 </div><!-- /.page-wrapper -->

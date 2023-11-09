@@ -6,7 +6,7 @@ const upload = multer({ storage });
 const { asyncErrorHandler} = require('../middleware');
 const { isLoggedIn } = require('../middleware/users');
 const {
-	packageIndex,
+	packagesIndex,
 	packageNew,
 	packageCreate,
 	packageShow,
@@ -18,7 +18,7 @@ const {
 /* GET packages Index /packages */
 router.get(
 	'/',
-	asyncErrorHandler(packageIndex)
+	asyncErrorHandler(packagesIndex)
 );
 
 /* GET packages New /packages/add-a-package */

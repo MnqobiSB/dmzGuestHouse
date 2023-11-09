@@ -5,19 +5,8 @@ module.exports = {
 	// Packages Index
 	async packagesIndex (req, res) {
 		// check dbqueries
-		const { dbQuery } = res.locals;
-		delete res.locals.dbQuery;
-		// find all packages
-		let packages = await Package.paginate(dbQuery, {
-			page: req.query.page || 1,
-			limit: 5,
-			sort: '-_id'
-		});
-		// paginate packages
-		packages.page = Number(packages.page);
-		if (!packages.docs.length && res.locals.query) {
-			res.locals.error = 'No articles match that query found.';
-		}
+		// find featured packages
+		let packages = await Package.find({});
 		// render page
 		res.render('packages/index', {
 			title: 'All Packages - DM-DMZ Guesthouse',
