@@ -52,12 +52,12 @@
 				<!-- our packages link -->
 				<li class="nav-item">
 					<a 
-						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'packages' ? 'navbar-active' : '' %>"
+						class="nav-link nav__link text-light <%= typeof page !== 'undefined' && page === 'all-packages' ? 'navbar-active' : '' %>"
 						href="/packages"
 					>
 						Packages
 						<span class="sr-only">
-							<%= typeof page !== 'undefined' && page === 'all-users' ? '(current)' : '' %>
+							<%= typeof page !== 'undefined' && page === 'all-packages' ? '(current)' : '' %>
 						</span>
 					</a>
 				</li>
