@@ -31,7 +31,7 @@ module.exports = {
 		res.render('packages/new', {
 			title: 'Add New Package - DM-DMZ Guesthouse',
 			description: 'Add New Package - DM-DMZ Guesthouse',
-			canonical: '/motoring-news-&-reviews/add-new-package',
+			canonical: '/packages/add-new-package',
 			robots: 'noindex, nofollow',
 			googlebot: 'noindex, nofollow',
 			page: 'new-package',
@@ -86,18 +86,22 @@ module.exports = {
 
 	// Packages Edit
 	packageEdit (req, res, next) {
+		let package = Package.findOne({
+			slug: req.params.slug
+		});
 		res.render('packages/edit', {
 			title: `Edit Package - DM-DMZ Guesthouse`,
 			description: `Edit Package - DM-DMZ Guesthouse`,
-			canonical: `/motoring-news-&-reviews/:id/edit`,
+			canonical: `/packages/:id/edit`,
 			page: 'edit-package',
 			robots: 'noindex, nofollow',
 			googlebot: 'noindex, nofollow',
 			// open graph properties start
 			og_type: 'website',
 			og_site_name: 'DM-DMZ Guesthouse',
-			og_image: '/favicon.ico'
+			og_image: '/favicon.ico',
 			// open graph properties end
+			package
 		});
 	},
 
@@ -145,6 +149,7 @@ module.exports = {
 		// redirect to show page
 		res.redirect(`/packages/${package.slug}`);
 	},
+	
 	// Package Destroy
 	async packageDestroy (req, res, next) {
 		const { package } = res.locals;

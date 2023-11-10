@@ -4,7 +4,7 @@
 	<div class="container">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a a class="breadcrumb__link" href="/">Home</a></li>
-			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Edit Post</span></li>
+			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Edit Package</span></li>
 		</ol>
 	</div>
 </nav>
@@ -22,7 +22,7 @@
 			<!-- page header component -->
 			<header class="page-header">
 				<div class="page-header__text-box">
-					<h1 class="display-4 page-header__heading mb-xxsmall">Edit Post - <%= post.title %></h1>
+					<h1 class="display-4 page-header__heading mb-xxsmall">Edit Package</h1>
 				</div>
 			</header>
 			<!-- page header component -->
@@ -31,435 +31,186 @@
 				<div class="row">
 					<div class="col-md-10 offset-1">
             <form 
-              id="postEditForm"
-              action="/motoring-news-&-reviews/<%= post.id %>?_method=PUT" 
+              action="/packages/<%= package.id %>?_method=PUT" 
               method="POST" 
               enctype="multipart/form-data"
             >
               <div class="form-group">
-                <label for="title">Post Title</label>
+                <label for="title">Package Title <span class="form-required">*</span>:</label>
                 <input
                   type="text"
-                  name="post[title]"
+                  name="package[title]"
                   id="title"
                   class="form-control"
                   placeholder="Title"
-                  required
-                  value="<%= post.title %>"
+                  value="<%= package.title %>"
                 />
               </div>
             
               <div class="form-group">
-                <label for="imageUpload">Image</label>
+                <label for="images">Image (Choose up to 2) <span class="form-required">*</span>:</label>
                 <input
                   type="file"
                   name="images"
-                  id="imageUpload"
+                  id="images"
                   class="form-control"
                   accept="images/*"
                   multiple
                 />
-                <div>
-                  <% post.images.forEach(function(image, i) { %>
-                    <img 
-                      src="<%= image.url %>" 
-                      class="edit-post-images" 
-                      width="64"
-                    />
-                    <label for="image<%= i %>">Delete</label>
-                    <input type="checkbox" name="deleteImages[]" class="imageDeleteCheckbox" id="image<%= i %>" value="<%= image.public_id %>">
-                  <% }); %>
-                </div>
-              </div>
-            
-              <div class="form-group">
-                <label for="main">Is Main Post?</label>
-                <select
-                  name="post[mainPost]"
-                  id="main"
-                  class="form-control"
-                >
-                  <option selected value="<%= post.mainPost %>"><%= post.mainPost %></option>
-                  <option value="true">Yes</option>
-                  <option value="false">No</option>
-                </select>
-              </div>
-            
-              <div class="form-group">
-                <label for="featured">Is Featured Post?</label>
-                <select
-                  name="post[featuredPost]"
-                  id="featured"
-                  class="form-control"
-                >
-                  <option selected value="<%= post.featuredPost %>"><%= post.featuredPost %></option>
-                  <option value="true">Yes</option>
-                  <option value="false">No</option>
-                </select>
-              </div>
-            
-              <div class="form-group">
-                <label for="homeArticle">Is Home Article?</label>
-                <select
-                  name="post[homeArticle]"
-                  id="homeArticle"
-                  class="form-control">
-                  <option selected value="<%= post.homeArticle %>"><%= post.homeArticle %></option>
-                  <option value="true">Yes</option>
-                  <option value="false">No</option>
-                </select>
-              </div>
-            
-              <div class="form-group">
-                <label for="popularArticle">Is Popular Article?</label>
-                <select
-                  name="post[popularArticle]"
-                  id="popularArticle"
-                  class="form-control"
-                >
-                  <option selected value="<%= post.popularArticle %>"><%= post.popularArticle %></option>
-                  <option value="true">Yes</option>
-                  <option value="false">No</option>
-                </select>
-              </div>
-            
-              <div class="form-group">
-                <label for="guideArticle">Is Guide Article?</label>
-                <select
-                  name="post[guideArticle]"
-                  id="guideArticle"
-                  class="form-control"
-                >
-                  <option selected value="<%= post.guideArticle %>"><%= post.guideArticle %></option>
-                  <option value="true">Yes</option>
-                  <option value="false">No</option>
-                </select>
-              </div>
-            
-              <div class="form-group">
-								<label for="carBrand">Car Brand/Make:</label>
-								<select 
-									name="post[carBrand]" 
-									id="carBrand"
-									class="form-control" 
-									title="Select car brand" 
-									required
-								>
-                <option selected value="<%= post.carBrand %>"><%= post.carBrand %></option>
-									<option value="AC">AC</option>
-									<option value="Abarth">Abarth</option>
-									<option value="Alfa Romeo">Alfa Romeo</option>
-									<option value="Aston Martin">Aston Martin</option>
-									<option value="Audi">Audi</option>
-									<option value="B.A.W">B.A.W</option>
-									<option value="BAIC">BAIC</option>
-									<option value="Bajaj">Bajaj</option>
-									<option value="BMW">BMW</option>
-									<option value="Bentley">Bentley</option>
-									<option value="Buick">Buick</option>
-									<option value="C.A.M">C.A.M</option>
-									<option value="CMC">CMC</option>
-									<option value="Cadillac">Cadillac</option>
-									<option value="Chana">Chana</option>
-									<option value="Chery">Chery</option>
-									<option value="Chevrolet">Chevrolet</option>
-									<option value="Chrysler">Chrysler</option>
-									<option value="Citreon">Citreon</option>
-									<option value="DFM">DFM</option>
-									<option value="Daewoo">Daewoo</option>
-									<option value="Daihatsu">Daihatsu</option>
-									<option value="Datsun">Datsun</option>
-									<option value="Dodge">Dodge</option>
-									<option value="FAW">FAW</option>
-									<option value="Ferrari">Ferrari</option>
-									<option value="Fiat">Fiat</option>
-									<option value="Ford">Ford</option>
-									<option value="Foton">Foton</option>
-									<option value="GMC">GMC</option>
-									<option value="GWM">GWM</option>
-									<option value="Geely">Geely</option>
-									<option value="Golden Journey">Golden Journey</option>
-									<option value="Hajadu">Hajadu</option>
-									<option value="Haval">Haval</option>
-									<option value="Hino">Hino</option>
-									<option value="Honda">Honda</option>
-									<option value="Hummer">Hummer</option>
-									<option value="Hyundai">Hyundai</option>
-									<option value="Infiniti">Infiniti</option>
-									<option value="Isuzu">Isuzu</option>
-									<option value="Iveco">Iveco</option>
-									<option value="JAC">JAC</option>
-									<option value="Jaguar">Jaguar</option>
-									<option value="Jeep">Jeep</option>
-									<option value="Jinbei">Jinbei</option>
-									<option value="Kia">Kia</option>
-									<option value="Lamborghini">Lamborghini</option>
-									<option value="Land Rover">Land Rover</option>
-									<option value="Lexus">Lexus</option>
-									<option value="Lotus">Lotus</option>
-									<option value="MG">MG</option>
-									<option value="MINI">MINI</option>
-									<option value="Mahindra">Mahindra</option>
-									<option value="Maserati">Maserati</option>
-									<option value="Mazda">Mazda</option>
-									<option value="McLaren">McLaren</option>
-									<option value="Mercedes-Benz">Mercedes-Benz</option>
-									<option value="Mitsubishi">Mitsubishi</option>
-									<option value="Morris">Morris</option>
-									<option value="Nash">Nash</option>
-									<option value="Nissan">Nissan</option>
-									<option value="Opel">Opel</option>
-									<option value="Peugeot">Peugeot</option>
-									<option value="Pontiac">Pontiac</option>
-									<option value="Porsche">Porsche</option>
-									<option value="Proton">Proton</option>
-									<option value="Renault">Renault</option>
-									<option value="Rolls-Royce">Rolls-Royce</option>
-									<option value="SAIC">SAIC</option>
-									<option value="SEAT">SEAT</option>
-									<option value="Saab">Saab</option>
-									<option value="Smart">Smart</option>
-									<option value="SsangYong">SsangYong</option>
-									<option value="Subaru">Subaru</option>
-									<option value="Suzuki">Suzuki</option>
-									<option value="TATA">TATA</option>
-									<option value="Toyota">Toyota</option>
-									<option value="UD Trucks">UD Trucks</option>
-									<option value="Volkswagen">Volkswagen</option>
-									<option value="Volvo">Volvo</option>
-									<option value="Willys">Willys</option>
-								</select>
-							</div>
-            
-              <div class="form-group">
-                <label for="carName">Car Name/Model:</label>
-                <input 
-                  type="text" 
-                  name="post[carName]" 
-                  id="carName"
-                  class="form-control"
-                  maxlength="256" 
-                  pattern="[a-zA-Z0-9._%+-\s]{2,}" 
-                  title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-                  placeholder="Enter car name/model"
-                  required
-                  value="<%= post.carName %>"
-                />
-              </div>
-              
-              <div class="form-group">
-                <label for="carType">Body Type:</label>
-                <select 
-                  name="post[carType]" 
-                  id="carType" 
-                  class="form-control" 
-                  title="Select post body type" 
-                  required
-                >
-                  <option selected value="<%= post.carType %>"><%= post.carType %></option>
-                  <option value="4x4">4x4</option>
-                  <option value="6x6">6x6</option>
-                  <option value="Cabriolet">Cabriolet</option>
-                  <option value="Coupe">Coupe</option>
-                  <option value="Convertable">Convertable</option>
-                  <option value="Commercial Vehicle">Commercial Vehicle</option>
-                  <option value="Compact SUV">Compact SUV</option>
-                  <option value="Double Cab Bakkie">Double Cab Bakkie</option>
-                  <option value="Economy Car">Economy Car</option>
-                  <option value="Executive Car">Executive Car</option>
-                  <option value="Family Car">Family Car</option>
-                  <option value="Fastback">Fastback</option>
-                  <option value="Hatchback">Hatchback</option>
-                  <option value="Light Truck">Light Truck</option>
-                  <option value="Limousine">Limousine</option>
-                  <option value="Mini Bus">Mini Bus</option>
-                  <option value="Multi Purpose Vehicle">Multi Purpose Vehicle</option>
-                  <option value="Mustle Car">Mustle Car</option>
-                  <option value="Panel Van">Panel Van</option>
-                  <option value="Roadster">Roadster</option>
-                  <option value="RV">RV</option>
-                  <option value="Sedan">Sedan</option>
-                  <option value="Sportback">Sportback</option>
-                  <option value="Station Wagon">Station Wagon</option>
-                  <option value="SUV">SUV</option>
-                  <option value="Single Cab Bakkie">Single Cab Bakkie</option>
-                  <option value="Van">Van</option>
-                  <option value="Utility Vehicle">Utility Vehicle</option>
-                </select>
-              </div>
-              
-              <div class="form-group">
-                <label for="category">Post Category</label>
-                <select
-                  name="post[category]"
-                  id="category"
-                  class="form-control"
-                >
-                <option selected value="<%= post.category %>"><%= post.category %></option>
-                  <option value="Car News">Car News</option>
-                  <option value="Car Reviews">Car Reviews</option>
-                  <option value="Car Launches">Car Launches</option>
-                  <option value="Car Opinions">Car Opinions</option>
-                  <option value="Car Lifestyles">Car Lifestyles</option>
-                </select>
-              </div>
-            
-              <div class="form-group">
-                <label for="tag1">Post Tag 1:</label>
-                <input
-                  type="text"
-                  name="post[tag1]"
-                  id="tag1"
-                  class="form-control"
-                  placeholder="Tag"
-                  required
-                  value="<%= post.tag1 %>"
-                />
-              </div>
-              <div class="form-group">
-                <label for="tag2">Post Tag 2:</label>
-                <input
-                  type="text"
-                  name="post[tag2]"
-                  id="tag2"
-                  class="form-control"
-                  placeholder="Tag"
-                  required
-                  value="<%= post.tag2 %>"
-                />
-              </div>
-              <div class="form-group">
-                <label for="tag3">Post Tag 3:</label>
-                <input
-                  type="text"
-                  name="post[tag3]"
-                  id="tag3"
-                  class="form-control"
-                  placeholder="Tag"
-                  required
-                  value="<%= post.tag3 %>"
-                />
-              </div>
-              <div class="form-group">
-                <label for="tag4">Post Tag 4:</label>
-                <input
-                  type="text"
-                  name="post[tag4]"
-                  id="tag4"
-                  class="form-control"
-                  placeholder="Tag"
-                  required
-                  value="<%= post.tag4 %>"
-                />
-              </div>
-              <div class="form-group">
-                <label for="tag5">Post Tag 5:</label>
-                <input
-                  type="text"
-                  name="post[tag5]"
-                  id="tag5"
-                  class="form-control"
-                  placeholder="Tag"
-                  required
-                  value="<%= post.tag5 %>"
-                />
-              </div>
-            
-              <div class="form-group">
-                <label for="description">Body</label>
-                <textarea
-                  name="post[body]"
-                  id="description"
-                  class="form-control"
-                  rows="5"
-                  placeholder="Post Body"><%= post.body %></textarea>
+                
               </div>
 
               <div class="form-group">
-                <label for="datePosted">Date Posted <span class="form-required">*</span>:</label>
+                <label for="price">Price/night in Rands <span class="form-required">*</span>:</label>
                 <input 
-                  type="date" 
-                  name="post[datePosted]" 
-                  id="datePosted" 
+                  type="number" 
+                  name="package[price]" 
+                  id="price"
                   class="form-control"
-                  title="Payment date must follow a pattern of year/month/day."
-                  required
-                />
-                <%= post.datePosted.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %> 
-              </div>
-            
-              <div class="form-group">
-                <label for="read">Read Time</label>
-                <input
-                  type="number"
-                  name="post[read]"
-                  id="read"
-                  class="form-control"
-                  step="1"
-                  min="1"
-                  max="15"
-                  placeholder="Read time(min)"
-                  required
-                  value="<%= post.read %>"
+                  step="1" 
+                  min="100" 
+                  max="99999"
+                  pattern="[0-9]{3,}"
+                  title="Must be a series of numeric characters."
+                  placeholder="Enter car price in Rands"
+                  value="<%= package.price %>"
                 />
               </div>
             
               <div class="form-group">
-                <label for="authorNames">Author Full Names:</label>
-                <input 
-                  type="text" 
-                  name="post[authorNames]" 
-                  id="authorNames"
-                  class="form-control"
-                  maxlength="256" 
-                  pattern="[a-zA-Z0-9._%+-\s]{2,}" 
-                  title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-                  placeholder="Enter full names"
-                  required
-                  value="<%= post.authorNames %>"
-                />
+                <label for="featured">Is Featured Package? </label>
+                <select
+                  name="package[featuredPackage]"
+                  id="featured"
+                  class="form-control">
+                  <option selected value="<%= package.featuredPackage %>"><%= package.featuredPackage %></option>
+                  <option value="true">Yes</option>
+                  <option value="false">No</option>
+                </select>
               </div>
             
               <div class="form-group">
-                <label for="authorBio">Author Bio:</label>
+                <label for="description">Body <span class="form-required">*</span>:</label>
                 <textarea
-                  name="post[authorBio]"
-                  id="authorBio"
+                  name="package[body]"
+                  id="description"
                   class="form-control"
                   rows="5"
-                  placeholder="Author Bio"><%= post.authorBio %></textarea>
+                  placeholder="Post Body" 
+                  required><%= package.body %></textarea>
               </div>
-            
-              <div class="form-group">
-                <label for="authorTwitter">Author Twitter Acc:</label>
-                <input 
-                  type="text" 
-                  name="post[authorTwitter]" 
-                  id="authorTwitter"
-                  class="form-control"
-                  maxlength="256" 
-                  pattern="[a-zA-Z0-9._%+-\s]{2,}" 
-                  title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-                  placeholder="Enter twitter acc. url"
-                  required
-                  value="<%= post.authorTwitter %>"
-                />
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="bookDate1">Booked Date 1:</label>
+                    <input 
+                      type="date" 
+                      name="package[bookDate1]" 
+                      id="bookDate1" 
+                      class="form-control"
+                      title="Booked date must follow a pattern of year/month/day."
+                    />
+                     
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="checkoutDate1">Checkout Date 1:</label>
+                    <input 
+                      type="date" 
+                      name="package[checkoutDate1]" 
+                      id="checkoutDate1" 
+                      class="form-control"
+                      title="Booked date must follow a pattern of year/month/day."
+                    />
+                  </div>
+                </div>
               </div>
-              
-              <div class="form-group">
-                <label for="authorImage">Author Image:</label>
-                <input 
-                  type="text" 
-                  name="post[authorImage]" 
-                  id="authorImage"
-                  class="form-control"
-                  maxlength="256" 
-                  pattern="[a-zA-Z0-9._%+-\s]{2,}" 
-                  title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-                  placeholder="Enter image url"
-                  required
-                  value="<%= post.authorImage %>"
-                />
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="bookDate2">Booked Date 2:</label>
+                    <input 
+                      type="date" 
+                      name="package[bookDate2]" 
+                      id="bookDate2" 
+                      class="form-control"
+                      title="Booked date must follow a pattern of year/month/day."
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="checkoutDate2">Checkout Date 2:</label>
+                    <input 
+                      type="date" 
+                      name="package[checkoutDate2]" 
+                      id="checkoutDate2" 
+                      class="form-control"
+                      title="Booked date must follow a pattern of year/month/day."
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="bookDate1">Booked Date 3:</label>
+                    <input 
+                      type="date" 
+                      name="package[bookDate3]" 
+                      id="bookDate3" 
+                      class="form-control"
+                      title="Booked date must follow a pattern of year/month/day."
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="checkoutDate3">Checkout Date 3:</label>
+                    <input 
+                      type="date" 
+                      name="package[checkoutDate3]" 
+                      id="checkoutDate3" 
+                      class="form-control"
+                      title="Booked date must follow a pattern of year/month/day."
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="bookDate1">Booked Date 4:</label>
+                    <input 
+                      type="date" 
+                      name="package[bookDate4]" 
+                      id="bookDate4" 
+                      class="form-control"
+                      title="Booked date must follow a pattern of year/month/day."
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="checkoutDate1">Checkout Date 4:</label>
+                    <input 
+                      type="date" 
+                      name="package[checkoutDate4]" 
+                      id="checkoutDate4" 
+                      class="form-control"
+                      title="Booked date must follow a pattern of year/month/day."
+                    />
+                  </div>
+                </div>
               </div>
             
               <div class="form-group">
@@ -468,7 +219,7 @@
                   id="submit"
                   class="btn btn__secondary w-100"
                 >
-                  Edit Post!
+                  Create Package!
                 </button>
               </div>
             </form>

@@ -5,7 +5,7 @@ const middleware = {
 		if (req.isAuthenticated()) return next();
 		req.session.error = 'You need to be signed in first!';
 		req.session.redirectTo = req.originalUrl;
-		res.redirect('/car-dealerships/sign-in');
+		res.redirect('/admin/sign-in');
 	},
 
 	isValidUserPassword: async (req, res, next) => {
@@ -20,7 +20,7 @@ const middleware = {
 		} else {
 			middleware.deleteProfileImage(req);
 			req.session.error = 'Incorrect current password!';
-			return res.redirect('/car-dealerships/profile');
+			return res.redirect('/admin/profile');
 		}
 	},
 
@@ -30,7 +30,7 @@ const middleware = {
 		if (newPassword && !passwordConfirmation) {
 			middleware.deleteProfileImage(req);
 			req.session.error = 'Missing password confirmation!';
-			return res.redirect('/car-dealerships/profile');
+			return res.redirect('/admin/profile');
 		} else if (newPassword && passwordConfirmation) {
 			const { user } = res.locals;
 			if (newPassword === passwordConfirmation) {
@@ -39,7 +39,7 @@ const middleware = {
 			} else {
 				middleware.deleteProfileImage(req);
 				req.session.error = 'New passwords must match!';
-				return res.redirect('/car-dealerships/profile');
+				return res.redirect('/admin/profile');
 			}
 		} else {
 			next();
