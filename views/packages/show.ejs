@@ -36,14 +36,6 @@
 							<!-- post header -->
 							<header class="blog-post__header mb-small">
 								<h2 class="car__h2 mb-xsmall">R<%= package.price %><small class="text-muted">/night</small></h2>
-								<p class="blog-post__meta">
-									<span class="blog-post__date">
-										<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: calendars">
-											<use xlink:href="/images/symbol-defs.svg#icon-calendar"></use>
-										</svg> 
-										
-									</span>
-								</p>
 							</header>
 							<!-- post header -->
 
@@ -64,7 +56,7 @@
 								
 								<!-- delete/edit post if author -->
 								<% if (currentUser) { %>
-									<h2 class="mb-small">Manage Package:</h2>
+									<h3 class="mb-small">Manage Package:</h3>
 
 									<div class="row justify-content-between mb-4">
 										<div class="col-6">
@@ -109,7 +101,14 @@
 				<div class="col-md-4">
 					<aside id="aside-post">
 						<h3>See Availability</h3>
-						
+						<p class="blog-post__meta">
+							<span class="blog-post__date">
+								<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: calendars">
+									<use xlink:href="/images/symbol-defs.svg#icon-calendar"></use>
+								</svg> 
+								
+							</span>
+						</p>
 					</aside>
 				</div><!-- /.col-md-4 -->
 			</div><!-- /.row -->
