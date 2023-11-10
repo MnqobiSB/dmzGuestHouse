@@ -10,10 +10,10 @@ html {
   font-size: 62.5%; }
   @media only screen and (max-width: 62em) {
     html {
-      font-size: 58%; } }
+      font-size: 60%; } }
   @media only screen and (max-width: 33.75em) {
     html {
-      font-size: 56%; } }
+      font-size: 58%; } }
 
 body {
   box-sizing: border-box;
@@ -324,12 +324,12 @@ body {
   .navbar-brand:link, .navbar-brand:visited {
     color: #f7f7f7;
     text-decoration: none;
-    margin-right: .4rem; }
+    margin-right: 4rem; }
   .navbar__logo {
-    height: 6rem; }
+    height: 7rem; }
     @media only screen and (max-width: 75em) {
       .navbar__logo {
-        height: 6rem; } }
+        height: 7rem; } }
   @media only screen and (max-width: 75em) {
     .navbar-nav {
       margin-top: 1.6rem; } }
@@ -412,7 +412,7 @@ body {
 @media only screen and (max-width: 75em) {
   .offcanvas-collapse {
     position: fixed;
-    top: 7.9rem;
+    top: 8.9rem;
     /* Height of navbar */
     bottom: 0;
     left: 100%;
@@ -615,11 +615,11 @@ body {
   border-radius: 0;
   background-color: transparent; }
   .breadcrumb__nav {
-    margin-top: 8rem;
+    margin-top: 9rem;
     background-color: #eeeeee; }
     @media only screen and (max-width: 75em) {
       .breadcrumb__nav {
-        margin-top: 8rem; } }
+        margin-top: 9rem; } }
   .breadcrumb-item + .breadcrumb-item::before {
     color: #333333 !important; }
   .breadcrumb__link:link, .breadcrumb__link:visited {
@@ -967,7 +967,7 @@ body {
       padding-left: 1.5rem; } }
 
 #brandBodyFilters {
-  background-image: linear-gradient(to right, rgba(13, 23, 39, 0.99), rgba(13, 23, 39, 0.95)), url(../images/dfd.jpg);
+  background-image: linear-gradient(to right, rgba(13, 41, 87, 0.8), rgba(13, 23, 39, 0.8)), url(../images/dfd.jpg);
   background-size: cover;
   background-position: center; }
 

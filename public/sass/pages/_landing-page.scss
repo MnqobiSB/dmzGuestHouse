@@ -148,8 +148,8 @@
 #brandBodyFilters {
 	background-image: linear-gradient(
 			to right,
-			rgba($color-secondary, .99),
-			rgba($color-secondary, .95)
+			rgba($color-secondary-dark, .8),
+			rgba($color-secondary, .8)
 		),
 		url(../images/dfd.jpg);
 	background-size: cover;
