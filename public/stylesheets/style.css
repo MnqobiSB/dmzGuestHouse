@@ -13,7 +13,7 @@ html {
       font-size: 58%; } }
   @media only screen and (max-width: 33.75em) {
     html {
-      font-size: 50%; } }
+      font-size: 56%; } }
 
 body {
   box-sizing: border-box;
@@ -278,7 +278,7 @@ body {
   border-radius: 0 !important;
   position: relative;
   margin-bottom: 0;
-  background-image: linear-gradient(to right, rgba(13, 23, 39, 0.3), rgba(13, 23, 39, 0.3)), url(../images/main-bg-img.jpg);
+  background-image: linear-gradient(to right, rgba(13, 41, 87, 0.8), rgba(13, 23, 39, 0.8)), url(../images/background.jpg);
   background-size: cover;
   background-position: center; }
   @supports (background-attachment: fixed) or (-webkit-background-attachment: fixed) {
@@ -304,7 +304,8 @@ body {
     transform: translate(-50%, -50%);
     width: 80%;
     text-align: center;
-    padding-top: 6rem; }
+    padding-top: 6rem;
+    color: #f7f7f7; }
   .header__hr {
     border-top: 1px solid #777777;
     margin: 3.2rem 0 3.8rem; }
@@ -443,7 +444,7 @@ body {
     cursor: pointer; }
   .btn__primary:hover {
     box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.2);
-    background-color: #e2d115; }
+    background-color: #a78354; }
   .btn__primary:active, .btn__primary:focus {
     transform: translateY(1px);
     box-shadow: 0 0.5rem 1rem rgba(20, 20, 20, 0.2); }

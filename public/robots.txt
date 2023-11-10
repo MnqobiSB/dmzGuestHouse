@@ -37,13 +37,13 @@
 #User-agent: *
 #Disallow: /
 #Crawl-delay: 5
-#Disallow: /car-dealerships/sign-up/
-#Disallow: /car-dealerships/sign-in/
+#Disallow: /admin/sign-up/
+#Disallow: /admin/sign-in/
 #Disallow: /legal-disclaimer/
 #Disallow: /terms-of-service/
 #Disallow: /privacy-policy/
-#Disallow: /car-dealerships/profile/
+#Disallow: /admin/profile/
 
-Sitemap: https://www.autoterritory.co.za/sitemap.xml
-Sitemap: https://autoterritory.co.za/sitemap.xml
+Sitemap: https://www.dm-dmzguesthouse.co.za/sitemap.xml
+Sitemap: https://dm-dmzguesthouse.co.za/sitemap.xml
 

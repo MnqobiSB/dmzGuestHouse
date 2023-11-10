@@ -8,465 +8,48 @@
 
 
 <url>
-  <loc>https://www.autoterritory.co.za/</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
+  <loc>https://www.dm-dmzguesthouse.co.za/</loc>
+  <lastmod>2023-11-10T17:50:11+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
+  <loc>https://www.dm-dmzguesthouse.co.za/packages</loc>
   <lastmod>2021-07-30T17:50:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.autoterritory.co.za/car-dealerships</loc>
+  <loc>https://www.dm-dmzguesthouse.co.za/gallery</loc>
   <lastmod>2021-07-30T17:50:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews</loc>
+  <loc>https://www.dm-dmzguesthouse.co.za/about-us</loc>
   <lastmod>2021-07-30T17:50:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews?search=&amp;category%5B%5D=Car+News</loc>
+  <loc>https://www.dm-dmzguesthouse.co.za/contact-us</loc>
   <lastmod>2021-07-30T17:50:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews?search=&amp;category%5B%5D=Car+Launches</loc>
+  <loc>https://www.dm-dmzguesthouse.co.za/packages/sharing-deluxe-room</loc>
   <lastmod>2021-07-30T17:50:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews?search=&amp;category%5B%5D=Car+Reviews</loc>
+  <loc>https://www.dm-dmzguesthouse.co.za/packages/premium-room</loc>
   <lastmod>2021-07-30T17:50:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews?search=&amp;category%5B%5D=Car+Opinions</loc>
+  <loc>https://www.dm-dmzguesthouse.co.za/packages/family-room</loc>
   <lastmod>2021-07-30T17:50:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews?search=&amp;category%5B%5D=Car+Lifestyles</loc>
+  <loc>https://www.dm-dmzguesthouse.co.za/booking</loc>
   <lastmod>2021-07-30T17:50:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://www.autoterritory.co.za/finance-calculator</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/contact-us</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/advertise</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;carState%5B%5D=New&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews/facelift-porsche-macan-is-revealed-specs-and-pricing</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews/the-new-audi-rs3-sportback-and-rs3-sedan-have-been-revealed</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews/mini-cooper-jcw-anniversary-edition-has-been-confirmed-for-sa</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews/giulia-alfa-romeo-gta-and-gtam-has-been-verified-for-mzansi</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews/facelift-hyundai-kona-is-available-in-south-africa</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews/vw-taigo-has-been-announced-and-it-will-be-available-in-sa</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews/new-bmw-2-series-coupe-second-generation-is-revealed</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Audi&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=BMW&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Chevrolet&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Datsun&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Fiat&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Ford&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Honda&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Hyundai&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Isuzu&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Jaguar&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Jeep&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Kia&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Land+Rover&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Lexus&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Mazda&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Mercedes-Benz&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=MINI&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Mitsubishi&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Nissan&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Opel&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Peugeot&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Porsche&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Renault&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Subaru&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Suzuki&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Toyota&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Volkswagen&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Volvo&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Cabriolet&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Compact+SUV&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Convertable&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Coupe&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Double+Cab+Bakkie&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Economy+Car&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Executive+Car&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Family+Car&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Fastback&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Hatchback&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Multi+Purpose+Vehicle&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Panel+Van&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Roadster&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Sedan&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Sportback&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Station+Wagon&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=SUV&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;bodyType%5B%5D=Single+Cab+Bakkie&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/about-us</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/careers</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/private-seller</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;province%5B%5D=Free+State&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;province%5B%5D=Gauteng&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;province%5B%5D=Mpumalanga&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;province%5B%5D=Kwa-Zulu+Natal&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;province%5B%5D=Eastern+Cape&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;province%5B%5D=Northern+Cape&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;province%5B%5D=Western+Cape&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;province%5B%5D=North+West&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;province%5B%5D=Limpopo&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=20000&amp;price%5Bmax%5D=100000&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Toyota&amp;carState%5B%5D=Used&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=Volkswagen&amp;carState%5B%5D=Used&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale?allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;brand%5B%5D=BMW&amp;carState%5B%5D=Used&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/cars-for-sale/2021-bmw-3-series-bethlehem-free-state</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/car-dealerships/auto-territory-bethlehem-free-state?dealershipCars=60e41ae8e060e4001568caef&amp;allCars=%7B%7D&amp;sortBy=price&amp;search=&amp;price%5Bmin%5D=&amp;price%5Bmax%5D=&amp;year=&amp;mileage%5BminMileage%5D=&amp;mileage%5BmaxMileage%5D=</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews?page=1</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews?page=2</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews/much-anticipated-toyota-gr-yaris-arrives-in-sa</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews/2021-volkswagen-polo-gti-facelift-is-unveiled</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews?search=&amp;category%5B%5D=Car+Launches&amp;page=1</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews?search=&amp;category%5B%5D=Car+Launches&amp;page=2</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/car-dealerships/auto-territory-bethlehem-free-state</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://www.autoterritory.co.za/motoring-news-&amp;-reviews/mzansi-gets-their-own-bmw-3-series-edition</loc>
-  <lastmod>2021-07-30T17:50:11+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-
-
 </urlset>

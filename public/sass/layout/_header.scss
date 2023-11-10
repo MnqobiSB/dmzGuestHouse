@@ -6,10 +6,10 @@
 
 	background-image: linear-gradient(
 			to right,
-			rgba($color-secondary, .3),
-			rgba($color-secondary, 0.3)
+			rgba($color-secondary-dark, .8),
+			rgba($color-secondary, .8)
 		),
-		url(../images/main-bg-img.jpg);
+		url(../images/background.jpg);
 	background-size: cover;
 	background-position: center;
 
@@ -36,6 +36,7 @@
 		width: 80%;
 		text-align: center;
 		padding-top: 6rem;
+		color: $color-grey-light-1;
 	}
 
 	&__hr {
