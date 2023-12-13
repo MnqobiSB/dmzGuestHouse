@@ -85,10 +85,8 @@ module.exports = {
 	},
 
 	// Packages Edit
-	packageEdit (req, res, next) {
-		let package = Package.findOne({
-			slug: req.params.slug
-		});
+	async packageEdit (req, res) {
+		const package = await Package.findById(req.params.id)
 		res.render('packages/edit', {
 			title: `Edit Package - DM-DMZ Guesthouse`,
 			description: `Edit Package - DM-DMZ Guesthouse`,
@@ -108,43 +106,11 @@ module.exports = {
 	// Packages Update
 	async packageUpdate (req, res, next) {
 		// destructure package from res.locals
-		const { package } = res.locals;
-		// check if there's any images for deletion
-		if (req.body.deleteImages && req.body.deleteImages.length) {
-			// assign deleteImages from req.body to its own variable
-			let deleteImages = req.body.deleteImages;
-			// loop over the deleteImages
-			for (const public_id of deleteImages) {
-				// delete images from cloudinary
-				await cloudinary.v2.uploader.destroy(public_id);
-				// delete images from package.images
-				for (const image of package.images) {
-					if (image.public_id === public_id) {
-						let index = package.images.indexOf(image);
-						package.images.splice(index, 1);
-					}
-				}
-			}
-		}
-		// check if there are any new images for upload
-		if (req.files) {
-			// upload images
-			for (const file of req.files) {
-				// add images to package.images array
-				package.images.push({
-					url: file.secure_url,
-					public_id: file.public_id
-				});
-			}
-		}
+		const { id } = req.params;
+		
 		// update the package with any new properties
-		package.title = req.body.package.title;
-		package.createdAt = req.body.package.createdAt;
-		package.featuredPackage = req.body.package.featuredPackage;
-		package.body = req.body.package.body;
-
-		// save the updated package into the db
-		await package.save();
+		const package = await Package.findByIdAndUpdate(id, {...req.body.package})
+		
 		req.session.success = 'Package updated successfully!';
 		// redirect to show page
 		res.redirect(`/packages/${package.slug}`);
@@ -152,11 +118,11 @@ module.exports = {
 	
 	// Package Destroy
 	async packageDestroy (req, res, next) {
-		const { package } = res.locals;
+		const { id } = req.params;
 		for (const image of package.images) {
 			await cloudinary.v2.uploader.destroy(image.public_id);
 		}
-		await package.remove();
+		await Package.findByIdAndDelete(id);
 		req.session.success = 'Package deleted successfully!';
 		res.redirect('/packages');
 	}

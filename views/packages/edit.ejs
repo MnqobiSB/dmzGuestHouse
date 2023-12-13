@@ -22,7 +22,7 @@
 			<!-- page header component -->
 			<header class="page-header">
 				<div class="page-header__text-box">
-					<h1 class="display-4 page-header__heading mb-xxsmall">Edit Package</h1>
+					<h1 class="display-4 page-header__heading mb-xxsmall">Edit Package - <%= package.title %></h1>
 				</div>
 			</header>
 			<!-- page header component -->
@@ -36,7 +36,7 @@
               enctype="multipart/form-data"
             >
               <div class="form-group">
-                <label for="title">Package Title <span class="form-required">*</span>:</label>
+                <label for="title" class="text-bold">Package Title <span class="form-required">*</span>:</label>
                 <input
                   type="text"
                   name="package[title]"
@@ -48,7 +48,7 @@
               </div>
             
               <div class="form-group">
-                <label for="images">Image (Choose up to 2) <span class="form-required">*</span>:</label>
+                <label for="images" class="text-bold">Image (Choose up to 2) <span class="form-required">*</span>:</label>
                 <input
                   type="file"
                   name="images"
@@ -57,11 +57,21 @@
                   accept="images/*"
                   multiple
                 />
-                
+                <div>
+                  <% package.images.forEach(function(image, i) { %>
+                    <img 
+                      src="<%= image.url %>" 
+                      class="edit-post-images" 
+                      width="64"
+                    />
+                    <label for="image<%= i %>">Delete</label>
+                    <input type="checkbox" name="deleteImages[]" class="imageDeleteCheckbox" id="image<%= i %>" value="<%= image.public_id %>">
+                  <% }); %>
+                </div>
               </div>
 
               <div class="form-group">
-                <label for="price">Price/night in Rands <span class="form-required">*</span>:</label>
+                <label for="price" class="text-bold">Price/night in Rands <span class="form-required">*</span>:</label>
                 <input 
                   type="number" 
                   name="package[price]" 
@@ -78,7 +88,7 @@
               </div>
             
               <div class="form-group">
-                <label for="featured">Is Featured Package? </label>
+                <label for="featured" class="text-bold">Is Featured Package? </label>
                 <select
                   name="package[featuredPackage]"
                   id="featured"
@@ -90,7 +100,7 @@
               </div>
             
               <div class="form-group">
-                <label for="description">Body <span class="form-required">*</span>:</label>
+                <label for="description" class="text-bold">Room Description <span class="form-required">*</span>:</label>
                 <textarea
                   name="package[body]"
                   id="description"
@@ -100,116 +110,155 @@
                   required><%= package.body %></textarea>
               </div>
 
+              <hr class="header__hr">
+
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label for="bookDate1">Booked Date 1:</label>
+                    <label class="text-bold" for="bookDate1">Booked Date 1:</label>
                     <input 
                       type="date" 
                       name="package[bookDate1]" 
                       id="bookDate1" 
                       class="form-control"
                       title="Booked date must follow a pattern of year/month/day."
+                      value="<%= package.bookDate1 ? package.bookDate1.toLocaleDateString("en-CA") : '' %>"
                     />
-                     
                   </div>
+                  <% if (package.bookDate1) { %>
+                    <span class="form-required"><%= package.bookDate1.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                  <% } %>
                 </div>
 
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label for="checkoutDate1">Checkout Date 1:</label>
+                    <label class="text-bold" for="checkoutDate1">Checkout Date 1:</label>
                     <input 
                       type="date" 
                       name="package[checkoutDate1]" 
                       id="checkoutDate1" 
                       class="form-control"
                       title="Booked date must follow a pattern of year/month/day."
+                      value="<%= package.checkoutDate1 ? package.checkoutDate1.toLocaleDateString("en-CA") : '' %>"
                     />
                   </div>
+                  <% if (package.checkoutDate1) { %>
+                    <span class="form-required"><%= package.checkoutDate1.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                  <% } %>
                 </div>
               </div>
+
+              <hr class="header__hr">
 
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label for="bookDate2">Booked Date 2:</label>
+                    <label class="text-bold" for="bookDate2">Booked Date 2:</label>
                     <input 
                       type="date" 
                       name="package[bookDate2]" 
                       id="bookDate2" 
                       class="form-control"
                       title="Booked date must follow a pattern of year/month/day."
+                      value="<%= package.bookDate2 ? package.bookDate2.toLocaleDateString("en-CA") : '' %>"
                     />
                   </div>
+                  <% if (package.bookDate2) { %>
+                    <span class="form-required"><%= package.bookDate2.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                  <% } %>
                 </div>
 
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label for="checkoutDate2">Checkout Date 2:</label>
+                    <label class="text-bold" for="checkoutDate2">Checkout Date 2:</label>
                     <input 
                       type="date" 
                       name="package[checkoutDate2]" 
                       id="checkoutDate2" 
                       class="form-control"
                       title="Booked date must follow a pattern of year/month/day."
+                      value="<%= package.checkoutDate2 ? package.checkoutDate2.toLocaleDateString("en-CA") : '' %>"
                     />
                   </div>
+                  <% if (package.checkoutDate2) { %>
+                    <span class="form-required"><%= package.checkoutDate2.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                  <% } %>
                 </div>
               </div>
+
+              <hr class="header__hr">
 
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label for="bookDate1">Booked Date 3:</label>
+                    <label class="text-bold" for="bookDate3">Booked Date 3:</label>
                     <input 
                       type="date" 
                       name="package[bookDate3]" 
                       id="bookDate3" 
                       class="form-control"
                       title="Booked date must follow a pattern of year/month/day."
+                      value="<%= package.bookDate3 ? package.bookDate3.toLocaleDateString("en-CA") : '' %>"
                     />
                   </div>
+                  <% if (package.bookDate3) { %>
+                    <span class="form-required"><%= package.bookDate3.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                  <% } %>
                 </div>
 
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label for="checkoutDate3">Checkout Date 3:</label>
+                    <label class="text-bold" for="checkoutDate3">Checkout Date 3:</label>
                     <input 
                       type="date" 
                       name="package[checkoutDate3]" 
                       id="checkoutDate3" 
                       class="form-control"
                       title="Booked date must follow a pattern of year/month/day."
+                      value="<%= package.checkoutDate3 ? package.checkoutDate3.toLocaleDateString("en-CA") : '' %>"
                     />
                   </div>
+                  <% if (package.checkoutDate3) { %>
+                    <span class="form-required"><%= package.checkoutDate3.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                  <% } %>
                 </div>
               </div>
+
+              <hr class="header__hr">
 
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label for="bookDate1">Booked Date 4:</label>
+                    <label class="text-bold" for="bookDate4">Booked Date 4:</label>
                     <input 
                       type="date" 
                       name="package[bookDate4]" 
                       id="bookDate4" 
                       class="form-control"
                       title="Booked date must follow a pattern of year/month/day."
+                      value="<%= package.bookDate4 ? package.bookDate4.toLocaleDateString("en-CA") : '' %>"
                     />
                   </div>
+                  <% if (package.bookDate4) { %>
+                    <span class="form-required"><%= package.bookDate4.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                  <% } %>
                 </div>
 
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label for="checkoutDate1">Checkout Date 4:</label>
+                    <label class="text-bold" for="checkoutDate4">Checkout Date 4:</label>
                     <input 
                       type="date" 
                       name="package[checkoutDate4]" 
                       id="checkoutDate4" 
                       class="form-control"
                       title="Booked date must follow a pattern of year/month/day."
+                      value="<%= package.checkoutDate4 ? package.checkoutDate4.toLocaleDateString("en-CA") : '' %>"
                     />
                   </div>
+                  <% if (package.checkoutDate4) { %>
+                    <span class="form-required"><%= package.checkoutDate4.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                  <% } %>
                 </div>
               </div>
             
@@ -219,11 +268,20 @@
                   id="submit"
                   class="btn btn__secondary w-100"
                 >
-                  Create Package!
+                  Update Package!
                 </button>
               </div>
             </form>
           </div>
+
+          <form>
+            <input 
+              class="btn btn__tertiary"
+              type="button" 
+              value="&laquo; Go back" 
+              onclick="history.back()"
+            />
+          </form>
         </div>
       </section>
     </main>

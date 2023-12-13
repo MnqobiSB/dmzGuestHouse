@@ -28,7 +28,7 @@ router.get('/add-a-package', isLoggedIn, packageNew);
 router.post(
 	'/add-a-package',
 	isLoggedIn,
-	upload.array('images', 2),
+	upload.array('images', 3),
 	asyncErrorHandler(packageCreate)
 );
 
@@ -46,7 +46,7 @@ router.get(
 router.put(
 	'/:id',
 	isLoggedIn,
-	upload.array('images', 10),
+	upload.array('images', 3),
 	asyncErrorHandler(packageUpdate)
 );
 
