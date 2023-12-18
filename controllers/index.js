@@ -63,7 +63,7 @@ module.exports = {
 
 				<p>Happy Vacations!,<br>DM-DMZ Guesthouse Newsletters</p>
 
-				<p><small><a href="https://www.dmzguesthouse.co.za/contact-us">Unsubscribe</a> | <a href="https://www.dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
+				<p><small><a href="https://www.dm-dmzguesthouse.co.za/contact-us">Unsubscribe</a> | <a href="https://www.dm-dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dm-dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dm-dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
 			`;
 
 		// email sender dmz guesthouse
@@ -227,16 +227,16 @@ module.exports = {
 
 				<p>Happy Vacations,<br>DM-DMZ Guesthouse Contact Team</p>
 
-				<p><small><a href="https://www.dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
+				<p><small><a href="https://www.dm-dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dm-dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dm-dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
 			`;
 
 		// email sender dmz guesthouse
 		let smtpTransport = nodemailer.createTransport({
-			host: 'serv28.registerdomain.co.za',
+			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
 			auth: {
-				user: 'contact@dmzguesthouse.co.za',
+				user: 'contact@dm-dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
 			},
 			tls: {
@@ -246,11 +246,11 @@ module.exports = {
 
 		// email sender user
 		let smtpTransportUser = nodemailer.createTransport({
-			host: 'serv28.registerdomain.co.za',
+			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
 			auth: {
-				user: 'contact@dmzguesthouse.co.za',
+				user: 'contact@dm-dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
 			},
 			tls: {
@@ -260,27 +260,25 @@ module.exports = {
 
 		// email options dmz guesthouse
 		const mailOptions = {
-			from: '"Contact Us - DM-DMZ Guesthouse" <contact@dmzguesthouse.co.za>',
-			to: 'contact@dmzguesthouse.co.za',
+			from: '"Contact Us - DM-DMZ Guesthouse" <contact@dm-dmzguesthouse.co.za>',
+			to: 'contact@dm-dmzguesthouse.co.za',
 			subject: 'New Customer Enquiry',
 			html: contactData
 		};
 
 		// email options user
 		const mailOptionsUser = {
-			from:
-				'"DM-DMZ Guesthouse - Contact Us Team" <contact@dmzguesthouse.co.za>',
+			from: '"DM-DMZ Guesthouse - Contact Us Team" <contact@dm-dmzguesthouse.co.za>',
 			to: req.body.email,
 			subject: 'Enquiry Recieved - DM-DMZ Gusethouse',
 			html: contactDataUser
 		};
 
-		await smtpTransport.sendMail(mailOptions, mailOptionsUser);
+		await smtpTransport.sendMail(mailOptions);
 
 		await smtpTransportUser.sendMail(mailOptionsUser);
 
-		req.session.success = `G'day ${req.body
-			.name}, your enquiry has been sent successfully!`;
+		req.session.success = `G'day ${req.body.name}, your enquiry has been sent successfully! A reply Will be sent to your email`;
 		res.redirect('/');
 	},
 
@@ -294,23 +292,6 @@ module.exports = {
 			googlebot:
 				'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
 			page: 'booking',
-			// open graph properties start
-			og_type: 'website',
-			og_site_name: 'DM-DMZ Guesthouse',
-			og_image: '/favicon.ico'
-			// open graph properties end
-		});
-	},
-
-	// GET /terms-of-service
-	async getTerms (req, res, next) {
-		res.render('terms', {
-			title: 'Terms Of Service - DM-DMZ Guesthouse',
-			description: 'DM-DMZ Guesthouse Terms Of Service',
-			canonical: '/terms-of-service',
-			robots: 'noindex, nofollow',
-			googlebot: 'noindex, nofollow',
-			page: 'terms',
 			// open graph properties start
 			og_type: 'website',
 			og_site_name: 'DM-DMZ Guesthouse',
@@ -348,7 +329,7 @@ module.exports = {
 
 				<p>Happy Vacations,<br>DM-DMZ Guesthouse Contact Team</p>
 
-				<p><small><a href="https://www.dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
+				<p><small><a href="https://www.dm-dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dm-dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dm-dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
 			`;
 
 		// email sender dmz guesthouse
@@ -403,6 +384,23 @@ module.exports = {
 		req.session.success = `G'day ${req.body
 			.name}, your Booking has been successfully received! An Email has been sent to you.`;
 		res.redirect('/booking');
+	},
+
+	// GET /terms-of-service
+	async getTerms (req, res, next) {
+		res.render('terms', {
+			title: 'Terms Of Service - DM-DMZ Guesthouse',
+			description: 'DM-DMZ Guesthouse Terms Of Service',
+			canonical: '/terms-of-service',
+			robots: 'noindex, nofollow',
+			googlebot: 'noindex, nofollow',
+			page: 'terms',
+			// open graph properties start
+			og_type: 'website',
+			og_site_name: 'DM-DMZ Guesthouse',
+			og_image: '/favicon.ico'
+			// open graph properties end
+		});
 	},
 
 	// GET /legal-disclaimer
