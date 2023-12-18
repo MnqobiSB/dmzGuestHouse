@@ -42,12 +42,12 @@ module.exports = {
 			    <li>${req.body.email}</li>
 		  	</ul>  
 		  	<h3>Message</h3>
-		  	<p>You Have A New Subscriber, add customer to maillist and keep them in the loop.</p>
+		  	<p>You Have A New Subscriber, add customer to mail-list and keep them in the loop.</p>
 	  	`;
       
 		// send customer an email
 		const subscribeDataCustomer = `
-				<img src="" width="150"/>
+				<img src="/iconx/tile310x150.png" width="150"/>
 
 		  	<h1>Welcome To DM-DMZ Guesthouse Newsletter!</h1>
 
@@ -61,6 +61,8 @@ module.exports = {
 
 		  	<p>We will be keeping you in the loop of what any new offerings and specials happening at DM-DMZ Guesthouse.</p>
 
+				<p>Get 20% Discount for Online Bookings</p>
+
 				<p>Happy Vacations!,<br>DM-DMZ Guesthouse Newsletters</p>
 
 				<p><small><a href="https://www.dm-dmzguesthouse.co.za/contact-us">Unsubscribe</a> | <a href="https://www.dm-dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dm-dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dm-dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
@@ -68,11 +70,11 @@ module.exports = {
 
 		// email sender dmz guesthouse
 		let smtpTransport = nodemailer.createTransport({
-			host: 'serv28.registerdomain.co.za',
+			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
 			auth: {
-				user: 'subscribe@dmzguesthouse.co.za',
+				user: 'subscribe@dm-dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
 			},
 			tls: {
@@ -82,11 +84,11 @@ module.exports = {
 
 		// email sender user
 		let smtpTransportCustomer = nodemailer.createTransport({
-			host: 'serv28.registerdomain.co.za',
+			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
 			auth: {
-				user: 'subscribe@dmzguesthouse.co.za',
+				user: 'subscribe@dm-dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
 			},
 			tls: {
@@ -96,17 +98,15 @@ module.exports = {
 
 		// email options dmz guesthouse
 		const mailOptions = {
-			from:
-				'"New Newsletters Subscriber" <subscribe@dmzguesthouse.co.za>',
-			to: 'subscribe@dmzguesthouse.co.za',
+			from:'"New Newsletters Subscriber" <subscribe@dm-dmzguesthouse.co.za>',
+			to: 'subscribe@dm-dmzguesthouse.co.za',
 			subject: 'New Customer Subscriber',
 			html: subscribeData
 		};
 
 		// email options user
 		const mailOptionsCustomer = {
-			from:
-				'"DM-DMZ Guesthouse Newsletter" <subscribe@dmzguesthouse.co.za>',
+			from:'"DM-DMZ Guesthouse Newsletter" <subscribe@dm-dmzguesthouse.co.za>',
 			to: req.body.email,
 			subject: 'Welcome to DM-DMZ Guesthouse Newsletter',
 			html: subscribeDataCustomer
@@ -118,7 +118,7 @@ module.exports = {
 
 		req.session.success = 
       `G'day ${req.body.firstName}, 
-      thank you for subscribing to DM-DMZ Guesthouse newsletter. We have sent you an email!`;
+      thank you for subscribing to DM-DMZ Guesthouse newsletter!`;
 		res.redirect('/');
 	},
 
@@ -334,7 +334,7 @@ module.exports = {
 
 		// email sender dmz guesthouse
 		let smtpTransport = nodemailer.createTransport({
-			host: 'serv28.registerdomain.co.za',
+			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
 			auth: {
@@ -348,7 +348,7 @@ module.exports = {
 
 		// email sender user
 		let smtpTransportUser = nodemailer.createTransport({
-			host: 'serv28.registerdomain.co.za',
+			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
 			auth: {

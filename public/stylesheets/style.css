@@ -278,7 +278,7 @@ body {
   border-radius: 0 !important;
   position: relative;
   margin-bottom: 0;
-  background-image: linear-gradient(to right, rgba(13, 41, 87, 0.8), rgba(13, 23, 39, 0.8)), url(../images/background.jpg);
+  background-image: linear-gradient(to right, rgba(13, 41, 87, 0.8), rgba(13, 23, 39, 0.8)), url(../images/main-bg-img.jpg);
   background-size: cover;
   background-position: center; }
   @supports (background-attachment: fixed) or (-webkit-background-attachment: fixed) {
