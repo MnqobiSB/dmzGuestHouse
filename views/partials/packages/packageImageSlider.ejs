@@ -11,7 +11,7 @@
       title="<%= package.title %>'s image"
       loading="eager"
       width="1200"
-      height="800"
+      height="700"
     />
   </div>
   <% } %> 
@@ -26,7 +26,22 @@
         title="<%= package.title %>'s image"
         loading="eager"
         width="1200"
-        height="800"
+        height="700"
+      />
+    </div>
+  <% } %> 
+
+  <% if (package.images[2]) { %> 
+    <div class="mySlides">
+      <div class="numbertext"><%= package.images.indexOf(package.images[2]) + 1 %> / <%= package.images.length %></div>
+      <img 
+        src="<%= package.images[2].url %>"
+        class="car__img mb-small img-thumbnail"
+        alt="<%= package.title %>"
+        title="<%= package.title %>'s image"
+        loading="eager"
+        width="1200"
+        height="700"
       />
     </div>
   <% } %> 
@@ -64,6 +79,22 @@
             title="<%= package.images[1]._id %>"
             loading="eager"
             onclick="currentSlide(2)" 
+            tabindex="0"
+            width="84"
+            height="56"
+          />
+        </div>
+      <% } %>
+
+      <% if (package.images[2]) { %> 
+        <div class="column">
+          <img 
+            src="<%= package.images[2].url %>" 
+            class="demo cursor car__img car__img--small img-thumbnail" 
+            alt="Post small image: <%= package.images[2]._id %>"
+            title="<%= package.images[2]._id %>"
+            loading="eager"
+            onclick="currentSlide(3)" 
             tabindex="0"
             width="84"
             height="56"

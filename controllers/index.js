@@ -278,7 +278,7 @@ module.exports = {
 
 		await smtpTransportUser.sendMail(mailOptionsUser);
 
-		req.session.success = `G'day ${req.body.name}, your enquiry has been sent successfully! A reply Will be sent to your email`;
+		req.session.success = `G'day ${req.body.name}, your enquiry has been received! A reply will be sent to you as soon as your enquiry has been reviewed.`;
 		res.redirect('/');
 	},
 
