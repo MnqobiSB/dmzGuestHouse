@@ -46,7 +46,7 @@
           <div class="col-md-6 col-lg-7">
             <form
               class="contact__form form__container"
-              action="/contact-us"
+              action="/booking"
               method="POST"
             >
               <!-- firstName & lastName -->
@@ -165,26 +165,26 @@
                       required
                     >
                       <option disabled selected value>Choose Package...</option>
-                      <option value="Sharing Deluxe Room">Sharing Deluxe Room: R890/night</option>
-                      <option value="Premium Room">Premium Room: R890/night</option>
-                      <option value="Family Room">Family Room: R1050/night</option>
+                      <option value="Sharing Deluxe Room: R890/night">Sharing Deluxe Room: R890/night</option>
+                      <option value="Premium Room: R890/night">Premium Room: R890/night</option>
+                      <option value="Family Room: R1050/night">Family Room: R1050/night</option>
                     </select>
                   </div>
                 </div>
 
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="text-bold" for="package">Secondary Package<span class="form-clue">(Optional)</span>:</label>
+                    <label class="text-bold" for="secondaryPackage">Secondary Package<span class="form-clue">(Optional)</span>:</label>
                     <select 
-                      name="package" 
-                      id="package" 
+                      name="secondaryPackage" 
+                      id="secondaryPackage" 
                       class="form-control" 
                       title="Select room package" 
                     >
-                      <option disabled selected value>Choose Package...</option>
-                      <option value="Sharing Deluxe Room">Sharing Deluxe Room: R890/night</option>
-                      <option value="Premium Room">Premium Room: R890/night</option>
-                      <option value="Family Room">Family Room: R1050/night</option>
+                      <option disabled selected value="None">Choose Package...</option>
+                      <option value="Sharing Deluxe Room: R890/night">Sharing Deluxe Room: R890/night</option>
+                      <option value="Premium Room: R890/night">Premium Room: R890/night</option>
+                      <option value="Family Room: R1050/night">Family Room: R1050/night</option>
                     </select>
                   </div>
                 </div>
@@ -205,7 +205,7 @@
                       value="1"
                       maxlength="1" 
                       pattern="[0-9]{3,}"
-                      title="Zip code must be a series of numeric characters." 
+                      title="Must be a series of numeric characters." 
                       placeholder="Select number of adults" 
                       required
                     />
@@ -227,7 +227,6 @@
                       pattern="[0-9]{3,}"
                       title="Zip code must be a series of numeric characters." 
                       placeholder="Select number of children" 
-                      required
                     />
                   </div>
                 </div>
@@ -242,7 +241,7 @@
                       id="breakfast"
                       class="form-check-input" 
                       value="Yes" 
-                      title="Check to agree to the terms"
+                      title="Check for breakfast"
                     />
                     <label class="form-check-label" for="breakfast">Breakfast</label>
                   </div>
