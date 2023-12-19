@@ -41,7 +41,7 @@
 							<!-- post header -->
 
 							<!-- car main images slider container -->
-								<% include ../partials/packages/packageImageSlider %>
+							<% include ../partials/packages/packageImageSlider %>
 							<!-- car main images slider container -->
 
 							<!-- post article -->
@@ -119,6 +119,8 @@
 									<span class="text-danger"><%= package.checkoutDate1.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
 								</span>
 							</p>
+						<% } else { %>
+							<p class="text-success">Room Available</p>
 						<% } %>
 
 						<% if (package.bookDate2) { %>
@@ -140,8 +142,46 @@
 								</span>
 							</p>
 						<% } %>
-						<hr class="">
-						<p class="text-success"><small>Make Sure You Checked Booked Dates To Ensure Your Booking Dates Are Available And Not Clashing With Already Booked Dates!</small></p>
+
+						<% if (package.bookDate3) { %>
+							<hr class="">
+							<h4 class="color-secondary">Room Booked From:</h4>
+							<p class="blog-post__meta">
+								<span class="blog-post__date">
+									<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: calendars">
+										<use xlink:href="/images/symbol-defs.svg#icon-calendar"></use>
+									</svg> 
+									<span class="text-danger"><%= package.bookDate3.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+								</span>
+								-To- 
+								<span class="blog-post__date">
+									<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: calendars">
+										<use xlink:href="/images/symbol-defs.svg#icon-calendar"></use>
+									</svg> 
+									<span class="text-danger"><%= package.checkoutDate3.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+								</span>
+							</p>
+						<% } %>
+
+						<% if (package.bookDate4) { %>
+							<hr class="">
+							<h4 class="color-secondary">Room Booked From:</h4>
+							<p class="blog-post__meta">
+								<span class="blog-post__date">
+									<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: calendars">
+										<use xlink:href="/images/symbol-defs.svg#icon-calendar"></use>
+									</svg> 
+									<span class="text-danger"><%= package.bookDate4.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+								</span>
+								-To- 
+								<span class="blog-post__date">
+									<svg class="blog__icon" focusable="false" role="img" aria-label="Placeholder: calendars">
+										<use xlink:href="/images/symbol-defs.svg#icon-calendar"></use>
+									</svg> 
+									<span class="text-danger"><%= package.checkoutDate4.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+								</span>
+							</p>
+						<% } %>
 					</aside>
 				</div><!-- /.col-md-4 -->
 			</div><!-- /.row -->

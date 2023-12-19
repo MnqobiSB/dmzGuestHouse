@@ -47,7 +47,7 @@ module.exports = {
       
 		// send customer an email
 		const subscribeDataCustomer = `
-				<img src="/iconx/tile310x150.png" width="150"/>
+				<img src="https://res.cloudinary.com/devmnqobi/image/upload/v1702974438/tile310x150_z4wrdr.png" width="150"/>
 
 		  	<h1>Welcome To DM-DMZ Guesthouse Newsletter!</h1>
 
@@ -75,6 +75,9 @@ module.exports = {
 			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
+			secureConnection: true,
+    	requiresAuth: false,
+    	requireTLS: true,
 			auth: {
 				user: 'subscribe@dm-dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
@@ -89,6 +92,9 @@ module.exports = {
 			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
+			secureConnection: true,
+    	requiresAuth: false,
+    	requireTLS: true,
 			auth: {
 				user: 'subscribe@dm-dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
@@ -217,7 +223,7 @@ module.exports = {
 	  	`;
 		// send user an email
 		const contactDataUser = `
-				<img src="" width="150"/>
+				<img src="https://res.cloudinary.com/devmnqobi/image/upload/v1702974438/tile310x150_z4wrdr.png" width="150"/>
 
 		  	<h1>Thank you for contacting DM-DMZ Guesthouse!</h1>
 
@@ -239,6 +245,9 @@ module.exports = {
 			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
+    	secureConnection: true,
+    	requiresAuth: false,
+    	requireTLS: true,
 			auth: {
 				user: 'contact@dm-dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
@@ -253,6 +262,9 @@ module.exports = {
 			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
+    	secureConnection: true,
+    	requiresAuth: false,
+    	requireTLS: true,
 			auth: {
 				user: 'contact@dm-dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
@@ -334,7 +346,7 @@ module.exports = {
 	  	`;
 		// send user an email
 		const bookingDataUser = `
-				<img src="" width="150"/>
+				<img src="https://res.cloudinary.com/devmnqobi/image/upload/v1702974438/tile310x150_z4wrdr.png" width="150"/>
 
 		  	<h1>Thank you for booking Accommodation at DM-DMZ Guesthouse!</h1>
 
@@ -383,6 +395,9 @@ module.exports = {
 			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
+			secureConnection: true,
+    	requiresAuth: false,
+    	requireTLS: true,
 			auth: {
 				user: 'bookings@dm-dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
@@ -397,6 +412,9 @@ module.exports = {
 			host: 's38.registerdomain.net.za',
 			port: 465,
 			secure: true,
+			secureConnection: true,
+    	requiresAuth: false,
+    	requireTLS: true,
 			auth: {
 				user: 'bookings@dm-dmzguesthouse.co.za',
 				pass: process.env.GMAILPW
@@ -410,7 +428,7 @@ module.exports = {
 		const mailOptions = {
 			from: '"Bookings - DM-DMZ Guesthouse" <bookings@dm-dmzguesthouse.co.za>',
 			to: 'bookings@dm-dmzguesthouse.co.za',
-			subject: 'New Customer Enquiry',
+			subject: 'New Customer Booking',
 			html: bookingData
 		};
 
