@@ -1,5 +1,5 @@
 // init .env file - turn it off in production
-require('dotenv').config();
+// require('dotenv').config();
 
 //require needed dependencies
 const createError = require('http-errors');
