@@ -41,7 +41,7 @@ module.exports = {
 			req.login(user, function (err) {
 				if (err) return next(err);
 				req.session.success = `You are successfully signed-up ${user.firstName}`;
-				res.redirect('/');
+				res.redirect('/admin/profile');
 			});
 		} catch (err) {
 			const { username, email } = req.body;
@@ -99,7 +99,7 @@ module.exports = {
 			if (err) return next(err);
 			req.session.success = `Hello ${username}, You are now able to manage the website!`;
 			const redirectUrl =
-				req.session.redirectTo || '/';
+				req.session.redirectTo || '/admin/profile';
 			delete req.session.redirectTo;
 			res.redirect(redirectUrl);
 		});

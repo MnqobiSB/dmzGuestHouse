@@ -56,7 +56,7 @@ module.exports = {
 		let package = new Package(req.body.package);
 		await package.save();
 		req.session.success = 'Package created successfully!';
-		res.redirect(`/packages/${package.slug}`);
+		res.redirect('/admin/profile');
 	},
 
 	// Packages Show
@@ -113,17 +113,17 @@ module.exports = {
 		
 		req.session.success = 'Package updated successfully!';
 		// redirect to show page
-		res.redirect(`/packages/${package.slug}`);
+		res.redirect('/admin/profile');
 	},
 	
 	// Package Destroy
 	async packageDestroy (req, res, next) {
 		const { id } = req.params;
-		for (const image of package.images) {
-			await cloudinary.v2.uploader.destroy(image.public_id);
-		}
+		// for (const image of package.images) {
+		// 	await cloudinary.v2.uploader.destroy(image.public_id);
+		// }
 		await Package.findByIdAndDelete(id);
 		req.session.success = 'Package deleted successfully!';
-		res.redirect('/packages');
+		res.redirect('/admin/profile');
 	}
 };
