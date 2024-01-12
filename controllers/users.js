@@ -144,15 +144,11 @@ module.exports = {
 	async updateProfile (req, res, next) {
 		const {
 			username,
-			email,
-			firstName,
-			lastName
+			email
 		} = req.body;
 		const { user } = res.locals;
 		if (username) user.username = username;
 		if (email) user.email = email;
-		if (firstName) user.firstName = firstName;
-		if (lastName) user.lastName = lastName;
 		// save new changes
 		await user.save();
 		const login = util.promisify(req.login.bind(req));

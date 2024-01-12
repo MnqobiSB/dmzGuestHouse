@@ -4,7 +4,7 @@
 	<div class="container">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a a class="breadcrumb__link" href="/">Home</a></li>
-			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Dashboard - <%= currentUser.name %></span></li>
+			<li class="breadcrumb-item" aria-current="page"><span class="breadcrumb__active">Dashboard - <%= currentUser.username %></span></li>
 		</ol>
 	</div>
 </nav>
@@ -22,7 +22,7 @@
 			<!-- page header component -->
 			<header class="page-header">
 				<div class="page-header__text-box">
-					<h1 class="display-4 page-header__heading">Dashboard - <%= currentUser.name %></h1>
+					<h1 class="display-4 page-header__heading">Dashboard - <%= currentUser.username %></h1>
 				</div>
 			</header>
 			<!-- page header component -->
@@ -30,200 +30,85 @@
       <section id="user-dashboard" class="user-dashboard p-0">
 				<ul class="nav nav-tabs car__features--tabs" id="myTab" role="tablist">
 					<li class="nav-item car__features--item" role="presentation">
-						<a class="nav-link car__features--link active" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
-					</li>
-					<li class="nav-item car__features--item" role="presentation">
-						<a class="nav-link car__features--link" id="cars-tab" data-toggle="tab" href="#cars" role="tab" aria-controls="cars" aria-selected="false">Advertised Cars</a>
-					</li>
-					<% if (currentUser&&currentUser.isAdmin) { %>
-					<li class="nav-item car__features--item" role="presentation">
-						<a class="nav-link car__features--link" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="false">Posted Car News</a>
-					</li>
-					<% } %>
-					<li class="nav-item car__features--item" role="presentation">
-						<a class="nav-link car__features--link" id="invoice-tab" data-toggle="tab" href="#invoice" role="tab" aria-controls="invoice" aria-selected="false">Billing Info</a>
+						<a class="nav-link car__features--link" id="packages-tab" data-toggle="tab" href="#packages" role="tab" aria-controls="packages" aria-selected="false">All Packages</a>
 					</li>
 					<li class="nav-item car__features--item" role="presentation">
 						<a class="nav-link car__features--link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Edit Profile</a>
 					</li>
-					<li class="nav-item car__features--item" role="presentation">
-						<a class="nav-link car__features--link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact Support</a>
-					</li>
 				</ul>
 
 				<div class="tab-content" id="myTabContent">
-					<!-- Overview Tab -->
-					<div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
-						<p class="text-bold"><%= currentUser.name %> Account Overview</p>
+					<!-- Packages Tab -->
+					<% if (currentUser) { %>
+					<div class="tab-pane fade show active" id="packages" role="tabpanel" aria-labelledby="packages-tab">
 						<div class="table-responsive">
 							<table class="table table-striped table-bordered table-sm">
 								<thead class="thead-dark">
 									<tr>
-										<th scope="col">Image:</th>
-										<th scope="col">Subscription Type:</th>
-										<th scope="col">Standard Package Cars Quantity:</th>
-										<th scope="col">Total Number Of Cars Advertised:</th>
-										<th scope="col">Monthly Invoice:</th>
+										<th scope="col">Package Image:</th>
+										<th scope="col">Package Title:</th>
+										<th scope="col">Package Price:</th>
+										<th scope="col">Book Date 1:</th>
+										<th scope="col">Book Date 2:</th>
+										<th scope="col">Book Date 3:</th>
+										<th scope="col">Book Date 4:</th>
+										<th scope="col">View Package:</th>
+										<th scope="col">Edit Package:</th>
+										<th scope="col">Delete Package:</th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<th>
-											<img 
-												src="<%= currentUser.image.secure_url %>" 
-												alt="<%= currentUser.username %>'s profile image" 
-												class="profile-image" 
-												width="64"
-											/>
-										</th>
-										<td><%= currentUser.subscriptionType %></td>
-										<td><%= currentUser.numOfCarsEntryPack %></td>
-										<td><%= entryPackCars.length %></td>
-										<td>
-											<% if (currentUser.hasPaidMonthlyInvoice) { %> 
-												<span class="color-secondary text-bold">Paid</span>
-											<% } else { %>
-												<span class="color-red text-bold">Unpaid</span>
-											<% } %>  
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					<!-- Overview Tab -->
-
-					<!-- Advertised Cars Tab -->
-					<div class="tab-pane fade" id="cars" role="tabpanel" aria-labelledby="cars-tab">
-						<p class="text-bold">Advertised Cars</p>
-						<p class="text-bold">Total Nr. Of Cars: <%= cars.length %></p>
-						<div class="table-responsive">
-							<table class="table table-striped table-bordered table-sm">
-								<thead class="thead-dark">
-									<tr>
-										<th scope="col">Car Image:</th>
-										<th scope="col">Car Brand:</th>
-										<th scope="col">Car Name:</th>
-										<th scope="col">Car Year:</th>
-										<th scope="col">Car Price:</th>
-										<th scope="col">Uploaded:</th>
-										<th scope="col">Package Type:</th>
-										<th scope="col">View Car:</th>
-										<th scope="col">Edit Car:</th>
-										<th scope="col">Delete Car:</th>
-									</tr>
-								</thead>
-								<tbody>
-									<% cars.forEach(function(car) { %>
+									<% packages.forEach(function(package) { %>
 										<tr>
-											<th>
+											<td>
 												<img 
-													src="<%= car.images[0].url %>" 
+													src="<%= package.images[0].url %>" 
 													class="" 
-													alt="<%= car.brand %> <%= car.name %>"
-													title="<%= car.brand %> <%= car.name %>'s image"
+													alt="<%= package.title %>"
+													title="<%= package.title %>'s image"
 													loading="lazy"
-													width="64"
+													width="80"
 												/>
 											</th>
-											<td><%= car.brand %></td>
-											<td><%= car.name %></td>
-											<td><%= car.year %></td>
-											<td>R<%= car.price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') %></td>
-											<td><%= moment(car.createdAt).format('DD MMMM, YYYY') %></td>
-											<td><%= car.advertPackage %></td>
+											<td><%= package.title %></td>
+											<td>R <%= package.price %></td>
 											<td>
-												<a href="/cars-for-sale/<%= car.slug %>">
+												<% if (package.bookDate1) { %>
+													<%= package.bookDate1.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %>
+												<% } %>
+											</td>
+											<td>
+												<% if (package.bookDate2) { %>
+													<%= package.bookDate2.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %>
+												<% } %>
+											</td>
+											<td>
+												<% if (package.bookDate3) { %>
+													<%= package.bookDate3.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %>
+												<% } %>
+											</td>
+											<td>
+												<% if (package.bookDate4) { %>
+													<%= package.bookDate4.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) %>
+												<% } %>
+											</td>
+											<td>
+												<a href="/packages/<%= package.slug %>">
 													<button class="btn btn__tertiary">View</button>
 												</a>
 											</td>
 											<td>
-												<% if (currentUser && car.author.equals(currentUser._id)) { %>
-													<a href="/cars-for-sale/<%= car.id %>/edit">
+												<% if (currentUser && package.author.equals(currentUser._id)) { %>
+													<a href="/packages/<%= package.id %>/edit">
 														<button class="btn btn__secondary">Edit</button>
 													</a>
 												<% } %>
 											</td>
 											<td>
-												<% if (currentUser && car.author.equals(currentUser._id)) { %>
+												<% if (currentUser && package.author.equals(currentUser._id)) { %>
 													<form 
 														class="form-inline"
-														action="/cars-for-sale/<%= car.id %>?_method=DELETE" 
-														method="POST"
-													>
-														<div class="form-group">
-															<button type="submit" class="btn btn__red">
-																Delete
-															</button>
-														</div>
-													</form>
-												<% } %>
-											</td>
-										</tr>
-									<% }); %>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					<!-- Advertised Cars Tab -->
-					
-					<!-- Posted Car News Tab -->
-					<% if (currentUser&&currentUser.isAdmin) { %>
-					<div class="tab-pane fade" id="posts" role="tabpanel" aria-labelledby="posts-tab">
-						<p class="text-bold">Posted Car News</p>
-						<p class="text-bold">Total Nr. Of Article: <%= posts.length %></p>
-						<div class="table-responsive">
-							<table class="table table-striped table-bordered table-sm">
-								<thead class="thead-dark">
-									<tr>
-										<th scope="col">Post Image:</th>
-										<th scope="col">Post Title:</th>
-										<th scope="col">Post Category:</th>
-										<th scope="col">Post Car Brand:</th>
-										<th scope="col">Post Car Name:</th>
-										<th scope="col">Post Author:</th>
-										<th scope="col">Posted Date:</th>
-										<th scope="col">View Post:</th>
-										<th scope="col">Edit Post:</th>
-										<th scope="col">Delete Post:</th>
-									</tr>
-								</thead>
-								<tbody>
-									<% posts.forEach(function(post) { %>
-										<tr>
-											<td>
-												<img 
-													src="<%= post.images[0].url %>" 
-													class="" 
-													alt="<%= post.title %>"
-													title="<%= post.title %>'s image"
-													loading="lazy"
-													width="64"
-												/>
-											</th>
-											<td><%= post.title %></td>
-											<td><%= post.category %></td>
-											<td><%= post.carBrand %></td>
-											<td><%= post.carName %></td>
-											<td><%= post.authorNames %></td>
-											<td><%= moment(post.createdAt).format('DD MMMM, YYYY') %></td>
-											<td>
-												<a href="/motoring-news-&-reviews/<%= post.slug %>">
-													<button class="btn btn__tertiary">View</button>
-												</a>
-											</td>
-											<td>
-												<% if (currentUser && post.author.equals(currentUser._id)) { %>
-													<a href="/motoring-news-&-reviews/<%= post.id %>/edit">
-														<button class="btn btn__secondary">Edit</button>
-													</a>
-												<% } %>
-											</td>
-											<td>
-												<% if (currentUser && post.author.equals(currentUser._id)) { %>
-													<form 
-														class="form-inline"
-														action="/motoring-news-&-reviews/<%= post.id %>?_method=DELETE" 
+														action="/packages/<%= package.id %>?_method=DELETE" 
 														method="POST"
 													>
 														<div class="form-group">
@@ -241,162 +126,7 @@
 						</div>
 					</div>
 					<% } %>
-					<!-- Posted Car News Tab -->
-
-					<!-- Invoice Tab -->
-					<div class="tab-pane fade" id="invoice" role="tabpanel" aria-labelledby="invoice-tab">
-						<p class="text-bold">Billing Information</p>
-						<div class="invoice-wrapper border p-4">
-							<div class="row">
-								<div class="col-4">
-									<img 
-										src="/images/logo.svg"
-										class="navbar__logo"
-										alt="Auto Territory Logo" 
-										title="Auto Territory"
-										loading="eager"
-										width="220"
-										height="51.18"
-									/> 
-									<p class="text-bold">Auto Galore Tax Invoice</p>
-								</div>
-
-								<div class="col-md-4 ml-auto">
-									<% if (currentUser.hasPaidMonthlyInvoice) { %> 
-										<span class="color-secondary text-bold">Paid</span>
-									<% } else { %>
-										<span class="color-red text-bold">Unpaid</span>
-
-										<p>Due Date: <span class="text-bold">05/<%= (new Date().getMonth()+1)%12 + 1 %>/<%= new Date().getFullYear() %></span></p>
-
-										<!-- Payment Button -->
-										<!-- <div class="payfast-paymet-btn">
-											<script language="JavaScript" type="text/javascript">
-												function click_4351e8e5173b3ed4108407dacc3b13cc( aform_reference ) {
-													var aform = aform_reference;
-													aform['amount'].value = Math.round( aform['amount'].value*Math.pow( 10,2 ) )/Math.pow( 10,2 );
-												}	
-											</script>
-												
-											<form 
-												action="https://www.payfast.co.za/eng/process" 
-												name="form_4351e8e5173b3ed4108407dacc3b13cc" 
-												onsubmit="return click_4351e8e5173b3ed4108407dacc3b13cc( this );" 
-												method="post"
-											>
-												<input type="hidden" name="cmd" value="_paynow">
-												<input type="hidden" name="receiver" value="18071237">
-
-												<input type="hidden" name="item_name" value="Car Advert Payment On Auto Territory">
-												<input type="hidden" name="amount" value="<%= totalPayment %>.00">
-												<input 
-													type="hidden" 
-													name="item_description" 
-													value=
-													"
-														Standard Package x <%= currentUser.numOfCarsEntryPack %>
-													"
-												/>
-
-												<input type="hidden" name="name_first" value="<%= currentUser.name %>">
-												<input type="hidden" name="email_address" value="<%= currentUser.email %>">
-												<input type="hidden" name="cell_number" value="0<%= currentUser.contactNr%>">
-
-												<input type="hidden" name="return_url" value="https://www.autoterritory.co.za/car-dealerships/profile">
-												<input type="hidden" name="cancel_url" value="https://www.autoterritory.co.za/car-dealerships/profile">
-												
-												<table>
-													<tr>
-														<td colspan=2 align=center><input type="image" src="https://www.payfast.co.za/images/buttons/light-large-paynow.png" width="174" height="59" alt="Pay Now" title="Pay Now with PayFast"></td>
-													</tr>
-												</table>
-											</form>	
-										</div> -->
-										<!-- Payment Button -->
-										<p class="">Total Payment: <span class="text-bold">R<%= totalPayment.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') %>.00</span></p>
-									<% } %>  
-								</div>
-							</div>
-
-							<hr />
-
-							<div class="row">
-								<div class="col-md-4">
-									<p class="text-bold">Invoiced To:</p>
-									<address>
-										<span><%= currentUser.name %></span> <br />
-										<span><%= currentUser.addressLineOne %></span> <br />
-										<% if (currentUser.addressLineTwo) { %>
-											<span><%= currentUser.addressLineTwo %></span> <br />
-										<% } %>
-										<span><%= currentUser.city %>, <%= currentUser.zipCode %></span> <br />
-										<span><%= currentUser.province %></span> <br />
-									</address>
-								</div>
-
-    						<div class="col-md-4 ml-auto text-right">
-									<p class="text-bold">Pay To:</p>
-									<address>
-										<span>Mnqobi Digital Solutions (Pty) Ltd.</span> <br />
-										<span>10A Kerk Street</span> <br />
-										<span>Bethlehem, 9701</span> <br />
-										<span>Tel: 068 160 0538</span> <br />
-										<!-- <span>VAT Number: *** *** ***</span> <br /> -->
-									</address>
-
-									<hr />
-
-									<p class="text-bold">Account Details:</p>
-									<ul class="list-unstyled">
-										<li>Bank: <span class="text-bold">Standard Bank</span></li>
-										<li>Account Number: <span class="text-bold">101 5355 4760</span></li>
-										<li>Branch Code: 051001</li>
-										<li>Reference: <span class="text-bold">Dealership Name</span></li>
-									</ul>
-								</div>
-							</div>
-
-							<div>
-								<p class="text-bold">Invoice Date: <span class="font-weight-normal">20/<%= (new Date().getMonth()-1)%12 + 1 %>/<%= new Date().getFullYear() %></span></p>
-
-								<div class="table-responsive">
-									<table class="table table-striped table-bordered table-sm">
-										<thead class="thead-dark">
-											<tr>
-												<th colspan="2">Invoice Items</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td class="text-bold">Description:</td>
-												<td class="text-bold">Amount:</td>
-											</tr>
-											<tr>
-												<td>- Standard Package (R15.00) x <%= currentUser.numOfCarsEntryPack %> Cars</td>
-												<td>R <%= entryPackCarsTotalAmount.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') %>.00</td>
-											</tr>
-											</tr>
-											<tr>
-												<td class="text-bold text-right mr-4"></td>
-												<td class="text-bold"></td>
-											</tr>
-											<tr>
-												<td class="text-bold text-right mr-4">Total Payment:</td>
-												<td class="text-bold">R <%= totalPayment.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') %>.00</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<!-- Payment Button -->
-									<!-- Payment Button -->
-									<p>For a more convient way, you can pay using your online banking service.</p>
-									<p>Or pay via direct deposit.</p>
-									<!-- Payment Button -->
-								<!-- Payment Button -->
-							</div>
-						</div>
-					</div>
-					<!-- Invoice Tab -->
+					<!-- Packages Tab -->
 
 					<!-- Edit Profile Tab -->
 					<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -406,21 +136,6 @@
 								<div class="form__container">
 									<span class="badge badge-dark form-badge"><span class="form-required">*</span> = Required Form Field</span>
 									<form action="/car-dealerships/profile?_method=PUT" method="POST" enctype="multipart/form-data">
-										<div class="form-group">
-											<label for="name">Company Name <span class="form-clue"> (car dealership name)</span> <span class="form-required">*</span>:</label>
-											<input 
-												type="text" 
-												name="name" 
-												id="name"
-												class="form-control"
-												maxlength="256" 
-												pattern="[a-zA-Z0-9._%+-\s]{2,}"
-												title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-												placeholder="Enter company name"
-												value="<%= currentUser.name %>"
-												required
-											/>
-										</div>
 									
 										<div class="form-group">
 											<label for="username">Username<span class="form-clue"> (remember your username! you use it to sign in)</span> <span class="form-required">*</span>:</label>
@@ -497,276 +212,6 @@
 										</div>
 									
 										<div class="form-group">
-											<label for="contactNr">Contact Nr <span class="form-required">*</span>:</label>
-											<input 
-												type="tel"
-												name="contactNr" 
-												id="contactNr"
-												class="form-control"
-												maxlength="13" 
-												pattern="[+0-9]{9,}" 
-												title="Contact number must be a series of numeric characters (min 9)." 
-												value="<%= currentUser.contactNr %>"
-												placeholder="Enter contact" 
-												required
-											/>
-										</div>
-										
-										<div class="form-group">
-											<label for="addressLineOne">Address Line One <span class="form-required">*</span>:</label>
-											<input 
-												type="text"
-												name="addressLineOne" 
-												id="addressLineOne"  
-												class="form-control"
-												maxlength="100" 
-												pattern="[a-zA-Z0-9._%+-\s]{4,}"
-												title="Address line one may be a mixture of numeric & alphabetic characters only (min 4, max 100)." 
-												placeholder="1234 Main Str" 
-												value="<%= currentUser.addressLineOne %>"
-												required
-											/>
-										</div>
-									
-										<div class="form-group">
-											<label for="addressLineTwo">Address Line Two<span class="clue">(Optional)</span>:</label>
-											<input 
-												type="text"
-												name="addressLineTwo" 
-												id="addressLineTwo"  
-												value="<%= currentUser.addressLineTwo %>"
-												class="form-control"
-												maxlength="100" 
-												pattern="[a-zA-Z0-9._%+-\s]{4,}"
-												title="Address line two may be a mixture of numeric & alphabetic characters only (min 2, max 100). It is not required" 
-												placeholder="Suburb or Apartment" 
-											/>
-										</div>
-									
-										<div class="form-group">
-											<label for="city">City <span class="form-required">*</span>:</label>
-											<input 
-												type="text"
-												name="city" 
-												id="city"  
-												value="<%= currentUser.city %>"
-												class="form-control"
-												maxlength="100" 
-												pattern="[a-zA-Z0-9._%+-\s]{4,}"
-												title="City must be a series of alphabetic characters only (min 2, max 100)." 
-												placeholder="Enter your city" 
-												required
-											/>
-										</div>
-									
-										<div class="form-group">
-											<label for="zipCode">Zip Code <span class="form-required">*</span>:</label>
-											<input 
-												type="number"
-												name="zipCode" 
-												id="zipCode"  
-												value="<%= currentUser.zipCode %>"
-												class="form-control"
-												maxlength="6" 
-												pattern="[0-9]{3,}"
-												title="Zip code must be a series of numeric characters." 
-												placeholder="Enter your zip code" 
-												required
-											/>
-										</div>
-									
-										<div class="form-group">
-											<label for="province">Province <span class="form-required">*</span>:</label>
-											<select 
-												name="province" 
-												id="province" 
-												class="form-control" 
-												title="Select your province" 
-												required
-											>
-												<option selected value="<%= currentUser.province %>"><%= currentUser.province %></option>
-												<option value="Free State">Free State</option>
-												<option value="Gauteng">Gauteng</option>
-												<option value="Mpumalanga">Mpumalanga</option>
-												<option value="Kwa-Zulu Natal">Kwa-Zulu Natal</option>
-												<option value="Eastern Cape">Eastern Cape</option>
-												<option value="Northern Cape">Northern Cape</option>
-												<option value="Western Cape">Western Cape</option>
-												<option value="North West">North West</option>
-												<option value="Limpopo">Limpopo</option>
-											</select>
-										</div>
-										
-										<div class="form-group">
-											<label for="location">Car Dealership Location  <span class="form-required">*</span>: <span class="form-clue">(If You Need Any Assisstance, <a href="/contact-us" target="_blank" rel="noopener noreferrer">Contact Support</a>)</span></label>
-											<input 
-												type="text" 
-												name="location" 
-												id="location"
-												class="form-control"
-												maxlength="1000" 
-												pattern="[a-zA-Z0-9._%+-\s]{2,}" 
-												title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-												placeholder="Your dealership google maps location embed link 'src"
-												value="<%= currentUser.location %>"
-											/>
-										</div>
-									
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<label for="contactPersonOneName">Sales Person One Name <span class="form-required">*</span>:</label>
-													<input 
-														type="text" 
-														name="contactPersonOneName"
-														id="contactPersonOneName" 
-														class="form-control"
-														maxlength="256" 
-														pattern="[a-zA-Z0-9._%+-\s]{2,}"
-														title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-														placeholder="Enter sales person one name" 
-														required
-														value="<%= currentUser.contactPersonOneName %>"
-													/>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<label for="contactPersonOneNumber">Sales Person One Number <span class="form-required">*</span>:</label>
-													<input 
-														type="tel"
-														name="contactPersonOneNumber" 
-														id="contactPersonOneNumber"  
-														class="form-control"
-														maxlength="13" 
-														pattern="[+0-9]{9,}" 
-														title="Contact number must be a series of numeric characters (min 9)." 
-														placeholder="Enter sales person one number" 
-														required
-														value="<%= currentUser.contactPersonOneNumber %>"
-													/>
-												</div>
-											</div>
-										</div>
-										
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<label for="contactPersonTwoName">Sales Person Two Name <span class="form-clue">(Optional)</span>:</label>
-													<input 
-														type="text" 
-														name="contactPersonTwoName"
-														id="contactPersonTwoName" 
-														class="form-control"
-														maxlength="256" 
-														pattern="[a-zA-Z0-9._%+-\s]{2,}"
-														title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-														placeholder="Enter sales person two name" 
-														value="<%= currentUser.contactPersonTwoName %>"
-													/>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<label for="contactPersonTwoNumber">Sales Person two Number <span class="form-clue">(Optional)</span>:</label>
-													<input 
-														type="tel"
-														name="contactPersonTwoNumber" 
-														id="contactPersonTwoNumber"  
-														class="form-control"
-														maxlength="13" 
-														pattern="[+0-9]{9,}" 
-														title="Contact number must be a series of numeric characters (min 9)." 
-														placeholder="Enter sales person two number" 
-														value="<%= currentUser.contactPersonTwoNumber %>"
-													/>
-												</div>
-											</div>
-										</div>
-
-										<div class="form-group">
-											<label for="website">Company Website <span class="form-clue">(Optional)</span>:</label>
-											<input 
-												type="url" 
-												name="website" 
-												id="website"
-												class="form-control"
-												pattern="https://.*" 
-												size="128" 
-												title="Must be a URL format containing: https://."
-												placeholder="E.g. https://company.co.za"
-												value="<%= currentUser.website %>"
-											/>
-										</div>
-									
-										<div class="form-group">
-											<label for="subscriptionType">Subscription Type <span class="form-required">*</span>:</label>
-											<select 
-												name="subscriptionType" 
-												id="subscriptionType" 
-												class="form-control" 
-												title="Select your subscription type" 
-												required
-											>
-												<option selected value="<%= currentUser.subscriptionType %>"><%= currentUser.subscriptionType %></option>
-												<option value="Monthly">Monthly</option>
-												<!-- <option value="Yearly">Yearly</option> -->
-											</select>
-										</div>
-											<div class="form-group">
-												<label for="numOfCarsEntryPack">Standard Package Cars Quantity <span class="form-required">*</span>: <span class="form-clue">(min: 5 cars)</span></label>
-												<input 
-													type="number"
-													name="numOfCarsEntryPack" 
-													id="numOfCarsEntryPack"  
-													class="form-control"
-													step="1" 
-													min="5" 
-													max="99999"
-													pattern="[0-9]{3,}"
-													title="Zip code must be a series of numeric characters." 
-													placeholder="R 20/mo"
-													value="<%= currentUser.numOfCarsEntryPack %>"
-													required
-												/>
-											</div>
-										<div class="form-group">
-											<label for="paymentDate">Date of Payment <span class="form-clue">(must be between the 25<sup>th</sup> and 5<sup>th</sup>)</span>:</label>
-											<input 
-												type="date" 
-												name="paymentDate" 
-												id="paymentDate" 
-												value="<%= currentUser.paymentDate.toDateString() %>"
-												class="form-control"
-												title="Payment date must follow a pattern of year/month/day."
-											/>
-											<p>Current chosen date: <%= currentUser.paymentDate.toDateString() %></p>
-										</div>
-									
-										<div class="form-group">
-											<label for="image">Profile Image <span class="form-clue">(changing deletes existing image)</span>:</label>
-											<input 
-												type="file" 
-												name="image"
-												id="image" 
-												class="form-control btn-secondary" 
-												title="Image file format must be: JPEG, PNG or SVG."
-											/>
-										</div>
-										
-										<div class="form-group">
-											<label for="description">Car Dealership About/Bio <span class="form-clue">(e.g. values, mission, vision)</span><span class="form-required">*</span>:</label>
-											<textarea 
-												name="about" 
-												id="description" 
-												class="form-control"
-												rows="10"
-												placeholder="Enter car dealership about/bio"
-												required
-											><%= currentUser.about %></textarea>
-										</div>
-									
-										<div class="form-group">
 											<button type="submit" id="update-profile" class="btn btn__secondary w-100 mt-xsmall">
 												Update Profile
 											</button>
@@ -776,108 +221,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- Edit Profile Tab -->
-
-					<!-- Contact Support Tab -->
-					<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-						<p class="text-bold">Contact Support</p>
-						<!-- Contact Form -->
-						<div class="form__container">
-							<form
-								class="contact__form"
-								action="/contact-us"
-								method="POST"
-							>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="name">Dealership Name:</label>
-											<input 
-												type="text" 
-												name="name"
-												id="name" 
-												class="form-control"
-												maxlength="256" 
-												pattern="[a-zA-Z0-9._%+-\s]{2,}"
-												title="Must be a series of alpha-numeric characters and allowed symbols only (min 2, max 256)."
-												placeholder="Your name" 
-												required
-												value="<%= currentUser.name %>"
-											/>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="email">Email:</label>
-											<input 
-												type="email" 
-												name="email"
-												id="email" 
-												class="form-control"
-												maxlength="150"
-												pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-												title="Email must follow this pattern: characters@characters.domain (should include '@' sign, '.' followed by atleast 2 characters)."
-												placeholder="Your email" 
-												required
-												value="<%= currentUser.email %>"
-											/>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="contactNr">Contact Nr:</label>
-									<input 
-										type="tel"
-										name="contactNr" 
-										id="contactNr"  
-										class="form-control"
-										maxlength="13" 
-										pattern="[+0-9]{9,}" 
-										title="Contact number must be a series of numeric characters (min 9)." 
-										placeholder="Your cell numbers" 
-										required
-										value="0<%= currentUser.contactNr %>"
-									/>
-								</div>
-						
-								<div class="form-group">
-									<label for="subject">Subject:</label>
-									<select 
-										name="subject" 
-										id="subject" 
-										class="form-control" 
-										title="Select your subscription type" 
-										required
-									>
-										<option disabled selected value>Choose Subject...</option>
-										<option value="Your Account">Your Account</option>
-										<option value="Car Advertising">Car Advertising</option>
-										<option value="Payment / Invoice">Payment / Invoice</option>
-										<option value="General Enquiry">General Enquiry</option>
-									</select>
-								</div>
-						
-								<div class="form-group">
-									<label for="message">Message:</label>
-									<textarea 
-										name="message" 
-										id="message" 
-										class="form-control"
-										rows="5"
-										placeholder="Type your message here"
-									></textarea>
-								</div>
-						
-								<div class="form-group">
-									<button type="submit" class="btn btn__secondary w-100 mt-xsmall">
-										Send Message
-									</button>
-								</div>
-							</form>
-						</div>
-						<!-- Contact Form -->
-					</div>
-					<!-- Contact Support Tab -->
 				</div>
 			</section>
 		</main>
