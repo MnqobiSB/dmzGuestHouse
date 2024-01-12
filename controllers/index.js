@@ -356,7 +356,11 @@ module.exports = {
 
 				<p><b>To complete your booking, kindly make a Full Payment Deposit to the following bank account:</b></p>
 
-		  	<p>Bank   :  <br>Account Number:   <br>Reference: Email Address   </p>
+		  	<p>Account Holder   : <b>DM LWM Holdings T/a DM-DMZ@Clarens</b>
+					<br>Bank Name     : <b>FNB</b>  
+					<br>Account Number: <b>6278 690 3734</b> 
+					<br>Branch Code   : <b>250655</b>
+					<br>Reference     : <b>Name & Surname</b></p>
 
 		  	<h2>Customer Details Confirmation:</h2>
 		  	<ul>
@@ -381,11 +385,15 @@ module.exports = {
 			    <li>Breakfast      : <b>${req.body.breakfast}</b></li>
 		  	</ul>
 
-				<p><b>Your booking will be confirmed after payment has reflected.</b></p>
+				<p><b>Your booking will be confirmed after payment has been received.</b></p>
 
 				<p>Happy Vacations!</p>
 
 				<p>DM-DMZ Guesthouse</p>
+
+				<p>Contact Nr: <a href="tel:+27647296934">+27 64 729 6934</a></p>
+
+				<p>Email: <a href="mailto:admin@dm-dmz.co.za">admin@dm-dmz.co.za</a></p>
 
 				<p><small><a href="https://www.dm-dmzguesthouse.co.za/privacy-policy">Privacy Policy</a> | <a href="https://www.dm-dmzguesthouse.co.za/terms-of-service">Terms Of Service</a> | <a href="https://www.dm-dmzguesthouse.co.za/contact-us">Contact Us</a></small></p>
 			`;
@@ -444,7 +452,7 @@ module.exports = {
 
 		await smtpTransportUser.sendMail(mailOptionsUser);
 
-		req.session.success = `G'day ${req.body.firstName} ${req.body.lastName}, your Booking request has been received! Please check your Email for finalization.`;
+		req.session.success = `G'day ${req.body.firstName} ${req.body.lastName}, your Booking request has been received! We have sent you an Email with details to Finalize your Booking.`;
 		res.redirect('/');
 	},
 
