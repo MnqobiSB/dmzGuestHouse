@@ -54,35 +54,6 @@
 
 							<!-- post article -->
 							<footer class="blog-post__footer p-0 mb-small">
-								
-								<!-- delete/edit post if author -->
-								<% if (currentUser) { %>
-									<h3 class="mb-small">Manage Package:</h3>
-
-									<div class="row justify-content-between mb-4">
-										<div class="col-6">
-											<a class="float-right" href="/packages/<%= package.id %>/edit">
-												<button class="btn btn__secondary">Edit Package</button>
-											</a>
-										</div><!-- /.col-6 -->
-
-										<div class="col-6">
-											<form 
-												class="form-inline"
-												action="/packages/<%= package.id %>?_method=DELETE"
-												method="POST"
-											>
-												<div class="form-group">
-													<button type="submit" class="btn btn__red">
-														Delete Package
-													</button>
-												</div>
-											</form>
-										</div><!-- /.col-6 -->
-									</div><!-- /.row -->
-								<% } %>
-								<!-- delete/edit post if author -->
-								
 								<!-- back button -->
 								<form>
 									<input 
